@@ -20,7 +20,7 @@
 <br><br><br><br><br><br><br>
 
 <div class="articles-wrapper">
-  <div class="articles-container1">
+  <div class="articles-main-container">
     <div class="main-article">
       <% @articles.last(1).each do |article| %>
       <%= render 'shared/main-cards', article: article %>
@@ -33,7 +33,7 @@
     </div>
   </div>
   <div class="articles-container">
-    <% @articles.drop(2).each do |article| %>
+    <% @articles.last(5).reverse.drop(2).each do |article| %>
     <%= render 'shared/cards', article: article %>
     <% end %>
   </div>

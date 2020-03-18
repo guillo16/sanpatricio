@@ -1,4 +1,48 @@
-.card-category {
+//find it in shared/cards.html.erb
+.card-article {
+  background-color: white;
+  box-shadow: 0px 0px 6px lightgrey;
+  a {
+    text-decoration: none;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  h2 {
+    padding: 0 6px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: black;
+  }
+  h4 {
+    text-align: left ;
+    padding: 0 6px;
+    margin-bottom: 2px;
+    font-size: 18px;
+    margin-top: 10px;
+    color: green;
+  }
+  &:hover {
+    text-decoration: none;
+    color: blue;
+    box-shadow: 0px 0px 6px grey;
+    h2 {
+      color: blue;
+    }
+  }
+}
+//find it in shared/main-cards.html.erb
+.main-card-article {
+  height: 400px;
+  a {
+    &:hover {
+    text-decoration: none;
+  }
+  }
+}
+.main-card-category {
   background-size: cover;
   background-position: center;
   display: flex;
@@ -8,18 +52,23 @@
 
 }
 
-.main-card-article {
-  height: 400px;
-  a {
-    &:hover {
-    text-decoration: none;
+.main-card-content {
+  padding: 20px 10px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  h4 {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
   }
+  h2 {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
   }
-
 }
 
-
-.card-article-2 {
+//find it in shared/main-cards and shared/second-card
+.main-card-article-2 {
   background-color: white;
   box-shadow: 0px 0px 6px lightgrey;
   display: none;
@@ -54,10 +103,8 @@
       color: blue;
     }
   }
-
-
 }
-
+//find it in second-card.html.erb
 .second-card-article-3 {
   background-color: white;
   box-shadow: 0px 0px 6px lightgrey;
@@ -66,7 +113,7 @@
     text-decoration: none;
   }
   img {
-    height: 70%;
+    min-height: 70%;
     max-width: 100%;
     object-fit: cover;
   }
@@ -93,25 +140,49 @@
       color: blue;
     }
   }
+}
+//responsiveness
+@media(max-width: 1000px) {
+  .main-card-article {
+    height: 250px;
+  }
 
+  .main-card-content {
+
+  h4 {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  h2 {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+  .card-article {
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  h2 {
+    font-size: 15px;
+  }
+  h4 {
+    font-size: 16px;
+  }
 
 }
-@media(max-width: 800px) {
-  .main-card-article {
-    height: 300px;
-  }
   .second-card-article-3 {
-    background-color: white;
-    box-shadow: 0px 0px 6px lightgrey;
-    height: 300px;
+    height: 250px;
     img {
       height: 50%;
     }
     h2 {
-      font-size: 17px;
+      font-size: 15px;
     }
     h4 {
-      font-size: 15px;
+      font-size: 16px;
     }
   }
 }
@@ -121,7 +192,7 @@
     display: none;
   }
 
-  .card-article-2 {
+  .main-card-article-2 {
     display: block;
   }
 

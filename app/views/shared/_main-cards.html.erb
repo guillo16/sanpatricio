@@ -1,14 +1,14 @@
 <div class="main-card-article">
   <%= link_to article_path(article) do %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(250,250,250,0.1), rgba(0,0,0,0.7)), url(<%= article.photo %>)">
-    <div class="content-category">
+  <div class="main-card-category" style="background-image: linear-gradient(rgba(250,250,250,0.1), rgba(0,0,0,0.7)), url(<%= article.photo %>)">
+    <div class="main-card-content">
       <h4><%= article.category %></h4>
       <h2><%= article.title %></h2>
     </div>
   </div>
   <% end %>
 </div>
-<div class="card-article-2">
+<div class="main-card-article-2">
   <%= link_to article_path(article) do %>
   <img src="<%= article.photo %>" alt="">
   <h4><%= article.category %></h4>
