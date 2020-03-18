@@ -7,35 +7,35 @@
   <h2><%= link_to articles_path(category: "Primario") do %>Primario<% end %></h2>
   <h2><%= link_to articles_path(category: "Secundario") do %>Secundario<% end %></h2>
   <h2><%= link_to articles_path(category: "Institucional") do %>Institucional<% end %></h2>
-  <h2><%= link_to articles_path(category: "I.B") do %>I.B<% end %></h2>
-
-  <h2><%= link_to articles_path do %>Todos<% end %></h2>
+  <h2><%= link_to "#{articles_path(category: "I.B")}#article-all" do %>I.B<% end %></h2>
+  <h2><%= link_to "#{articles_path}#article-all" do %>Todos<% end %></h2>
 </div>
-<div class="articles-wrapper">
-  <div class="articles-main-container">
-    <div class="main-article">
-      <% @articles.last(1).each do |article| %>
-      <%= render 'shared/main-cards', article: article %>
-      <% end %>
+<section id="article-all">
+  <div class="articles-wrapper">
+    <div class="articles-main-container">
+      <div class="main-article">
+        <% @articles.last(1).each do |article| %>
+        <%= render 'shared/main-cards', article: article %>
+        <% end %>
+      </div>
+      <div class="main-article">
+        <% @articles.last(2).reverse.drop(1).each do |article| %>
+        <%= render 'shared/second-card', article: article %>
+        <% end %>
+      </div>
+      <div class="main-article">
+        <% @articles.last(3).reverse.drop(2).each do |article| %>
+        <%= render 'shared/second-card', article: article %>
+        <% end %>
+      </div>
     </div>
-    <div class="main-article">
-      <% @articles.last(2).reverse.drop(1).each do |article| %>
-      <%= render 'shared/second-card', article: article %>
-      <% end %>
-    </div>
-    <div class="main-article">
-      <% @articles.last(3).reverse.drop(2).each do |article| %>
-      <%= render 'shared/second-card', article: article %>
+    <div class="articles-container">
+      <% @articles.last(10).reverse.drop(3).each do |article| %>
+      <%= render 'shared/cards', article: article %>
       <% end %>
     </div>
   </div>
-  <div class="articles-container">
-    <% @articles.last(10).reverse.drop(3).each do |article| %>
-    <%= render 'shared/cards', article: article %>
-    <% end %>
-  </div>
-</div>
-
+</section>
 
 
 <%= link_to 'create article', new_article_path  %>
