@@ -1,7 +1,13 @@
 <br><br><br>
-<h1>welcome to news index</h1>
-
-<div class="container">
+<div class="banner-articles" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1532649538693-f3a2ec1bf8bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
+     <h2>Noticias</h2>
+</div>
+<div class="articles-navbar">
+  <h2>jardin</h2>
+  <h2>primario</h2>
+  <h2>secundario</h2>
+</div>
+<div class="articles-container">
   <% @articles.each do |article| %>
   <%= render 'shared/cards', article: article %>
   <% end %>
