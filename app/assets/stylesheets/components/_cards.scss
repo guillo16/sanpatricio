@@ -1,0 +1,27 @@
+.card-article {
+  background-color: white;
+  border-top: 1px solid lightgrey;
+  a {
+    text-decoration: none;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    color: grey;
+  }
+
+}
