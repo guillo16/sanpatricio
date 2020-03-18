@@ -1,22 +1,12 @@
-.card-article {
-  background-color: white;
-  box-shadow: 0px 0px 6px lightgrey;
-  a {
-    text-decoration: none;
-  }
-  img {
-    width: 100%;
-    object-fit: cover;
-  }
-
-  h2 {
-    padding: 0 6px;
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-    margin-top: 10px;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+.card-category {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
