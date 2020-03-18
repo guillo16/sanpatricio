@@ -3,9 +3,13 @@
  <h2>Noticias</h2>
 </div>
 <div class="articles-navbar mb-3">
-  <h2>jardin</h2>
-  <h2>primario</h2>
-  <h2>secundario</h2>
+  <h2><%= link_to articles_path(category: "Jardines") do %>Jardines<% end %></h2>
+  <h2><%= link_to articles_path(category: "Primario") do %>Primario<% end %></h2>
+  <h2><%= link_to articles_path(category: "Secundario") do %>Secundario<% end %></h2>
+  <h2><%= link_to articles_path(category: "Institucional") do %>Institucional<% end %></h2>
+  <h2><%= link_to articles_path(category: "I.B") do %>I.B<% end %></h2>
+
+  <h2><%= link_to articles_path do %>Todos<% end %></h2>
 </div>
 <div class="articles-wrapper">
   <div class="articles-main-container">
