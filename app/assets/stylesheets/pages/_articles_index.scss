@@ -15,7 +15,6 @@
     margin-bottom: 0px;
   }
 }
-
 .articles-main-container {
   width: 90%;
   margin: 0 auto;
@@ -32,27 +31,23 @@
   grid-gap: 10px;
   padding: 10px;
 }
-
-
-
-
-@media(max-width: 900px) {
+//responsive
+@media(max-width: 1025px) {
   .articles-container {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
-    padding: 10px;
+
   }
 }
-
 @media(max-width: 600px) {
   .articles-main-container {
     display: grid;
     grid-template-columns: 1fr;
+    padding: 0px 10px;
   }
-
   .articles-container {
     grid-template-columns: 1fr;
     grid-gap: 10px;
-    padding: 10px;
+    padding: 0px 10px;
   }
 }

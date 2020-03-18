@@ -11,3 +11,8 @@
     background-color: lightgreen;
   }
 }
+@media(max-width: 600px) {
+  .btn-article {
+    padding: 10px 25px;
+  }
+}

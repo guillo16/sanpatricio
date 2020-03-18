@@ -38,8 +38,8 @@
   height: 400px;
   a {
     &:hover {
-    text-decoration: none;
-  }
+      text-decoration: none;
+    }
   }
 }
 .main-card-category {
@@ -77,21 +77,22 @@
   }
   img {
     width: 100%;
-    height: 100%;
+    height: 150px;
     object-fit: cover;
   }
   h2 {
     padding: 0 6px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     margin-top: 5px;
     color: black;
+    padding-bottom: 10px;
   }
   h4 {
     text-align: left ;
     padding: 0 6px;
     margin-bottom: 2px;
-    font-size: 18px;
+    font-size: 14px;
     margin-top: 10px;
     color: green;
   }
@@ -142,37 +143,37 @@
   }
 }
 //responsiveness
-@media(max-width: 1000px) {
+@media(max-width: 1025px) {
   .main-card-article {
     height: 250px;
   }
 
   .main-card-content {
 
-  h4 {
-    color: white;
-    font-size: 15px;
-    font-weight: bold;
+    h4 {
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    h2 {
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+    }
   }
-  h2 {
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-  }
-}
   .card-article {
-  img {
-    width: 100%;
-    object-fit: cover;
-  }
-  h2 {
-    font-size: 15px;
-  }
-  h4 {
-    font-size: 16px;
-  }
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+    h2 {
+      font-size: 15px;
+    }
+    h4 {
+      font-size: 16px;
+    }
 
-}
+  }
   .second-card-article-3 {
     height: 250px;
     img {
@@ -198,14 +199,18 @@
 
   .second-card-article-3 {
    display: none;
+ }
+
+ .card-article {
+  padding: 10px 5px;
+  img{
+    display: none;
   }
-
-  .card-article {
-    padding: 20px;
-    img{
-      display: none;
-    }
+  h2 {
+    font-size: 14px;
   }
-
-
+  h4 {
+    font-size: 15px;
+  }
+}
 }

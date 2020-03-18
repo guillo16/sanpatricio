@@ -2,7 +2,7 @@
   <%= link_to article_path(article) do %>
   <img src="<%= article.photo %>" alt="">
   <h4><%= article.category %></h4>
-  <h2><%= article.title %></h2>
+  <h2><%= article.title.truncate(50) %></h2>
   <% end %>
 </div>
 <div class="main-card-article-2">
