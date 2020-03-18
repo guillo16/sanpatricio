@@ -1,26 +1,28 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1576495199011-eb94736d05d6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1652&q=80);">
 </div>
-  <section id="articles">
-    <div class="home-container">
-      <h3>San Patricio Hoy</h2>
-      <p>Las ultimas noticias del colegio</p>
-      <div class="articles-container">
-        <% @articles.only(6).each do |article| %>
-        <%= render 'shared/cards', article: article %>
-        <% end %>
-      </div>
+<section id="articles">
+  <div class="home-container">
+    <h3>San Patricio Hoy</h2>
+    <p>Las ultimas noticias del colegio</p>
+    <div class="articles-container">
+      <% @articles.only(6).each do |article| %>
+      <%= render 'shared/cards', article: article %>
+      <% end %>
+    </div>
+    <div class="article-button">
       <%= link_to 'Todas las noticias', articles_path, class: "btn-article"  %>
     </div>
-</section>
-<section id="ib">
-  <div class="ib-container">
-    <h2> esta pagina es del ib</h2>
   </div>
 </section>
-<section id="events">
-  <div class="event-container">
+  <section id="ib">
+    <div class="ib-container">
+      <h2> esta pagina es del ib</h2>
+    </div>
+  </section>
+  <section id="events">
+    <div class="event-container">
      <h2> esta pagina es de eventos</h2>
-  </div>
-</section>
+   </div>
+ </section>
 
 
