@@ -17,18 +17,18 @@
 
 <%= link_to 'create article', new_article_path  %>
 
-
+<br><br><br><br><br><br><br>
 
 <div class="articles-wrapper">
   <div class="articles-container1">
     <div class="main-article">
-      <% @articles.first(1).each do |article| %>
-      <%= render 'shared/cards', article: article %>
+      <% @articles.last(1).each do |article| %>
+      <%= render 'shared/main-cards', article: article %>
       <% end %>
     </div>
     <div class="main-article">
-      <% @articles.drop(1).first(1).each do |article| %>
-      <%= render 'shared/cards', article: article %>
+      <% @articles.last(2).reverse.drop(1).each do |article| %>
+      <%= render 'shared/second-card', article: article %>
       <% end %>
     </div>
   </div>

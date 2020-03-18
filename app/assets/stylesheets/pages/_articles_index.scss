@@ -8,15 +8,19 @@
 }
 
 .articles-container1 {
+  width: 90%;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+  padding: 10px;
 }
 
 @media(max-width: 600px) {
   .articles-container1 {
-  display: grid;
-  grid-template-columns: 1fr;
-}
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 
@@ -25,20 +29,36 @@
 
 @media(max-width: 900px) {
   .articles-container {
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 10px;
-  padding: 10px;
-}
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+  }
 }
 
 @media(max-width: 600px) {
   .articles-container {
-  grid-template-columns: 1fr;
-  grid-gap: 10px;
-  padding: 10px;
-}
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+  }
 }
 
+.content-category {
+  padding: 20px 10px;
+
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  h4 {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  h2 {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+  }
+}
 
 .card-article {
   background-color: white;
@@ -66,17 +86,16 @@
     color: green;
   }
   &:hover {
-      text-decoration: none;
+    text-decoration: none;
+    color: blue;
+    box-shadow: 0px 0px 6px grey;
+    h2 {
       color: blue;
-      box-shadow: 0px 0px 6px grey;
-      h2 {
-        color: blue;
-      }
     }
+  }
 }
 
-@media(max-width: 600px) {
-  }
+
 
 
 
