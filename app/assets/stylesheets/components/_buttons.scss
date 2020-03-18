@@ -1,0 +1,18 @@
+//home buttons
+.btn-article {
+  padding: 15px 100px;
+  background-color: transparent;
+  color: green;
+  font-weight: bold;
+  margin: 20px 0px;
+  border: 2px solid green;
+  &:hover {
+    text-decoration: none;
+    background-color: lightgreen;
+  }
+}
+@media(max-width: 600px) {
+  .btn-article {
+    padding: 10px 25px;
+  }
+}
