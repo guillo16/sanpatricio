@@ -2,23 +2,11 @@
 <div class="banner-articles" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1532649538693-f3a2ec1bf8bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
  <h2>Noticias</h2>
 </div>
-<div class="articles-navbar">
+<div class="articles-navbar mb-3">
   <h2>jardin</h2>
   <h2>primario</h2>
   <h2>secundario</h2>
 </div>
-<div class="articles-container">
-  <% @articles.each do |article| %>
-  <%= render 'shared/cards', article: article %>
-  <% end %>
-</div>
-
-
-
-<%= link_to 'create article', new_article_path  %>
-
-<br><br><br><br><br><br><br>
-
 <div class="articles-wrapper">
   <div class="articles-main-container">
     <div class="main-article">
@@ -31,10 +19,20 @@
       <%= render 'shared/second-card', article: article %>
       <% end %>
     </div>
+    <div class="main-article">
+      <% @articles.last(3).reverse.drop(2).each do |article| %>
+      <%= render 'shared/second-card', article: article %>
+      <% end %>
+    </div>
   </div>
   <div class="articles-container">
-    <% @articles.last(5).reverse.drop(2).each do |article| %>
+    <% @articles.last(10).reverse.drop(3).each do |article| %>
     <%= render 'shared/cards', article: article %>
     <% end %>
   </div>
 </div>
+
+
+
+<%= link_to 'create article', new_article_path  %>
+

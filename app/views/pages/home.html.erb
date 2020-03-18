@@ -17,7 +17,7 @@
           <% end %>
         </div>
         <div class="main-article">
-          <% @articles.last(2).reverse.drop(1).each do |article| %>
+          <% @articles.last(3).reverse.drop(2).each do |article| %>
           <%= render 'shared/second-card', article: article %>
           <% end %>
         </div>
