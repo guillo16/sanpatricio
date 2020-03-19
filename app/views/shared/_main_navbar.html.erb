@@ -1,0 +1,19 @@
+<div class="navbar navbar-expand-md navbar-light navbar-lewagon-main fixed-top ">
+  <%= link_to root_path, class: "navbar-brand" do %>
+  <%= image_tag "https://res.cloudinary.com/dw7ox75dg/image/upload/v1584485220/sanpa.png"%>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <%= link_to "Noticias", "#", class: "nav-link" %>
+        <%= link_to "Historia", about_path, class: "nav-link" %>
+        <%= link_to "IB", root_path, class: "nav-link" %>
+        <%= link_to "Novedades", "#", class: "nav-link" %>
+        <%= link_to "Contacto", "#", class: "nav-link" %>
+  </div>
+</div>

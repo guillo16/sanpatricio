@@ -1,4 +1,4 @@
-<br><br><br><br>
+<%= render 'shared/main_navbar' %>
 <div class="container">
   <%= simple_form_for(@article) do |f| %>
   <%= f.input :category,  collection: [ "Jardines", "Primario", "Secundario", "I.B", "Institucional"] %>
