@@ -1,0 +1,28 @@
+<%= render 'shared/navbar' %>
+<div class="container">
+  <div class="form-container">
+    <p><%= link_to 'GV-WEB', root_path  %> > contact form</p>
+    <h2>Contact Form</h2>
+    <%= simple_form_for @contact do |f| %>
+    <h3>Name<strong style="color:red; font-size: 16px;">*</strong></h3>
+    <div class="form-group">
+      <%= f.input :name, input_html: { class: "form-control form-control-lg"}, label: false%>
+    </div>
+    <h3>Email address<strong style="color:red; font-size: 16px;">*</strong></h3>
+    <div class="form-group">
+      <%= f.input :email, input_html: { class: "form-control form-control-lg"}, label: false, placeholder: "name@example.com" %>
+    </div>
+    <h3>Message<strong style="color:red; font-size: 16px;">*</strong></h3>
+    <div class="form-group">
+     <%= f.input :message, :as => :text, input_html: { class: "form-control", id:"exampleFormControlTextarea1", rows:"5" }, label: false %>
+    </div>
+    <h4>Please enter the details of your request. A member of our support staff will respond as soon as possible.</h4>
+    <div class="hidden">
+      <%= f.input :nickname %>
+    </div>
+    <div class="guillo w-100">
+      <%= f.button :submit, class: "btn btn-primary btn-lg btn-block" %>
+    </div>
+    <% end %>
+  </div>
+</div>
