@@ -1,0 +1,15 @@
+.carousel-inner {
+  img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media(max-width: 686px) {
+.carousel-inner {
+  img {
+    height: 200px;
+  }
+}
+}
