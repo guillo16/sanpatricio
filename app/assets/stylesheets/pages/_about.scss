@@ -1,11 +1,18 @@
-.guillo {
+.about-container {
   width: 90%;
-  margin: 0 auto;
+  margin: 90px auto;
   display: flex;
 }
 
-.guillo-1 {
-  padding-right: 10px;
+.nav-tab {
+ position: sticky !important;
+ top: 100px;
+
+
+}
+
+.nav-tab-content {
+
 }
 
 
@@ -15,4 +22,19 @@
     font-size: 35px;
     font-weight: bold;
   }
+}
+
+
+@media(max-width: 686px) {
+  .about-container {
+    display: block;
+  }
+  .nav-tab {
+    padding-right: 10px;
+  }
+  .nav-tab {
+    text-align: center;
+  }
+
+
 }
