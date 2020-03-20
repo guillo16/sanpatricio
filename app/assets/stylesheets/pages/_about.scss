@@ -1,18 +1,16 @@
 .about-container {
-  width: 90%;
+  width: 96%;
   margin: 90px auto;
   display: flex;
 }
-
 .nav-tab {
- position: sticky !important;
- top: 100px;
-
-
+ flex: 0 0 30%;
+ padding-right: 5px;
 }
 
-.nav-tab-content {
-
+.nav {
+  position: sticky;
+  top: 90px;
 }
 
 
