@@ -1,3 +1,26 @@
+//main navbar for all the pages but home.html.erb
+.navbar-main {
+  justify-content: space-between;
+  background-color: white;
+  font-weight: bold;
+  color: red;
+  font-size: 20px;
+  border-bottom: 3px solid green;
+  .nav-link {
+    color: grey;
+    border-bottom: 2px solid transparent;
+    &:hover {
+      border-bottom: 2px solid red;
+    }
+  }
+}
+.navbar-main .navbar-collapse {
+  flex-grow: 0;
+}
+.navbar-main .navbar-brand img {
+  width: 40px;
+}
+//navbar for the homepage
 .navbar-lewagon {
   justify-content: space-between;
   background-color: transparent;
@@ -5,66 +28,58 @@
   color: red;
   font-size: 20px;
   .nav-link {
-  color: white;
-  border-bottom: 2px solid transparent;
-  &:hover {
-    border-bottom: 2px solid white;
+    color: white;
+    border-bottom: 2px solid transparent;
+    &:hover {
+      border-bottom: 2px solid white;
+    }
   }
 }
-}
-
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
-
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
-
 .navbar-lewagon-white {
   background-color: white;
   border-bottom: 3px solid green;
-   .nav-link {
-  color: grey;
-  border-bottom: 2px solid transparent;
-  &:hover {
-    color: red;
-    border-bottom: 2px solid red;
+  .nav-link {
+    color: grey;
+    border-bottom: 2px solid transparent;
+    &:hover {
+      color: red;
+      border-bottom: 2px solid red;
+    }
   }
 }
-}
-
 @media(max-width: 700px) {
   .navbar-lewagon {
-  justify-content: space-between;
-  background-color: transparent;
-  font-weight: bold;
-  color: red;
-  font-size: 20px;
-  .nav-link {
-  color: white;
-  border-bottom: 2px solid transparent;
-  background-color: rgba(0, 0, 0, 0.2);
-  &:hover {
-    border-bottom: 2px solid white;
-  }
-}
-}
-
-.navbar-lewagon-white {
-  background-color: white;
-  border-bottom: 3px solid green;
-   .nav-link {
-  color: grey;
-  border-bottom: 2px solid transparent;
-  background-color: white;
-  &:hover {
+    justify-content: space-between;
+    background-color: transparent;
+    font-weight: bold;
     color: red;
-    border-bottom: 2px solid red;
+    font-size: 20px;
+    .nav-link {
+      color: white;
+      border-bottom: 2px solid transparent;
+      background-color: rgba(0, 0, 0, 0.2);
+      &:hover {
+        border-bottom: 2px solid white;
+      }
+    }
+  }
+  .navbar-lewagon-white {
+    background-color: white;
+    border-bottom: 3px solid green;
+    .nav-link {
+      color: grey;
+      border-bottom: 2px solid transparent;
+      background-color: white;
+      &:hover {
+        color: red;
+        border-bottom: 2px solid red;
+      }
+    }
   }
 }
-}
-
-}
-
-

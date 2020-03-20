@@ -1,7 +1,23 @@
-<br><br><br><br>
-<h1>Articles#show</h1>
-<p>Find me in app/views/articles/show.html.erb</p>
+<%= render 'shared/main_navbar' %>
+<div class="articles-navbar mb-3">
+  <h2><%= link_to articles_path(category: "Jardines") do %>Jardines<% end %></h2>
+  <h2><%= link_to articles_path(category: "Primario") do %>Primario<% end %></h2>
+  <h2><%= link_to articles_path(category: "Secundario") do %>Secundario<% end %></h2>
+  <h2><%= link_to articles_path(category: "Institucional") do %>Institucional<% end %></h2>
+  <h2><%= link_to "#{articles_path(category: "I.B")}#article-all" do %>I.B<% end %></h2>
+  <h2><%= link_to "#{articles_path}#article-all" do %>Todos<% end %></h2>
+</div>
+<br><br><br>
+<div class="show-articles-wrapper">
+  <div class="show-articles-container">
+    <h2><%= @article.title %></h2>
+    <h3><%= @article.subtitle %></h3>
+    <img src="<%= @article.photo %>" alt="">
+    <p><%= @article.content1 %></p>
+    <p><%= @article.content2 %></p>
+    <p><%= @article.content3 %></p>
+  </div>
+  <div class="show-articles-footer">
 
-<%= @article.title %>
-<%= @article.subtitle %>
-<img src="<%= @article.photo %>" alt="">
+  </div>
+</div>

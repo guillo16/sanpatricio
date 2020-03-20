@@ -1,13 +1,16 @@
-<br><br><br><br>
+<%= render 'shared/main_navbar' %>
 <div class="container">
-  <%= simple_form_for(@article) do |f| %>
-  <%= f.input :category,  collection: [ "Jardines", "Primario", "Secundario", "I.B", "Institucional"] %>
-  <%= f.input :title %>
-  <%= f.input :subtitle %>
-  <%= f.input :content1 %>
-  <%= f.input :content2 %>
-  <%= f.input :content3 %>
-  <%= f.input :photo %>
-  <%= f.submit %>
-  <% end %>
+  <div class="article-new-container">
+    <h2>Crear una noticia</h2>
+    <%= simple_form_for(@article) do |f| %>
+    <%= f.input :category,  collection: [ "Jardines", "Primario", "Secundario", "I.B", "Institucional"] %>
+    <%= f.input :title, placeholder: "Titulo" %>
+    <%= f.input :subtitle, placeholder: "Subtitulo" %>
+    <%= f.input :content1, placeholder: "Primer Contenido" %>
+    <%= f.input :content2, placeholder: "Segundo Contenido" %>
+    <%= f.input :content3, placeholder: "Tercer Contenido" %>
+    <%= f.input :photo %>
+    <%= f.submit class:"btn btn-primary" %>
+    <% end %>
+  </div>
 </div>
