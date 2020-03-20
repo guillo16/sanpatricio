@@ -5,3 +5,11 @@
     object-fit: cover;
   }
 }
+
+@media(max-width: 686px) {
+.carousel-inner {
+  img {
+    height: 200px;
+  }
+}
+}
