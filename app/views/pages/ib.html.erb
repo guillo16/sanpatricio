@@ -1,0 +1,28 @@
+<%= render 'shared/main_navbar' %>
+<div class="video-container">
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+      <source src="https://res.cloudinary.com/dw7ox75dg/video/upload/v1584741462/ib_fondo.mp4" type="video/mp4">
+  </video>
+  <div class="video-title">
+    <h1>INTERNATIONAL BACCALAUREATE</h1>
+      <p>Convertirse en Colegio del Mundo del IB supone unirse a más de 4.500 colegios de todo el mundo que imparten los programas del IB, así como formar parte de una comunidad de educadores en constante crecimiento y desarrollo. La implementación del IB, única en su género, se ve fortalecida gracias a la relación que mantenemos con colegios, gobiernos y organizaciones internacionales de todo el mundo.</p>
+  </div>
+</div>
+<div class="ib-wrapper">
+  <div class="nav-tab">
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Alumnos</a>
+      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Colegios</a>
+      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Profesores</a>
+      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Que diferencia al IB</a>
+    </div>
+  </div>
+  <div class="nav-tab-content">
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"><%= render 'ib/student' %></div>
+      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"><%= render 'ib/school' %></div>
+      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"><%= render 'ib/teacher' %></div>
+      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"><%= render 'ib/ib' %></div>
+    </div>
+  </div>
+</div>

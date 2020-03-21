@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'contacts/new'
-  get 'contacts/create'
   devise_for :users
   root to: 'pages#home'
 
@@ -9,5 +7,6 @@ Rails.application.routes.draw do
   resources :contacts, only: [:new, :create]
 
   get 'about', to: 'pages#about'
+  get 'ib', to: 'pages#ib'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
