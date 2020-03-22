@@ -19,15 +19,11 @@
     font-weight: bold;
   }
 }
-
-
 .banner-ib {
   background-size: cover;
   background-position: center;
   padding: 150px 0;
-
 }
-
 .banner-container-ib {
   text-align: center;
   img {
@@ -44,5 +40,19 @@
   }
 }
 
+@media(max-width: 686px){
 
-
+  .banner-ib {
+    padding: 100px 0;
+  }
+  .banner-container-ib {
+    img {
+      height: 180px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 25px;
+      margin-bottom: 40px;
+    }
+  }
+}
