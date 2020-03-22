@@ -16,3 +16,23 @@
     padding: 10px 25px;
   }
 }
+
+
+.btn-ib {
+  padding: 15px 100px;
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  margin: 20px 0px;
+  border: 2px solid white;
+  &:hover {
+    text-decoration: none;
+    color: lightgrey;
+    border-color: lightgrey;
+  }
+}
+@media(max-width: 600px) {
+  .btn-article {
+    padding: 10px 25px;
+  }
+}
