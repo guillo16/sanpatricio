@@ -1,12 +1,15 @@
 <div class="footer">
-  <h2> hola como andas todo bien</h2>
-  <% if user_signed_in? %>
-      <li class="nav-item">
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-      </li>
-       <% else %>
-      <li class="nav-item">
-        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-      </li>
-      <% end %>
+  <div class="footer-content">
+    <p><%= link_to 'Direcciones & Telefono', "#" %></p>
+    <p><%= link_to 'Contacto',  "#"%></p>
+    <% if user_signed_in? %>
+    <p><%= link_to "Log out", destroy_user_session_path, method: :delete %></p>
+    <% else %>
+    <p><%= link_to "Login", new_user_session_path %></p>
+    <% end %>
+  </div>
+  <h3>  Copyright © Colegio San Patricio. Todos los derechos reservados</h3>
+  <p>Made by <%= link_to 'GV-WEB', 'https://gwwebsite.herokuapp.com', target: "blank" %></p>
 </div>
+
+
