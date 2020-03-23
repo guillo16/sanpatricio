@@ -1,14 +1,13 @@
+<%= link_to event_path(event) do %>
 <div class="event-container">
-  <%= link_to event_path(event) do %>
   <div class="event-img">
     <img src="<%= event.photo %>" alt="">
   </div>
   <div class="event-content">
     <h2><%= event.title %></h2>
-    <h3><%= event.date %></h3>
-    <p><%= event.time %></p>
+    <h3><i class="far fa-calendar-alt"></i> <strong style="color: grey;"><%= event.date %></strong></h3>
+    <h3><i class="far fa-clock"></i> <strong style="color: grey;"> <%= event.time %></strong> </h3>
     <p><%= event.description %></p>
   </div>
-  <% end %>
 </div>
-
+<% end %>

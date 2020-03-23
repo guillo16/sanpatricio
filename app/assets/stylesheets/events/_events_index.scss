@@ -1,3 +1,53 @@
+.wrapper-event {
+  width: 90%;
+  margin: 0 auto;
+  a {
+    text-decoration: none;
+    &:hover {
+      h2 {
+        color: blue;
+      }
+    }
+  }
+}
 .event-container {
+  display: flex;
+  padding: 15px;
+  border: 1px solid grey;
+}
 
+.event-content {
+  h2 {
+    font-size:  28px;
+    font-weight: bold;
+    color: black;
+  }
+
+  h3 {
+    font-size: 14px;
+    color: lightgrey;
+    margin-bottom: 10px;
+  }
+  p {
+    color: black;
+  }
+}
+
+.event-img {
+  padding-right: 10px;
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid black;
+  }
+}
+
+@media(max-width: 686px){
+  .event-container {
+    display: block;
+  }
+  .event-img {
+    display: none;
+  }
 }
