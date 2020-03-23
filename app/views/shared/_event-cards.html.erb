@@ -1,0 +1,13 @@
+<%= link_to event_path(event) do %>
+<div class="event-container">
+  <div class="event-img">
+    <img src="<%= event.photo %>" alt="">
+  </div>
+  <div class="event-content">
+    <h2><%= event.title %></h2>
+    <h3><i class="far fa-calendar-alt"></i> <strong style="color: grey;"><%= event.date.strftime(' %d/%m/%y') %></strong></h3>
+    <h3><i class="far fa-clock"></i> <strong style="color: grey;"> <%= event.time.in_time_zone("Buenos Aires").strftime('%H:%M') %></strong> </h3>
+    <p><%= event.description %></p>
+  </div>
+</div>
+<% end %>
