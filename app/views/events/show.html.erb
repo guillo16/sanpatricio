@@ -1,2 +1,18 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<%= render 'shared/main_navbar' %>
+<br> <br><br><br>
+<div class="show-event-container">
+  <div class="show-event-img">
+    <img src="<%= @event.photo %>" alt="">
+  </div>
+  <div class="show-event-container">
+    <h2><%= @event.title %></h2>
+  </div>
+</div>
+<div class="show-event-container">
+  <div class="show event-img">
+
+  </div>
+  <div class="show-event-container">
+    <h2><%= @event.title %></h2>
+  </div>
+</div>

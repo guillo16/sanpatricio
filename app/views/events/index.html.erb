@@ -1,5 +1,9 @@
 <%= render 'shared/main_navbar' %>
+<div class="mission-container">
+  <img src="https://images.unsplash.com/photo-1568792923760-d70635a89fdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" alt="">
+</div>
 <div class="wrapper-event">
+  <h1>EVENTOS</h1>
   <% @events.each do |event| %>
   <%= render 'shared/event-cards', event: event %>
   <% end %>
