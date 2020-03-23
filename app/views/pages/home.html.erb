@@ -38,8 +38,11 @@
     <%= render 'shared/ib' %>
   </section>
   <section id="events">
+    <h2>Eventos</h2>
     <div class="event-container-home">
-      <h2> esta pagina es de eventos</h2>
+      <% @events.each do |event| %>
+      <%= render 'shared/event_card', event: event %>
+      <% end %>
     </div>
   </section>
   <section id="social">

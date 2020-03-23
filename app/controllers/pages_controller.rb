@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @articles = Article.all
+    @events = Event.all
   end
 
   def about

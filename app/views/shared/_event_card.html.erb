@@ -1,0 +1,21 @@
+<div class="main-wrapper-event">
+  <%= link_to event_path(event) do  %>
+  <div class="main-event-container">
+    <div class="main-event-img">
+      <img src="<%= event.photo %>" alt="">
+    </div>
+    <div class="main-event-content">
+      <div class="date-box">
+        <p><%= event.date.strftime('%b') %></p>
+        <h2><%= event.date.strftime('%d') %></h2>
+      </div>
+    </div>
+    <div class="event-card-footer">
+      <h2><%= event.title %></h2>
+      <p><%= event.date %></p>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+
