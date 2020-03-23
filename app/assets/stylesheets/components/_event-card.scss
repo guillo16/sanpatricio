@@ -82,6 +82,7 @@
   .main-wrapper-event {
     display: inline-block;
     width: 200px;
+    margin-right: 30px;
   }
   .main-event-img {
     img {
@@ -92,16 +93,41 @@
   }
 
   .event-card-footer {
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 20px;
     h2 {
       color: black;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 14px;
+      width: 100%;
     }
     p {
       color: black;
-      font-size: 14px;
+      font-size: 12px;
     }
   }
+  .date-box {
+  position: absolute;
+  left: 10px;
+  bottom: -25px;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+
+  p {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+  }
+  h2 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+  }
+
+}
 }
