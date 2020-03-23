@@ -1,0 +1,14 @@
+<div class="event-container">
+  <%= link_to event_path(event) do %>
+  <div class="event-img">
+    <img src="<%= event.photo %>" alt="">
+  </div>
+  <div class="event-content">
+    <h2><%= event.title %></h2>
+    <h3><%= event.date %></h3>
+    <p><%= event.time %></p>
+    <p><%= event.description %></p>
+  </div>
+  <% end %>
+</div>
+

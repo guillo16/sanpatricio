@@ -1,8 +1,9 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<%= render 'shared/main_navbar' %>
+<br><br><br><br><br>
+<div class="container">
+  <% @events.each do |event| %>
+  <%= render 'shared/event-cards', event: event %>
+  <% end %>
+</div>
 
-<% @events.each do |event| %>
-<%= event.title %>
-<%= event.date %>
-<%= event.time %>
-<% end %>
+
