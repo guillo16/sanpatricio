@@ -1,3 +1,18 @@
+.banner-articles{
+  margin-top: 78px;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 32px;
+    font-weight: bold;
+  }
+}
 .articles-navbar {
   width: 100%;
   position: sticky;
@@ -53,6 +68,10 @@
 }
 
 @media(max-width: 900px){
+  .banner-articles{
+    margin-top: 78px;
+    height: 30vh;
+  }
   .articles-navbar {
     padding: 15px;
 
@@ -72,7 +91,6 @@
       margin-bottom: 0px;
     }
   }
-
 }
 
 @media(max-width: 680px) {
