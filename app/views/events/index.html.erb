@@ -1,6 +1,9 @@
 <div class="event-index-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dw7ox75dg/image/upload/v1585161507/13483383_1073075972738550_5614390916278140258_o.jpg);">
   <h1>CALENDARIO</h1>
 </div>
+<div class="event_navbar">
+  <h2>Proximos eventos </h2>
+</div>
 <% if user_signed_in? %>
 <div class='p-5'>
   <%= link_to 'Create Event', new_event_path, class: 'btn btn-primary btn-lg btn-block'  %>
@@ -8,7 +11,7 @@
 <% else %>
 <% end %>
 <div class="wrapper-event">
-  <% @events.each do |event| %>
+  <% @events.last(10).each do |event| %>
   <%= render 'shared/event-cards', event: event %>
   <% end %>
 </div>
