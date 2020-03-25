@@ -6,7 +6,7 @@ class Event < ApplicationRecord
   validate :end_date
 
   def end_date
-    time = Time.now
-    errors.add(:date, "can't be before today") if date <= time
+    dates = Date.current
+    errors.add(:date, "can't be before today") if date <= dates
   end
 end
