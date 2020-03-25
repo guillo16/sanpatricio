@@ -8,18 +8,18 @@
     font-weight: bold;
     margin-bottom: 0px;
     padding: 20px;
-    background-color: #115f2e;
+    background-color: $green;
     color: white;
   }
   p {
     background-color: white;
-    border-bottom: 2px solid #115f2e;
+    border-bottom: 2px solid $green;
     font-size: 22px;
     text-align: left;
 
     padding: 8px;
     padding-left: 30px;
-    color: #115f2e;
+    color: $green;
 
   }
 }
@@ -31,9 +31,27 @@
 .home-event-wrapper {
   background-color: white;
   h4 {
+    font-size: 45px;
     text-align: center;
-    padding-top: 20px;
+    font-weight: bold;
+    margin-bottom: 0px;
+    padding: 20px;
+    background-color: $green;
+    color: white;
   }
+
+    h5 {
+    background-color: white;
+    border-bottom: 2px solid $green;
+    font-size: 22px;
+    text-align: left;
+
+    padding: 8px;
+    padding-left: 30px;
+    color: $green;
+
+  }
+
 }
 .article-button {
   padding:60px;
