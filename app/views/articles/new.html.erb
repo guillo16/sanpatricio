@@ -3,14 +3,14 @@
   <div class="article-new-container">
     <h2>Crear una noticia</h2>
     <%= simple_form_for(@article) do |f| %>
-    <%= f.input :category,  collection: [ "Jardines", "Primario", "Secundario", "I.B", "Institucional"] %>
-    <%= f.input :title, placeholder: "Titulo" %>
-    <%= f.input :subtitle, placeholder: "Subtitulo" %>
-    <%= f.input :content1, placeholder: "Primer Contenido" %>
-    <%= f.input :content2, placeholder: "Segundo Contenido" %>
-    <%= f.input :content3, placeholder: "Tercer Contenido" %>
-    <%= f.input :photo %>
-    <%= f.submit class:"btn btn-primary" %>
+    <%= f.input :category,  collection: [ "Jardines", "Primario", "Secundario", "I.B", "Institucional"], required: false %>
+    <%= f.input :title, placeholder: "Titulo", required: false %>
+    <%= f.input :subtitle, placeholder: "Subtitulo", required: false %>
+    <%= f.input :content1, placeholder: "Primer Contenido", required: false %>
+    <%= f.input :content2, placeholder: "Segundo Contenido", required: false %>
+    <%= f.input :content3, placeholder: "Tercer Contenido", required: false %>
+    <%= f.input :photo, required: false %>
+    <%= f.submit class:"btn btn-primary btn-lg btn-block " %>
     <% end %>
   </div>
 </div>
