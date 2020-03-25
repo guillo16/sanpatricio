@@ -44,25 +44,25 @@
 
 @media(max-width: 686px) {
   .video-container {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  video {
-    width: 100%;
-    max-height: 60%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    video {
+      width: 100%;
+      max-height: 60%;
+    }
   }
-}
-.video-title {
-  padding: 5px 10px;
-  h1 {
-    font-size: 22px;
+  .video-title {
+    padding: 5px 10px;
+    h1 {
+      font-size: 22px;
+    }
+    p {
+      font-size: 12px;
+    }
   }
-  p {
-    font-size: 12px;
-  }
-}
   .ib-wrapper {
     display: block;
-}
+  }
   .ib-container {
     h2 {
       margin-top: 14px;
@@ -77,6 +77,9 @@
       height: 200px;
     }
     p {
+      font-size: 12px;
+    }
+    li {
       font-size: 12px;
     }
   }
