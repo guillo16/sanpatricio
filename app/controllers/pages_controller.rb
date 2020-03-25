@@ -3,7 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @articles = Article.all
-    @events = Event.all
+    @events = Event.where("date >= ?", Time.current).order(date: :asc)
   end
 
   def about

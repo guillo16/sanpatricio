@@ -1,6 +1,7 @@
 .show-event-container {
   width: 70%;
-  margin: 0 auto;
+  margin: 0px auto;
+  margin-top: 100px;
 }
 .show-event-img {
   img {
@@ -14,10 +15,12 @@
 
   h2 {
     padding: 20px;
-    background-color: grey;
+    background-color: white;
     font-size: 35px;
     font-weight: bold;
     margin-bottom: 0px;
+    color: $green;
+    text-align: center;
   }
   h3 {
     padding: 0px 20px;
@@ -27,6 +30,7 @@
   }
 }
 .show-event-time {
+  background-color: white;
   padding: 20px;
   p {
     font-size: 18px;
