@@ -9,8 +9,12 @@
 <br><br><br>
 <div class="show-articles-wrapper">
   <div class="show-articles-container">
-    <h2><%= @article.title %></h2>
-    <h3><%= @article.subtitle %></h3>
+    <div class="show-articles-title">
+      <h2><%= @article.title %></h2>
+      <h3><%= @article.subtitle %></h3>
+    </div>
+    <h6><%= @article.created_at.strftime(" %d %b %Y - %I:%M %P") %></h6>
+
     <img src="<%= @article.photo %>" alt="">
     <p><%= @article.content1 %></p>
     <p><%= @article.content2 %></p>
