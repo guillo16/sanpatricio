@@ -2,7 +2,7 @@
 .social {
   width: 100%;
   img {
-    height: 400px;
+    height: 500px;
     width: 100%;
     object-fit: cover;
   }
@@ -126,4 +126,14 @@
 .hovereffect:hover p.icon-links a:first-child {
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
+}
+@media(max-width: 678px) {
+  .social {
+  width: 100%;
+  img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+}
 }
