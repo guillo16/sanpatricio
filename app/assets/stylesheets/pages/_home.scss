@@ -1,36 +1,33 @@
 // Specific CSS for your home-page
 .home-container {
-  background-color: rgba(250, 250, 250, 0.2);
+  background-color: white;;
   width: 100%;
   h3 {
-    font-size: 35px;
+    font-size: 45px;
     text-align: center;
     font-weight: bold;
-    margin-bottom: 2px;
-    padding-top: 30px;
+    margin-bottom: 0px;
+    padding: 20px;
+    background-color: $green;
+    color: white;
   }
-  p {
+  h5 {
+    background-color: white;
+    border-bottom: 2px solid $green;
     font-size: 22px;
-    text-align: center;
+    text-align: left;
+    padding: 8px;
+    padding-left: 30px;
+    color: $green;
   }
 }
-
-
 //Ib section
 .ib-container-1 {
   width: 100%;
 }
 
-//home event
-.home-event-wrapper {
-  background-color: white;
-  h4 {
-    text-align: center;
-    padding-top: 20px;
-  }
-}
-
 .article-button {
+  background-color: white;
   padding:60px;
   text-align: center;
 }
@@ -38,10 +35,15 @@
 @media(max-width: 600px) {
   .home-container {
     h3 {
-      font-size: 25px;
+      font-size: 28px;
+      padding: 12px;
     }
-    p {
-      font-size: 16px;
+    h5 {
+      font-size: 18px;
+      text-align: center;
     }
+  }
+  .article-button {
+    padding: 30px;
   }
 }

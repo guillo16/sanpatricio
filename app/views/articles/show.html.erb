@@ -1,4 +1,3 @@
-<%= render 'shared/main_navbar' %>
 <div class="articles-navbar mb-3">
   <h2><%= link_to articles_path(category: "Jardines") do %>Jardines<% end %></h2>
   <h2><%= link_to articles_path(category: "Primario") do %>Primario<% end %></h2>
@@ -21,3 +20,7 @@
 
   </div>
 </div>
+<div class="text-center mt-5">
+  <%= link_to 'Mas Noticias', articles_path, class: 'btn-article'  %>
+</div>
+

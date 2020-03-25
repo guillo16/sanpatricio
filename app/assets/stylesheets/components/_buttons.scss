@@ -1,17 +1,18 @@
 //home buttons
 .btn-article {
-  padding: 15px 100px;
-  background-color: transparent;
-  color: green;
+  padding: 15px 80px;
+  background-color:  #115f2e;
+  color: white;
   font-weight: bold;
   margin: 20px 0px;
-  border: 2px solid green;
+  border: 2px solid $red;
   &:hover {
     text-decoration: none;
-    background-color: lightgreen;
+    background-color: darkgreen;
+    color:grey;
   }
 }
-@media(max-width: 600px) {
+@media(max-width: 686px) {
   .btn-article {
     padding: 10px 25px;
   }
@@ -31,8 +32,12 @@
     border-color: lightgrey;
   }
 }
-@media(max-width: 600px) {
-  .btn-article {
-    padding: 10px 25px;
+
+
+@media(max-width: 323px) {
+
+  .btn-ib {
+    padding: 10px 70px;
   }
+
 }
