@@ -11,48 +11,21 @@
     background-color: $green;
     color: white;
   }
-  p {
+  h5 {
     background-color: white;
     border-bottom: 2px solid $green;
     font-size: 22px;
     text-align: left;
-
     padding: 8px;
     padding-left: 30px;
     color: $green;
-
   }
 }
 //Ib section
 .ib-container-1 {
   width: 100%;
 }
-//home event
-.home-event-wrapper {
-  background-color: white;
-  h4 {
-    font-size: 45px;
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 0px;
-    padding: 20px;
-    background-color: $green;
-    color: white;
-  }
 
-    h5 {
-    background-color: white;
-    border-bottom: 2px solid $green;
-    font-size: 22px;
-    text-align: left;
-
-    padding: 8px;
-    padding-left: 30px;
-    color: $green;
-
-  }
-
-}
 .article-button {
   padding:60px;
   text-align: center;
@@ -61,13 +34,14 @@
 @media(max-width: 600px) {
   .home-container {
     h3 {
-      font-size: 25px;
+      font-size: 28px;
     }
-    p {
-      font-size: 16px;
+    h5 {
+      font-size: 18px;
+      text-align: center;
     }
   }
   .article-button {
-  padding: 30px;
-}
+    padding: 30px;
+  }
 }
