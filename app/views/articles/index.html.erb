@@ -1,6 +1,6 @@
 
 <div class="banner-articles" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1532649538693-f3a2ec1bf8bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);">
- <h2>Noticias</h2>
+ <h2>NOTICIAS</h2>
 </div>
 <div class="articles-navbar mb-3">
   <h2><%= link_to articles_path(category: "Jardines") do %>JARDINES <% end %></h2>
@@ -36,7 +36,11 @@
     </div>
   </div>
 </section>
+<% if user_signed_in? %>
+<div class='p-5'>
+  <%= link_to 'Crear Noticia', new_article_path, class: 'btn btn-primary btn-lg btn-block'  %>
+</div>
+<% else %>
+<% end %>
 
-
-<%= link_to 'create article', new_article_path  %>
 
