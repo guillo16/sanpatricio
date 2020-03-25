@@ -12,7 +12,7 @@
     color:grey;
   }
 }
-@media(max-width: 600px) {
+@media(max-width: 686px) {
   .btn-article {
     padding: 10px 25px;
   }
@@ -32,8 +32,12 @@
     border-color: lightgrey;
   }
 }
-@media(max-width: 600px) {
-  .btn-article {
-    padding: 10px 25px;
+
+
+@media(max-width: 323px) {
+
+  .btn-ib {
+    padding: 10px 70px;
   }
+
 }
