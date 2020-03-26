@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:new, :create]
+
   def new
     @contact = Contact.new
   end
@@ -8,7 +10,7 @@ class ContactsController < ApplicationController
     @contact.request = request
     if @contact.deliver
       redirect_to root_path
-      flash[:notice] = "Thanks for your message, we will get back you soon"
+      flash[:notice] = "Gracias por su mensaje, lo contactaremos pronto"
     else
       render :new
     end
