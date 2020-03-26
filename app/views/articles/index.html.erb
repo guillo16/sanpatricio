@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="articles-container">
-      <% @articles.last(10).reverse.drop(3).each do |article| %>
+      <% @articles.last(12).reverse.drop(3).each do |article| %>
       <%= render 'shared/cards', article: article %>
       <% end %>
     </div>
