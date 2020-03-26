@@ -33,8 +33,8 @@ Article.create(user: user,
  title: 'Inaguramos el nuevo comedor',
  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156086/73188402_2556116157767850_6243152740499849216_n.jpg',
  subtitle: 'La inaguracion del nuevo comedor del Secundario',
- content1: ''
- ,created_at: '02/03/2019')
+ content1: '',
+ created_at: '02/03/2019')
 Article.create(user: user,
   category: 'Primario',
   title: 'Proteger al medio ambientee',
@@ -80,8 +80,8 @@ Article.create(user: user,
   title: 'Profesoras de Ingles visitaron la exposición P.E.P',
   subtitle: '',
   photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_602/v1585229881/EKea2fxWsAEDcld.jpg',
-  content1:'Profesoras de Ingles visitaron la exposición P.E.P. Tambien se acercaron los padres en una jornada para tomar conciencia sobre el cuidado del medio ambiente.'
-  ,created_at: '22/06/2019')
+  content1:'Profesoras de Ingles visitaron la exposición P.E.P. Tambien se acercaron los padres en una jornada para tomar conciencia sobre el cuidado del medio ambiente.',
+  created_at: '22/06/2019')
 Article.create(user: user,
   category: 'Secundario',
   title: 'Visita a la Casa historica',
@@ -112,8 +112,8 @@ Article.create(user: user,
   title: 'Visita a la Legislatura',
   subtitle: 'Los alumnos visitaron la Legislatura de la provincia',
   photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229647/secundario_legislatura.jpg',
-  content1:'Invitados por un legislador los alumnos del secundario visitaron la Legislatura. Fue una linda jornada donde los alumnos conocieron el funcionamiento de la Legislatura.'
-  ,created_at: '21/10/2019')
+  content1:'Invitados por un legislador los alumnos del secundario visitaron la Legislatura. Fue una linda jornada donde los alumnos conocieron el funcionamiento de la Legislatura.',
+  created_at: '21/10/2019')
 
 Article.create(user: user,
   category: 'I.B',
@@ -159,8 +159,8 @@ Article.create(user: user,
   subtitle: 'Los alumnos del primario colaboraron en la enseñanza de las normas de transito a los chicos de los jardines',
   photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156072/40029739_1854585191254287_6456261823657148416_o.jpg',
   content1:'Los alumnos del primario colaboraron en la enseñanza de las normas de transito a los chicos de los jardines.
-  Esta actividad se realizo acompañada por docentes y expretos en seguridad vial.'
-  ,created_at: '12/03/2020')
+  Esta actividad se realizo acompañada por docentes y expretos en seguridad vial.',
+  created_at: '12/03/2020')
 Article.create(user: user,
   category: 'Institucional',
   title: 'Las clases se suspenden por el coronavirus',
@@ -179,8 +179,8 @@ Article.create(user: user,
   When the Chinese government ordered schools to be shut down due to the COVID-19 outbreak, students and teachers at IB World Schools Shanghai American School (SAS) and Western Academy of Beijing (WAB) were on vacation for the Chinese New Year. Faculty and families were scattered across the world and unable to return to China. Both schools had to respond to the situation as quickly as possible.
   SAS leadership implemented an emergency online learning programme. In the process, they discovered that their students and teachers resided across five continents and 22 time zones. The first challenge for SAS was to figure out how to get everyone enough online learning and teaching time.
   Director of Technology Alan Preis says: “At first, learning was almost entirely asynchronous [not online simultaneously] because we assumed we’d be closed for a short time. Now, we have implemented more options for synchronous [groups online at the same time] instruction. But equitable access is a huge issue based on time zones―it is almost impossible to have all students working together with a teacher at the same time.” The Shanghai American School Distance Learning Plan continues to evolve as the school must remain closed longer than originally expected.
-  SAS has had to distribute teachers’ time across different time zones, creating shorter meeting times, more one-to-one conversations with students and more spontaneous teaching moments as students worked on their assignments. SAS leadership has been impressed by how well the teachers have responded despite the stresses of teaching in a different way as well as in a new medium. “The teachers got five years’ worth of professional learning in two weeks,” adds Preis.'
-  ,created_at: '19/03/2020')
+  SAS has had to distribute teachers’ time across different time zones, creating shorter meeting times, more one-to-one conversations with students and more spontaneous teaching moments as students worked on their assignments. SAS leadership has been impressed by how well the teachers have responded despite the stresses of teaching in a different way as well as in a new medium. “The teachers got five years’ worth of professional learning in two weeks,” adds Preis.',
+  created_at: '19/03/2020')
 Article.create(user: user,
   category: 'I.B',
   title: 'The cancellation of the May 2020 IB examinations',
