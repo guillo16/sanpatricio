@@ -167,12 +167,13 @@ Article.create(user: user,
   A continuación se encuentra el segundo cuerpo principal, dividido en tres salas: la mayor es la de las sesiones del Congreso, y la única que se conserva del edificio original. También contiene el gran candil y la mesa que presidieron las sesiones del mismo. Las sillas que acompañan a la mesa datan aproximadamente de la fecha de la declaración de la independencia.
 
   A continuación sigue el segundo patio o "patio del aljibe", que contiene ejemplares de varios árboles de la región. En ambos costados tiene algunas habitaciones menores. Un tercer patio incluye una última sala, la Galería de Homenajes en el lado norte, y el amplio patio de los sobrerrelieves y el mástil.')
-   # Article.create(user: user,
-  #   category: '',
-  #   title: '',
-  #   subtitle: '',
-  #   photo: '',
-  #   content1:'')
+   Article.create(user: user,
+    category: 'Secundario',
+    title: 'Cierre del ciclo lectivo',
+    subtitle: 'Se festejo el acto por el cierre del ciclo lectivo',
+    photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585233891/IMG_3035.jpg',
+    content1:'Se produjo el acto por el cierre del ciclo lectivo del año, padres y alumnos estuvieron presente en la entrega de distinciones a los alumnos de todos los años.',
+    created_at: '10/12/2018')
      # Article.create(user: user,
   #   category: '',
   #   title: '',
