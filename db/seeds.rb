@@ -14,39 +14,42 @@ puts 'creating user'
 User.create(email: 'user1@hotmail.com', password: '123456')
 puts 'creating articles'
 user = User.last
-Article.create(user: user, category: 'Primario',title: 'Los Alumnos empezaron el ciclo lectivo 2020', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156076/44267120_1919928638053275_7998990119052771328_o.jpg', subtitle: 'Los Alumnos del Primario empezaron el ciclo lectivo 2020 , y los padres estuvieron presentes',
- content1: 'Los Alumnos del Primario empezaron el ciclo lectivo 2020 , y los padres estuvieron presentes' )
-Article.create(user: user,
-  category: 'I.B',
-  title: 'IB schools win seven International School Awards 2020',
-  subtitle: 'The International School Awards 2020 took place in London on Monday 20th January, and IB World Schools were strongly represented amongst the nominees and winners.',
-  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585174411/Stryker-Awards-2019-Immigration-Law-Society-600px.jpg',
-  content1:'The International School of the Year Award was presented to St Andrews International School Bangkok, Thailand, for their outstanding environmental initiative aimed at addressing critical environmental challenges.')
 Article.create(user: user,
   category: 'Secundario',
-  title: 'Los Alumnos empezaron el ciclo lectivo 2020',
-  subtitle: 'Los Alumnos del Secundario empezaron el ciclo lectivo 2020',
-  photo: '',
-  content1:'Los Alumnos del Secundario empezaron el ciclo lectivo 2020.')
+  title: 'Reunion con el ministro de Educacion de la nacion',
+  subtitle: 'Los alumnos se reunieron con el ministro de Educacion de la nacion , Esteban Bullrich',
+  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229638/secundario_ministro_de_educacion.jpg',
+  content1: 'Los alumnos se reunieron con el ministro de Educacion de la nacion , Esteban Bullrich. Autoridades , profesores y alumnos fueron parte de esta jornada.',
+  created_at: '15/04/2017')
+Article.create(user: user,
+  category: 'Secundario',
+  title: 'Cierre del ciclo lectivo',
+  subtitle: 'Se festejo el acto por el cierre del ciclo lectivo',
+  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585233891/IMG_3035.jpg',
+  content1:'Se produjo el acto por el cierre del ciclo lectivo del año, padres y alumnos estuvieron presente en la entrega de distinciones a los alumnos de todos los años.',
+  created_at: '10/12/2018')
 Article.create(user: user,
  category: 'Institucional',
  title: 'Inaguramos el nuevo comedor',
  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156086/73188402_2556116157767850_6243152740499849216_n.jpg',
  subtitle: 'La inaguracion del nuevo comedor del Secundario',
- content1: '')
-Article.create(user: user,
-  category: 'Jardines',
-  title: 'Los Alumnos empezaron el ciclo lectivo 2020',
-  subtitle: 'Los Alumnos de los Jardines empezaron el ciclo lectivo 2020',
-  photo: '',
-  content1:'Los Alumnos de los Jardines empezaron el ciclo lectivo 2020, los padres estuvieron presentes en el primer dia de clases.')
+ content1: ''
+ ,created_at: '02/03/2019')
 Article.create(user: user,
   category: 'Primario',
-  title: 'Los alumnos del primario y la educacion vial',
-  subtitle: 'Los alumnos del primario colaboraron en la enseñanza de las normas de transito a los chicos de los jardines',
-  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156072/40029739_1854585191254287_6456261823657148416_o.jpg',
-  content1:'Los alumnos del primario colaboraron en la enseñanza de las normas de transito a los chicos de los jardines.
-  Esta actividad se realizo acompañada por docentes y expretos en seguridad vial.')
+  title: 'Proteger al medio ambientee',
+  subtitle: 'Los alumnos del primario presentaron sus proyectos de reciclaje y ayuda al medio ambiente',
+  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156066/77268036_2589662987746500_8735371027980222464_n.jpg',
+  content1:'En el marco de la feria de ciencia , alumnos del primario presentaron sus proyectos sobre medio ambiente y reciclaje.
+  El evento se llevo a cabo en el primario con presencia de algunos padres y expretos en reciclaje.',
+  created_at: '21/04/2019')
+Article.create(user: user,
+  category: 'Secundario',
+  title: 'Ayuda de los alumnos en los comedores de la zona',
+  subtitle: 'En el marco de la materia C.A.S , los alumnos colaboraron con el comedor "Padre Mujica" ubicado en Yerba Buena',
+  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229668/secundario_comedores.jpg',
+  content1:'En el marco de la materia C.A.S , los alumnos colaboraron con el comedor "Padre Mujica" ubicado en Yerba Buena. Felicitamos a alumnos y profesores por esta gran iniciativa.',
+  created_at: '15/05/2019')
 Article.create(user: user,
   category: 'Secundario',
   title: 'Se celebro el 25 de Mayo',
@@ -54,107 +57,31 @@ Article.create(user: user,
   photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156055/60997228_2240313369348132_358752390532300800_n.jpg',
   content1:'en conmemoracion al 25 de Mayo de 1810, los alumnos y profesores realizaron el tradicional acto.
   El 25 de mayo es una de las fechas patrias más importantes para la República Argentina, que conmemora la Revolución de Mayo, una gesta que concluyó en la constitución de la Primera Junta de Gobierno que depuso la autoridad del virrey español Baltasar Hidalgo de Cisneros sobre el Virreinato del Río de la Plata.
-  Los alumnos estuvieron acompañados por los padres que se hicieron presente para el acto patrio. ')
-Article.create(user: user,
-  category: 'Primario',
-  title: 'Proteger al medio ambientee',
-  subtitle: 'Los alumnos del primario presentaron sus proyectos de reciclaje y ayuda al medio ambiente',
-  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156066/77268036_2589662987746500_8735371027980222464_n.jpg',
-  content1:'En el marco de la feria de ciencia , alumnos del primario presentaron sus proyectos sobre medio ambiente y reciclaje.
-  El evento se llevo a cabo en el primario con presencia de algunos padres y expretos en reciclaje.')
+  Los alumnos estuvieron acompañados por los padres que se hicieron presente para el acto patrio.',
+  created_at: '25/05/2019')
 Article.create(user: user,
   category: 'Secundario',
   title: 'Se celebro el dia de la Bandera',
   subtitle: 'Los alumnos juraron la bandera en el acto realizado en el Secundario ',
   photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585161507/13483383_1073075972738550_5614390916278140258_o.jpg',
   content1:'En el marco de los festejos por el dia de la bandera los alumnos de tercer año realizaron la jura de la bandera.
-  Estuvieron acompañados por sus padres en este importante momento.')
-Article.create(user: user,
-  category: 'Institucional',
-  title: 'Las clases se suspenden por el coronavirus',
-  subtitle: 'El presidente decreto la suspencion de las clases en todo el pais',
-  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_561/v1585230669/ETLpVEmXYAEaSrN.jpg',
-  content1:'El presidente decreto la suspencion de las clases en todo el pais.
-  Así lo anunciará hoy el Gobierno, luego de un encuentro entre expertos y funcionarios nacionales que liderará, después de las 14, el ministro de Educación, Nicolás Trotta, que ayer había comenzado a resolver medidas que se encaminaban a esa definición.
-  Ayer, horas antes, Educación había habilitado a las universidades de todo el país no solo a suspender clases presenciales por 14 días, sino también a permitir que estudiantes y docentes con patologías previas pudieran ausentarse de las aulas de manera justificada.')
-Article.create(user: user,
-  category: 'I.B',
-  title: 'The cancellation of the May 2020 IB examinations',
-  subtitle: 'For the first time in its history, the IB will not hold a May exam session due to COVID-19. We speak with IB Director General Siva Kumari to hear more about the decision.',
-  photo: '',
-  content1:'What led up to your unprecedented decision to not hold exams?
-  It’s been two intensive months of day-to-day decisions about the health and safety of our international community. In late December/early January, we were monitoring and reacting to what was happening in our schools in China, Japan and South Korea. Those schools provided insights on the impact of shutdowns to come. We paid close attention as the epidemic quickly grew to a global pandemic. All the while, we were thinking through scenarios for all situations and, “what if’s”.
-
-  Simultaneously, we as an organization started migrating to virtual. Our Singapore office transitioned to virtual working seven weeks ago and so have all other locations in the last two weeks. Our 700 employees worldwide are continuing to do what we are here to do, which is to provide services to schools, now as a suddenly virtual organization.
-
-    The impact of the pandemic on our students and their ability to go through a fair assessment process was a major focal point throughout this entire process.
-
-    Due to the nature of the IB programme, we could not make the decision one country at a time. We had to make the right decision for our entire global community of teachers, examiners and students.')
-Article.create(user: user,
-  category: 'I.B',
-  title: 'Students globally celebrate results',
-  subtitle: 'More than 18,700 Diploma Programme (DP) and Career-related Programme (CP) students around the world will receive their results today',
-  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585228465/ENXB6ViXsAchvTK.png',
-  content1:'“I warmly congratulate all DP and CP graduates”, said Dr Siva Kumari, Director General of the International Baccalaureate. “I know that your hard work and commitment will be rewarded—both in the immediate term, with the highly-deserved award of your diplomas, and in the future, with enhanced prospects for your further education, your careers, and your lives as a whole.
-
-  “You have been taught valuable skills for your future in the fourth industrial revolution, in which you will face wholly new contexts and challenges.
-
-  “Research suggests that an IB education provides skills that both universities and employers value, with independent, critical thinking and the ability to work flexibly and cooperatively. I am confident that you’ve been exceptionally well prepared to make the most of new opportunities, and I wish you all the best in whichever direction you choose to follow.
-
-  “I would also like to thank all the IB educators—teachers, heads, coordinators—and all those in our great and growing community, including parents, who help to shape succeeding generations of IB students with their drive and passion, enriching lives and making the world a better place through education.”')
-Article.create(user: user,
-  category: 'I.B',
-  title: 'IB students show creativity, caring and innovation',
-  subtitle: 'In the 50 years since the IB was founded, one thing has remained certain and steadfast: The inspirational drive with which IB students face challenges and aim to make the world a better place.',
-  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_637/v1585229052/ES62R6bXsAUJh_Q.jpg',
-  content1:'Participants in the #generationIB campaign were asked to form groups, pick themes, and think about how they could begin to solve some of the greatest challenges humanity faces right now. Teams were established in schools all over the world, themes were chosen, topics were meticulously researched, and incoming pictures and messages of the ongoing work impressed us with their detailed, critical and creative approaches.
-
-  Among some of the incredible projects submitted, the Genes for Jeans project in Bahrain worked on researching sickle cell disease and the team spoke with patients who have the illness. The team also organised a fundraising event. In India, students worked on setting up their own NGO to address the issue of unused medicines, and managed to organise the supervised redistribution of 137 kilos of medicine to areas in need.
-
-  In Argentina and the US, Skype calls were organised between young PYP student teams to discuss healthy eating habits. In India, students invented a cost-effective water purifier. And in Hawaii, the Wipeout Crew (pictured above) took on coastal environmental challenges.
-
-  Solutions are still coming in across all of the IB’s social media channels, and we’ll continue to share the inspiration.')
-Article.create(user: user,
-  category: 'I.B',
-  title: 'Schools respond to COVID-19 outbreak by going virtual',
-  subtitle: 'Due to the COVID-19, also known as Coronavirus, emergency, many IB World Schools are successfully using online learning to continue students’ education, says IB Curriculum Manager Pilar Quezzaire. ',
-  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_555/v1585229134/Schools-respond-to-COVID-19-outbreak-by-going-virtual.png',
-  content1:'Coordinating teachers and students
-  When the Chinese government ordered schools to be shut down due to the COVID-19 outbreak, students and teachers at IB World Schools Shanghai American School (SAS) and Western Academy of Beijing (WAB) were on vacation for the Chinese New Year. Faculty and families were scattered across the world and unable to return to China. Both schools had to respond to the situation as quickly as possible.
-  SAS leadership implemented an emergency online learning programme. In the process, they discovered that their students and teachers resided across five continents and 22 time zones. The first challenge for SAS was to figure out how to get everyone enough online learning and teaching time.
-  Director of Technology Alan Preis says: “At first, learning was almost entirely asynchronous [not online simultaneously] because we assumed we’d be closed for a short time. Now, we have implemented more options for synchronous [groups online at the same time] instruction. But equitable access is a huge issue based on time zones―it is almost impossible to have all students working together with a teacher at the same time.” The Shanghai American School Distance Learning Plan continues to evolve as the school must remain closed longer than originally expected.
-  SAS has had to distribute teachers’ time across different time zones, creating shorter meeting times, more one-to-one conversations with students and more spontaneous teaching moments as students worked on their assignments. SAS leadership has been impressed by how well the teachers have responded despite the stresses of teaching in a different way as well as in a new medium. “The teachers got five years’ worth of professional learning in two weeks,” adds Preis.')
+  Estuvieron acompañados por sus padres en este importante momento.',
+  created_at: '20/06/2019')
 Article.create(user: user,
   category: 'Primario',
   title: 'Exposición P.E.P en el primario ',
   subtitle: 'Educación: la conciencia es bilingüe en el colegio San Patricio',
   photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229618/feria_de_ciencias_primario.jpg',
   content1:'Durante la jornada del "Programa de la escuela Primaria".
-  Durante la jornada los alumnos expusieron trabajos con un sello ecologico' )
+  Durante la jornada los alumnos expusieron trabajos con un sello ecologico',
+  created_at: '22/06/2019' )
 Article.create(user: user,
   category: 'Primario',
   title: 'Profesoras de Ingles visitaron la exposición P.E.P',
   subtitle: '',
   photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_602/v1585229881/EKea2fxWsAEDcld.jpg',
-  content1:'Profesoras de Ingles visitaron la exposición P.E.P. Tambien se acercaron los padres en una jornada para tomar conciencia sobre el cuidado del medio ambiente.')
-Article.create(user: user,
-  category: 'Secundario',
-  title: 'Ayuda de los alumnos en los comedores de la zona',
-  subtitle: 'En el marco de la materia C.A.S , los alumnos colaboraron con el comedor "Padre Mujica" ubicado en Yerba Buena',
-  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229668/secundario_comedores.jpg',
-  content1:'En el marco de la materia C.A.S , los alumnos colaboraron con el comedor "Padre Mujica" ubicado en Yerba Buena. Felicitamos a alumnos y profesores por esta gran iniciativa.')
-Article.create(user: user,
-  category: 'Secundario',
-  title: 'Reunion con el ministro de Educacion de la nacion',
-  subtitle: 'Los alumnos se reunieron con el ministro de Educacion de la nacion , Esteban Bullrich',
-  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229638/secundario_ministro_de_educacion.jpg',
-  content1: 'Los alumnos se reunieron con el ministro de Educacion de la nacion , Esteban Bullrich. Autoridades , profesores y alumnos fueron parte de esta jornada.')
-Article.create(user: user,
-  category: 'Secundario',
-  title: 'Visita a la Legislatura',
-  subtitle: 'Los alumnos visitaron la Legislatura de la provincia',
-  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229647/secundario_legislatura.jpg',
-  content1:'Invitados por un legislador los alumnos del secundario visitaron la Legislatura. Fue una linda jornada donde los alumnos conocieron el funcionamiento de la Legislatura.')
+  content1:'Profesoras de Ingles visitaron la exposición P.E.P. Tambien se acercaron los padres en una jornada para tomar conciencia sobre el cuidado del medio ambiente.'
+  ,created_at: '22/06/2019')
 Article.create(user: user,
   category: 'Secundario',
   title: 'Visita a la Casa historica',
@@ -166,32 +93,119 @@ Article.create(user: user,
 
   A continuación se encuentra el segundo cuerpo principal, dividido en tres salas: la mayor es la de las sesiones del Congreso, y la única que se conserva del edificio original. También contiene el gran candil y la mesa que presidieron las sesiones del mismo. Las sillas que acompañan a la mesa datan aproximadamente de la fecha de la declaración de la independencia.
 
-  A continuación sigue el segundo patio o "patio del aljibe", que contiene ejemplares de varios árboles de la región. En ambos costados tiene algunas habitaciones menores. Un tercer patio incluye una última sala, la Galería de Homenajes en el lado norte, y el amplio patio de los sobrerrelieves y el mástil.')
-   Article.create(user: user,
-    category: 'Secundario',
-    title: 'Cierre del ciclo lectivo',
-    subtitle: 'Se festejo el acto por el cierre del ciclo lectivo',
-    photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585233891/IMG_3035.jpg',
-    content1:'Se produjo el acto por el cierre del ciclo lectivo del año, padres y alumnos estuvieron presente en la entrega de distinciones a los alumnos de todos los años.',
-    created_at: '10/12/2018')
-     # Article.create(user: user,
-  #   category: '',
-  #   title: '',
-  #   subtitle: '',
-  #   photo: '',
-  #   content1:'')
-     # Article.create(user: user,
-  #   category: '',
-  #   title: '',
-  #   subtitle: '',
-  #   photo: '',
-  #   content1:'')
+  A continuación sigue el segundo patio o "patio del aljibe", que contiene ejemplares de varios árboles de la región. En ambos costados tiene algunas habitaciones menores. Un tercer patio incluye una última sala, la Galería de Homenajes en el lado norte, y el amplio patio de los sobrerrelieves y el mástil.',
+  created_at: '29/06/2019')
+Article.create(user: user,
+  category: 'I.B',
+  title: 'IB students show creativity, caring and innovation',
+  subtitle: 'In the 50 years since the IB was founded, one thing has remained certain and steadfast: The inspirational drive with which IB students face challenges and aim to make the world a better place.',
+  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_637/v1585229052/ES62R6bXsAUJh_Q.jpg',
+  content1:'Participants in the #generationIB campaign were asked to form groups, pick themes, and think about how they could begin to solve some of the greatest challenges humanity faces right now. Teams were established in schools all over the world, themes were chosen, topics were meticulously researched, and incoming pictures and messages of the ongoing work impressed us with their detailed, critical and creative approaches.
+
+  Among some of the incredible projects submitted, the Genes for Jeans project in Bahrain worked on researching sickle cell disease and the team spoke with patients who have the illness. The team also organised a fundraising event. In India, students worked on setting up their own NGO to address the issue of unused medicines, and managed to organise the supervised redistribution of 137 kilos of medicine to areas in need.
+
+  In Argentina and the US, Skype calls were organised between young PYP student teams to discuss healthy eating habits. In India, students invented a cost-effective water purifier. And in Hawaii, the Wipeout Crew (pictured above) took on coastal environmental challenges.
+  Solutions are still coming in across all of the IB’s social media channels, and we’ll continue to share the inspiration.',
+  created_at: '24/09/2019')
+Article.create(user: user,
+  category: 'Secundario',
+  title: 'Visita a la Legislatura',
+  subtitle: 'Los alumnos visitaron la Legislatura de la provincia',
+  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229647/secundario_legislatura.jpg',
+  content1:'Invitados por un legislador los alumnos del secundario visitaron la Legislatura. Fue una linda jornada donde los alumnos conocieron el funcionamiento de la Legislatura.'
+  ,created_at: '21/10/2019')
+
+Article.create(user: user,
+  category: 'I.B',
+  title: 'Students globally celebrate results',
+  subtitle: 'More than 18,700 Diploma Programme (DP) and Career-related Programme (CP) students around the world will receive their results today',
+  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585228465/ENXB6ViXsAchvTK.png',
+  content1:'“I warmly congratulate all DP and CP graduates”, said Dr Siva Kumari, Director General of the International Baccalaureate. “I know that your hard work and commitment will be rewarded—both in the immediate term, with the highly-deserved award of your diplomas, and in the future, with enhanced prospects for your further education, your careers, and your lives as a whole.
+  “You have been taught valuable skills for your future in the fourth industrial revolution, in which you will face wholly new contexts and challenges.
+  “Research suggests that an IB education provides skills that both universities and employers value, with independent, critical thinking and the ability to work flexibly and cooperatively. I am confident that you’ve been exceptionally well prepared to make the most of new opportunities, and I wish you all the best in whichever direction you choose to follow.
+  “I would also like to thank all the IB educators—teachers, heads, coordinators—and all those in our great and growing community, including parents, who help to shape succeeding generations of IB students with their drive and passion, enriching lives and making the world a better place through education.”',
+  created_at: '19/12/2019')
+
+Article.create(user: user, category: 'Primario',title: 'Los Alumnos empezaron el ciclo lectivo 2020', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156076/44267120_1919928638053275_7998990119052771328_o.jpg', subtitle: 'Los Alumnos del Primario empezaron el ciclo lectivo 2020 , y los padres estuvieron presentes',
+ content1: 'Los Alumnos del Primario empezaron el ciclo lectivo 2020 , y los padres estuvieron presentes',
+ created_at: '03/03/2020' )
+Article.create(user: user,
+  category: 'I.B',
+  title: 'IB schools win seven International School Awards 2020',
+  subtitle: 'The International School Awards 2020 took place in London on Monday 20th January, and IB World Schools were strongly represented amongst the nominees and winners.',
+  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585174411/Stryker-Awards-2019-Immigration-Law-Society-600px.jpg',
+  content1:'The International School of the Year Award was presented to St Andrews International School Bangkok, Thailand, for their outstanding environmental initiative aimed at addressing critical environmental challenges.',
+  created_at: '20/02/2020')
+
+Article.create(user: user,
+  category: 'Secundario',
+  title: 'Los Alumnos empezaron el ciclo lectivo 2020',
+  subtitle: 'Los Alumnos del Secundario empezaron el ciclo lectivo 2020',
+  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585233917/IMG_3037.jpg',
+  content1:'Los Alumnos del Secundario empezaron el ciclo lectivo 2020.',
+  created_at: '03/03/2020')
+
+Article.create(user: user,
+  category: 'Jardines',
+  title: 'Los Alumnos empezaron el ciclo lectivo 2020',
+  subtitle: 'Los Alumnos de los Jardines empezaron el ciclo lectivo 2020',
+  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156076/44267120_1919928638053275_7998990119052771328_o.jpg',
+  content1:'Los Alumnos de los Jardines empezaron el ciclo lectivo 2020,
+  los padres estuvieron presentes en el primer dia de clases.',
+  created_at: '03/03/2020')
+Article.create(user: user,
+  category: 'Primario',
+  title: 'Los alumnos del primario y la educacion vial',
+  subtitle: 'Los alumnos del primario colaboraron en la enseñanza de las normas de transito a los chicos de los jardines',
+  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156072/40029739_1854585191254287_6456261823657148416_o.jpg',
+  content1:'Los alumnos del primario colaboraron en la enseñanza de las normas de transito a los chicos de los jardines.
+  Esta actividad se realizo acompañada por docentes y expretos en seguridad vial.'
+  ,created_at: '12/03/2020')
+Article.create(user: user,
+  category: 'Institucional',
+  title: 'Las clases se suspenden por el coronavirus',
+  subtitle: 'El presidente decreto la suspencion de las clases en todo el pais',
+  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_561/v1585230669/ETLpVEmXYAEaSrN.jpg',
+  content1:'El presidente decreto la suspencion de las clases en todo el pais.
+  Así lo anunciará hoy el Gobierno, luego de un encuentro entre expertos y funcionarios nacionales que liderará, después de las 14, el ministro de Educación, Nicolás Trotta, que ayer había comenzado a resolver medidas que se encaminaban a esa definición.
+  Ayer, horas antes, Educación había habilitado a las universidades de todo el país no solo a suspender clases presenciales por 14 días, sino también a permitir que estudiantes y docentes con patologías previas pudieran ausentarse de las aulas de manera justificada.',
+  created_at: '16/03/2020')
+Article.create(user: user,
+  category: 'I.B',
+  title: 'Schools respond to COVID-19 outbreak by going virtual',
+  subtitle: 'Due to the COVID-19, also known as Coronavirus, emergency, many IB World Schools are successfully using online learning to continue students’ education, says IB Curriculum Manager Pilar Quezzaire. ',
+  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_555/v1585229134/Schools-respond-to-COVID-19-outbreak-by-going-virtual.png',
+  content1:'Coordinating teachers and students
+  When the Chinese government ordered schools to be shut down due to the COVID-19 outbreak, students and teachers at IB World Schools Shanghai American School (SAS) and Western Academy of Beijing (WAB) were on vacation for the Chinese New Year. Faculty and families were scattered across the world and unable to return to China. Both schools had to respond to the situation as quickly as possible.
+  SAS leadership implemented an emergency online learning programme. In the process, they discovered that their students and teachers resided across five continents and 22 time zones. The first challenge for SAS was to figure out how to get everyone enough online learning and teaching time.
+  Director of Technology Alan Preis says: “At first, learning was almost entirely asynchronous [not online simultaneously] because we assumed we’d be closed for a short time. Now, we have implemented more options for synchronous [groups online at the same time] instruction. But equitable access is a huge issue based on time zones―it is almost impossible to have all students working together with a teacher at the same time.” The Shanghai American School Distance Learning Plan continues to evolve as the school must remain closed longer than originally expected.
+  SAS has had to distribute teachers’ time across different time zones, creating shorter meeting times, more one-to-one conversations with students and more spontaneous teaching moments as students worked on their assignments. SAS leadership has been impressed by how well the teachers have responded despite the stresses of teaching in a different way as well as in a new medium. “The teachers got five years’ worth of professional learning in two weeks,” adds Preis.'
+  ,created_at: '19/03/2020')
+Article.create(user: user,
+  category: 'I.B',
+  title: 'The cancellation of the May 2020 IB examinations',
+  subtitle: 'For the first time in its history, the IB will not hold a May exam session due to COVID-19. We speak with IB Director General Siva Kumari to hear more about the decision.',
+  photo: '',
+  content1:'What led up to your unprecedented decision to not hold exams?
+  It’s been two intensive months of day-to-day decisions about the health and safety of our international community. In late December/early January, we were monitoring and reacting to what was happening in our schools in China, Japan and South Korea. Those schools provided insights on the impact of shutdowns to come. We paid close attention as the epidemic quickly grew to a global pandemic. All the while, we were thinking through scenarios for all situations and, “what if’s”.
+  Simultaneously, we as an organization started migrating to virtual. Our Singapore office transitioned to virtual working seven weeks ago and so have all other locations in the last two weeks. Our 700 employees worldwide are continuing to do what we are here to do, which is to provide services to schools, now as a suddenly virtual organization.
+    The impact of the pandemic on our students and their ability to go through a fair assessment process was a major focal point throughout this entire process.
+    Due to the nature of the IB programme, we could not make the decision one country at a time. We had to make the right decision for our entire global community of teachers, examiners and students.',
+    created_at: '20/03/2020')
    # Article.create(user: user,
   #   category: '',
   #   title: '',
   #   subtitle: '',
   #   photo: '',
-  #   content1:'')
+  #   content1:'',
+  # created_at: '')
+   # Article.create(user: user,
+  #   category: '',
+  #   title: '',
+  #   subtitle: '',
+  #   photo: '',
+  #   content1:'',
+  # created_at: '')
   puts 'creating events'
   Event.create(user: user, title: 'Dia de la independencia', description: 'Se celebra el 9 de julio el dia de nuestra independencia los esperamos a todos', date: '09/07/2020', time: '08', photo: 'https://www.noticiasdel6.com/wp-content/uploads/2018/06/3-1.gif')
   Event.create(user: user, title: 'Dia de la bandera', description: 'Se celebra el 20 de junio el dia de nuestra bandera los esperamos a todos', date: '20/06/2020', time: '08',
