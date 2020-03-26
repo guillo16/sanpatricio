@@ -185,7 +185,7 @@ Article.create(user: user,
   category: 'I.B',
   title: 'The cancellation of the May 2020 IB examinations',
   subtitle: 'For the first time in its history, the IB will not hold a May exam session due to COVID-19. We speak with IB Director General Siva Kumari to hear more about the decision.',
-  photo: '',
+  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585173597/GZTLMSWJK5AMLAZ6MAI7J4CVY4.jpg',
   content1:'What led up to your unprecedented decision to not hold exams?
   It’s been two intensive months of day-to-day decisions about the health and safety of our international community. In late December/early January, we were monitoring and reacting to what was happening in our schools in China, Japan and South Korea. Those schools provided insights on the impact of shutdowns to come. We paid close attention as the epidemic quickly grew to a global pandemic. All the while, we were thinking through scenarios for all situations and, “what if’s”.
   Simultaneously, we as an organization started migrating to virtual. Our Singapore office transitioned to virtual working seven weeks ago and so have all other locations in the last two weeks. Our 700 employees worldwide are continuing to do what we are here to do, which is to provide services to schools, now as a suddenly virtual organization.
