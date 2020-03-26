@@ -1,26 +1,26 @@
 <div class="container">
   <div class="form-container">
-    <p><%= link_to 'San Patricio', root_path  %> > contact form</p>
-    <h2>Contact Form</h2>
+    <p><%= link_to 'San Patricio', root_path  %> > contacto</p>
+    <h2>Contacto</h2>
     <%= simple_form_for @contact do |f| %>
-    <h3>Name<strong style="color:red; font-size: 16px;">*</strong></h3>
+    <h3>Nombre<strong style="color:red; font-size: 16px;">*</strong></h3>
     <div class="form-group">
       <%= f.input :name, input_html: { class: "form-control form-control-lg"}, label: false%>
     </div>
-    <h3>Email address<strong style="color:red; font-size: 16px;">*</strong></h3>
+    <h3>Email<strong style="color:red; font-size: 16px;">*</strong></h3>
     <div class="form-group">
-      <%= f.input :email, input_html: { class: "form-control form-control-lg"}, label: false, placeholder: "name@example.com" %>
+      <%= f.input :email, input_html: { class: "form-control form-control-lg"}, label: false, placeholder: "nombre@mail.com" %>
     </div>
-    <h3>Message<strong style="color:red; font-size: 16px;">*</strong></h3>
+    <h3>Mensaje<strong style="color:red; font-size: 16px;">*</strong></h3>
     <div class="form-group">
      <%= f.input :message, :as => :text, input_html: { class: "form-control", id:"exampleFormControlTextarea1", rows:"5" }, label: false %>
     </div>
-    <h4>Please enter the details of your request. A member of our support staff will respond as soon as possible.</h4>
+    <h4>Por favor escriba su mensaje. Un miembro de nuestro equipo le respondera lo mas rapido posible.</h4>
     <div class="hidden">
       <%= f.input :nickname %>
     </div>
     <div class="guillo w-100">
-      <%= f.button :submit, class: "btn btn-primary btn-lg btn-block" %>
+      <%= f.submit 'Enviar Mensaje', class: "btn btn-primary btn-lg btn-block" %>
     </div>
     <% end %>
   </div>
