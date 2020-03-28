@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'conections/new'
+  get 'conections/create'
+  get 'conections/index'
+  get 'conections/show'
   get 'events/index'
   get 'events/show'
   get 'events/new'
