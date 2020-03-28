@@ -1,3 +1,4 @@
+<% if current_user.admin? %>
 <div class="conection-wrapper">
   <h1>Mensajes</h1>
   <div class="conection-container">
@@ -20,32 +21,35 @@
            <td><%= conection.name %></td>
            <td> <%= link_to 'Ver Mensaje' , conection_path(conection), class: 'btn btn-primary btn-md' %>
            </td>
-          </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-    <div class="table-mobile">
-      <table class="table table-striped table-hover">
-        <caption>Lista de mensajes</caption>
-        <thead>
-          <tr>
-            <th scope="col">Destinatario</th>
-            <th scope="col">Nombre</th>
-            <th scope="col"></th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @conections.each do |conection| %>
-          <tr >
-           <td><%= conection.building%></td>
-           <td><%= conection.name %></td>
-           <td><%= link_to 'Entrar' , conection_path(conection), class: 'btn btn-primary btn-sm' %>
-           </td>
-          </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
+         </tr>
+         <% end %>
+       </tbody>
+     </table>
+   </div>
+   <div class="table-mobile">
+    <table class="table table-striped table-hover">
+      <caption>Lista de mensajes</caption>
+      <thead>
+        <tr>
+          <th scope="col">Destinatario</th>
+          <th scope="col">Nombre</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @conections.each do |conection| %>
+        <tr >
+         <td><%= conection.building%></td>
+         <td><%= conection.name %></td>
+         <td><%= link_to 'Entrar' , conection_path(conection), class: 'btn btn-primary btn-sm' %>
+         </td>
+       </tr>
+       <% end %>
+     </tbody>
+   </table>
  </div>
 </div>
+</div>
+<% else %>
+<%= render 'shared/denied' %>
+<% end %>

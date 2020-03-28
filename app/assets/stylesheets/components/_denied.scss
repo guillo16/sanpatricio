@@ -1,0 +1,33 @@
+.denied-container {
+  height: 90vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  h2 {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+}
+
+@media(max-width: 686px) {
+  .denied-container {
+    img {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: white;
+      font-size: 30px;
+      margin-bottom: 20px;
+
+    }
+  }
+
+}
