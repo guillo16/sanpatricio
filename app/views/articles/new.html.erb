@@ -1,4 +1,4 @@
-
+<% if current_user.admin? %>
 <div class="container">
   <div class="article-new-container">
     <h2>Crear una noticia</h2>
@@ -14,3 +14,6 @@
     <% end %>
   </div>
 </div>
+<% else %>
+<%= render 'shared/denied' %>
+<% end %>
