@@ -4,12 +4,6 @@
 <div class="event_navbar">
   <h2>PROXIMOS EVENTOS <i class="fas fa-caret-down"></i></h2>
 </div>
-<% if user_signed_in? %>
-<div class='p-5'>
-  <%= link_to 'Create Event', new_event_path, class: 'btn btn-primary btn-lg btn-block'  %>
-</div>
-<% else %>
-<% end %>
 <div class="wrapper-event">
   <% @events.last(10).each do |event| %>
   <%= render 'shared/event-cards', event: event %>
