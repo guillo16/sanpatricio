@@ -6,7 +6,7 @@ class ConectionsController < ApplicationController
   end
 
   def show
-    @conection = Conection.find(paramas[:id])
+    @conection = Conection.find(params[:id])
   end
 
   def new
@@ -21,6 +21,12 @@ class ConectionsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @conection = Conection.find(params[:id])
+    @conection.delete
+    redirect_to conections_path
   end
 
   private

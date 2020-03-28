@@ -1,2 +1,12 @@
-<h1>Conections#show</h1>
-<p>Find me in app/views/conections/show.html.erb</p>
+<div class="conection-show-container">
+  <h2><%= @conection.building %></h2>
+  <h3><strong>Email:</strong> <%= @conection.email %></h3>
+  <h3><strong>Nombre:</strong> <%= @conection.name %></h3>
+  <h3><strong>Mensage:</strong></h3>
+  <p><%= @conection.message %></p>
+</div>
+
+
+
+<%= link_to 'Atras', conections_path, class: 'btn btn-primary btn-lg'  %> <br>
+<%= link_to "Eliminar Mensaje", @conection, method: "delete",  data: {:confirm => "Estas Seguro de que quieres destruir el mensaje" } , class: 'btn btn-danger btn-lg'  %>

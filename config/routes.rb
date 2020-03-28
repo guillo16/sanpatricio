@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :articles
   resources :contacts, only: [:new, :create]
-  resources :conections, exept: [:update, :edit, :destroy]
+  resources :conections, exept: [:update, :edit]
 
   get 'about', to: 'pages#about'
   get 'ib', to: 'pages#ib'
