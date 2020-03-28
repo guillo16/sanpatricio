@@ -1,0 +1,30 @@
+<br><br><br><br><br>
+<%= @user.email %>
+<%= link_to 'crear noticia', new_article_path  %>
+<%= link_to 'crear evento', new_article_path  %>
+
+
+
+
+
+
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Usuario</th>
+      <th scope="col">Creado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each_with_index do | user, index| %>
+    <% users = index + 1 %>
+    <tr>
+      <th scope="row"><%= users %></th>
+      <td><%= user.email %></td>
+      <td><%= user.created_at.strftime('%D/%M/%Y - %H:%M') %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
