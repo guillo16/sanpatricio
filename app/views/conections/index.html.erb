@@ -1,10 +1,40 @@
-<h1>Mensajes</h1>
-<% @conections.each do |conection| %>
-<%= link_to conection_path(conection) do %>
-  <h2><%= conection.building %></h2>
-  <h3><%= conection.name %></h3>
-  <h3><%= conection.email %></h3>
-  <p><%= conection.message %></p>
-<% end %>
-<% end %>
+<div class="conection-wrapper">
+  <h1>Mensajes</h1>
+  <div class="conection-container">
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Destinatario</th>
+          <th scope="col">Email</th>
+          <th scope="col">Nombre</th>
+
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @conections.each do |conection| %>
+
+
+
+
+        <tr>
+          <td> <%= conection.building%></td>
+          <td><%= conection.email %></td>
+          <td><%= conection.name %></td>
+          <td> <%= link_to 'Ver Mensaje' , conection_path(conection) %></td>
+          <% end %>
+        </tr>
+
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>
+
+
+
 
