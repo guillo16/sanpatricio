@@ -1,3 +1,4 @@
+<% if current_user.admin? %>
 <div class="container p-5 mt-5">
   <h1>Events#new</h1>
 
@@ -10,4 +11,6 @@
   <%= f.submit class: 'btn btn-primary btn-lg btn-block'%>
   <% end %>
 </div>
-
+<% else %>
+<%= render 'shared/denied' %>
+<% end %>

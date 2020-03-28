@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'events/index'
-  get 'events/show'
-  get 'events/new'
+
   devise_for :users
   root to: 'pages#home'
 
   resources :articles
   resources :contacts, only: [:new, :create]
+  resources :conections, exept: [:update, :edit]
 
   get 'about', to: 'pages#about'
   get 'ib', to: 'pages#ib'
