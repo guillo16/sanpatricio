@@ -1,22 +1,24 @@
 .footer {
   text-align: center;
   padding: 10px;
-  background-color: rgba(20, 20, 20, 0.7);
+  background-color: white;
+  box-shadow: 1px 1px 10px lightgrey;
   h3 {
     font-size: 15px;
-    margin-bottom: 5px;
-    color: white;
+    margin-bottom: 0px;
+    color: rgb(74, 73, 74);
   }
   p {
     margin-bottom: 0px;
+    margin-right: 10px;
     font-size: 18px;
-    color: white;
+    color: rgb(74, 73, 74);
   }
 }
 .footer-content {
   margin-bottom: 10px;
   a {
-    color: white;
+    color: rgb(74, 73, 74);
     font-size: 14px;
   }
   p {

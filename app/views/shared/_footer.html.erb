@@ -1,15 +1,14 @@
 <div class="footer">
-  <div class="footer-content">
+  <div class="footer-content d-flex justify-content-center">
     <p><%= link_to 'Direcciones & Telefono', "#" %></p>
     <p><a href="http://sanpatricio.suronline.net" target="_blank">Campus Virtual</a></p>
     <% if user_signed_in? %>
-    <p><%= link_to "Log out", destroy_user_session_path, method: :delete %></p>
+    <p><%= link_to "Cerrar sesíon", destroy_user_session_path, method: :delete %></p>
     <% else %>
-    <p><%= link_to "Login", new_user_session_path %></p>
+    <p><%= link_to "Inicias sesíon", new_user_session_path %></p>
     <% end %>
   </div>
-  <h3>  Copyright © Colegio San Patricio. Todos los derechos reservados</h3>
-  <p>Made by <%= link_to 'GV-WEB', 'https://gwwebsite.herokuapp.com', target: "blank" %></p>
+  <h3>© 2020 Colegio San Patricio - Made by <%= link_to 'GV-WEB', 'https://gwwebsite.herokuapp.com', target: "blank" %></h3>
 </div>
 
 
