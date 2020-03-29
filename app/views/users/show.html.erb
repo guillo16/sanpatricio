@@ -4,38 +4,13 @@
     <img src="https://res.cloudinary.com/san-patricio/image/upload/c_scale,w_260/v1585504992/st-patricks-day-1272034_960_720_bxlqpj.png" alt="">
     <h2><strong>Email:</strong> <%= @user.email %></h2>
   </div>
-  <h2 class="title-green">TAREAS <i class="fas fa-angle-down"></i></h2>
-  <div class="user-container">
-    <div class="user-links">
-      <%= link_to 'crear noticia', new_article_path, class: "btn btn-secondary btn-lg btn-block"  %>
-      <%= link_to 'crear evento', new_event_path, class: "btn btn-primary btn-lg btn-block" %>
-    </div>
-  </div>
-  <h2 class="title-green">LISTA DE USUARIOS <i class="fas fa-angle-down"></i></h2>
-  <div class="user-table">
+  <% if current_user.admin? %>
+  <%= render 'adminpanel' %>
+  <% else %>
+  <%= render 'userpanel' %>
+  <% end %>
+</div>
 
-    <table class="table">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col">N</th>
-          <th scope="col">Usuario</th>
-          <th scope="col">Creado</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @users.each_with_index do | user, index| %>
-        <% users = index + 1 %>
-        <tr>
-          <th scope="row"><%= users %></th>
-          <td><%= user.email %></td>
-          <td><%= user.created_at.strftime('%y/%m/%Y a las %H:%m') %></td>
-        </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
-</div>
-</div>
 
 
 
