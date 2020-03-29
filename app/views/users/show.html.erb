@@ -1,0 +1,13 @@
+<%= render 'shared/main_navbar' %>
+<div class="user-wrapper">
+  <h1>BIENVENIDO</h1>
+  <div class="user-avatar ">
+    <img src="https://res.cloudinary.com/san-patricio/image/upload/c_scale,w_260/v1585504992/st-patricks-day-1272034_960_720_bxlqpj.png" alt="">
+    <h2><strong>Email:</strong> <%= @user.email %></h2>
+  </div>
+  <% if current_user.admin? %>
+  <%= render 'adminpanel' %>
+  <% else %>
+  <%= render 'userpanel' %>
+  <% end %>
+</div>
