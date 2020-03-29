@@ -1,10 +1,12 @@
-<br><br><br><br><br>
+<div class="user-wrapper">
+  <h1>BIENVENIDO</h1>
+  <h3>Usuario </h3>
+</div>
+
+
 <%= @user.email %>
 <%= link_to 'crear noticia', new_article_path  %>
 <%= link_to 'crear evento', new_article_path  %>
-
-
-
 
 
 
@@ -23,7 +25,7 @@
     <tr>
       <th scope="row"><%= users %></th>
       <td><%= user.email %></td>
-      <td><%= user.created_at.strftime('%D/%M/%Y - %H:%M') %></td>
+      <td><%= user.created_at.strftime('%y/%m/%Y a las %H:%m') %></td>
     </tr>
     <% end %>
   </tbody>
