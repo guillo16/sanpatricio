@@ -6,7 +6,7 @@
 }
 .login-container {
   width: 400px;
-  margin: 20px auto;
+  margin: 50px auto;
   padding: 20px;
   h2 {
     font-size: 22px;
@@ -75,13 +75,26 @@
     width: 500px;
   }
 }
-@media(max-width: 600px) {
+@media(max-width: 686px) {
   .form-container {
     width: 100%;
     margin-bottom: 80px;
   }
   .login-container {
     width: 100%;
-    margin: 0 auto;
+    margin: 30px auto;
+  }
+  .remember {
+    a {
+      margin-left: 80px;
+    }
+  }
+}
+
+@media(max-width: 330px){
+  .remember {
+    a {
+      margin-left: 40px;
+    }
   }
 }
