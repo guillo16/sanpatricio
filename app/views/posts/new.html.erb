@@ -1,2 +1,11 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<%= render 'shared/main_navbar' %>
+<br><br><br><br><br><br>
+<%= simple_form_for (@post) do |f| %>
+<p>importante no olvidar poner categoria</p>
+<%= select_tag(:category_id, options_for_select(@categories), :prompt => "categorias") %>
+<%= f.input :title %>
+<%= f.input :content %>
+
+<br><br>
+<%= f.submit class:"btn btn-primary btn-lg btn-block" %>
+<% end %>
