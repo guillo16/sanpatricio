@@ -8,7 +8,7 @@
   <h4><strong>Mensaje:</strong></h4>
   <p><%= @conection.message %></p>
   <%= link_to 'Atras', conections_path, class: 'btn btn-primary btn-lg btn-block'  %><br>
-  <button id="sweet-alert-demo" class="btn btn-danger btn-lg btn-block">Delete</button>
+  <button id="sweet-alert-demo" class="btn btn-danger btn-lg btn-block">Eliminar el mensaje</button>
 <%= link_to "", @conection, method: :delete, id: "delete-link", class: "hidden" %>
 </div>
 <% else %>

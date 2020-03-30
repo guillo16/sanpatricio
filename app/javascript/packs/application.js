@@ -1,3 +1,4 @@
+import "bootstrap";
 import { initSweetalert } from '../plugins/init_sweetalert';
 
 initSweetalert('#sweet-alert-demo', {
@@ -16,9 +17,9 @@ initSweetalert('#sweet-alert-demo', {
   }
 });
 
-import "bootstrap";
 import { loadDynamicBannerText } from '../components/banner';
 loadDynamicBannerText();
+
 
 
 // import { initUpdateNavbarOnScroll } from '../components/navbar';
