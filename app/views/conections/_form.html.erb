@@ -1,0 +1,25 @@
+ <div class="form-container">
+  <p><%= link_to 'San Patricio', root_path  %> > contacto</p>
+  <h2>Contacto</h2>
+  <%= simple_form_for @conection do |f| %>
+  <h3>Edificio<strong style="color:red; font-size: 16px;">*</strong></h3>
+  <div class="form-group">
+    <%= f.input :building, input_html: { class: "form-control form-control-lg"}, label: false , collection: ['Administracion', 'Jardines', 'Primario', 'Secundario']%>
+  </div>
+  <div class="form-group">
+    <%= f.input :name, input_html: { class: "form-control form-control-lg"}, label: false%>
+  </div>
+  <h3>Email<strong style="color:red; font-size: 16px;">*</strong></h3>
+  <div class="form-group">
+    <%= f.input :email, input_html: { class: "form-control form-control-lg"}, label: false, placeholder: "nombre@mail.com" %>
+  </div>
+  <h3>Mensaje<strong style="color:red; font-size: 16px;">*</strong></h3>
+  <div class="form-group">
+   <%= f.input :message, :as => :text, input_html: { class: "form-control form-control form-control-lg", id:"exampleFormControlTextarea1", rows:"5" }, label: false %>
+ </div>
+ <h4>Por favor escriba su mensaje. Un miembro de nuestro equipo le respondera lo mas rapido posible.</h4>
+ <div class="guillo w-100">
+  <%= f.submit 'Enviar Mensaje', class: "btn btn-primary btn-lg btn-block" %>
+ </div>
+ <% end %>
+</div>
