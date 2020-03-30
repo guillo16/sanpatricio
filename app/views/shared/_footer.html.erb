@@ -5,10 +5,15 @@
     <% if user_signed_in? %>
     <p><%= link_to "Cerrar sesíon", destroy_user_session_path, method: :delete %></p>
     <% else %>
-    <p><%= link_to "Inicias sesíon", new_user_session_path %></p>
+    <p><%= link_to "Iniciar sesíon", new_user_session_path %></p>
     <% end %>
   </div>
-  <h3>© 2020 Colegio San Patricio - Made by <%= link_to 'GV-WEB', 'https://gwwebsite.herokuapp.com', target: "blank" %></h3>
+  <div class="d-flex justify-content-center">
+    <h3>© 2020 Colegio San Patricio</h3>
+    <img src="https://res.cloudinary.com/san-patricio/image/upload/c_scale,w_260/v1585504992/st-patricks-day-1272034_960_720_bxlqpj.png" alt="" style="width: 20px; margin: 0 8px;">
+    <h3>Made by <%= link_to 'GV-WEB', 'https://gwwebsite.herokuapp.com', target: "blank" %></h3>
+  </div>
+
 </div>
 
 
