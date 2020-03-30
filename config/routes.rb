@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-
-  get 'categories/index'
-  get 'categories/show'
-  get 'users/show'
   devise_for :users
   root to: 'pages#home'
 
@@ -16,6 +12,7 @@ Rails.application.routes.draw do
 
   resources :events
   resources :users, only: :show
+  resources :categories, only: [:index, :show]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
