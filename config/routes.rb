@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'posts/index'
+  get 'posts/show'
+  get 'posts/new'
+  get 'posts/create'
   devise_for :users
   root to: 'pages#home'
 
