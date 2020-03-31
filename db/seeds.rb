@@ -8,6 +8,7 @@
 require 'faker'
 puts 'clearing database'
 Post.delete_all
+Conection.delete_all
 Category.delete_all
 Article.delete_all
 Event.destroy_all
@@ -235,9 +236,19 @@ Article.create(user: user,
   #   time: '08')
   puts 'finsh events'
   puts 'creating messages'
-  building = ['Primario', 'Secundario', 'Administracion', 'Jardines'].sort
-  20 times do
-    Conection.create(building: building, email: Faker::Internet.email, name: Faker::Name.name, content: Faker::TvShows::Friends.quote)
+  building = ['Primario', 'Secundario', 'Administracion', 'Jardines']
+
+  10.times do
+    Conection.create(building: building[0], email: Faker::Internet.email, name: Faker::Name.name, message: Faker::TvShows::Friends.quote )
+  end
+  10.times do
+    Conection.create(building: building[1], email: Faker::Internet.email, name: Faker::Name.name, message: Faker::TvShows::Friends.quote )
+  end
+  10.times do
+    Conection.create(building: building[2], email: Faker::Internet.email, name: Faker::Name.name, message: Faker::TvShows::Friends.quote )
+  end
+  10.times do
+    Conection.create(building: building[3], email: Faker::Internet.email, name: Faker::Name.name, message: Faker::TvShows::Friends.quote )
   end
 
   puts 'creating category'
@@ -248,10 +259,12 @@ Article.create(user: user,
 
   puts 'Creating Noticificaciones'
 
-  category = Category.all.sort
+  category = Category.last
+
+  user = User.last
 
   20.times do
-    Post.create(title: Faker::Quotes::Shakespeare.hamlet_quote, content: Faker::TvShows::Simpsons.quote )
+    Post.create(title: Faker::Quotes::Shakespeare.hamlet_quote, content: Faker::TvShows::Simpsons.quote, user: user, category: category )
   end
 
   puts 'finish'
