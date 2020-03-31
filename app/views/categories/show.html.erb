@@ -1,5 +1,9 @@
 <%= render 'shared/main_navbar' %>
-<br><br><br><br><br>
-<%= @category.title %>
-
-<% @category %>
+<div class="categories-banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588867/Captura_de_Pantalla_2020-03-30_a_la_s_12.36.43.png);">
+  <h2><%= @category.title %></h2>
+</div>
+<% @category.posts.each do |post| %>
+<%= link_to post_path(post) do %>
+<%= post.title %>
+<% end %>
+<% end %>
