@@ -2,9 +2,10 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-#
+
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
 puts 'clearing database'
 Article.delete_all
 Event.destroy_all
@@ -230,3 +231,7 @@ Article.create(user: user,
   #   date: '/0/2020',
   #   time: '08')
   puts 'finsh events'
+  puts 'creating messages'
+  building = ['Primario', 'Secundario', 'Administracion', 'Jardines'].sort
+  10 times do
+    Conection.create(building: building, email: Faker::Internet.email, name: Faker::Name.name,  )
