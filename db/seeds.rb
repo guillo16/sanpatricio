@@ -252,19 +252,30 @@ Article.create(user: user,
   end
 
   puts 'creating category'
-  Category.create(title: 'Primario', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588867/Captura_de_Pantalla_2020-03-30_a_la_s_12.36.43.png')
-  Category.create(title: 'Administracion', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588935/Captura_de_Pantalla_2020-03-30_a_la_s_14.19.06.png')
-  Category.create(title: 'Jardines', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588844/Captura_de_Pantalla_2020-03-30_a_la_s_14.20.07.png')
-  Category.create(title: 'Secundario', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588869/Captura_de_Pantalla_2020-03-30_a_la_s_14.17.33.png')
+  primario = Category.create(title: 'Primario', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588867/Captura_de_Pantalla_2020-03-30_a_la_s_12.36.43.png')
+  administracion = Category.create(title: 'Administracion', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588935/Captura_de_Pantalla_2020-03-30_a_la_s_14.19.06.png')
+  jardines = Category.create(title: 'Jardines', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588844/Captura_de_Pantalla_2020-03-30_a_la_s_14.20.07.png')
+  secundario = Category.create(title: 'Secundario', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588869/Captura_de_Pantalla_2020-03-30_a_la_s_14.17.33.png')
 
   puts 'Creating Noticificaciones'
-
-  category = Category.last
-
   user = User.last
 
+  10.times do
+    Post.create(title: Faker::Quotes::Shakespeare.hamlet_quote, content: Faker::TvShows::Simpsons.quote, user: user, category: primario )
+  end
+
+  10.times do
+    Post.create(title: Faker::Quotes::Shakespeare.hamlet_quote, content: Faker::TvShows::Simpsons.quote, user: user, category: administracion )
+  end
+
   20.times do
-    Post.create(title: Faker::Quotes::Shakespeare.hamlet_quote, content: Faker::TvShows::Simpsons.quote, user: user, category: category )
+    Post.create(title: Faker::Quotes::Shakespeare.hamlet_quote, content: Faker::TvShows::Simpsons.quote, user: user, category: secundario )
+
+  end
+
+  20.times do
+    Post.create(title: Faker::Quotes::Shakespeare.hamlet_quote, content: Faker::TvShows::Simpsons.quote, user: user, category: jardines )
+
   end
 
   puts 'finish'

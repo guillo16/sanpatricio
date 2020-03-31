@@ -29,6 +29,7 @@
 <div class="post-index-container">
   <h2>Todas</h2>
   <% @posts.each do |post| %>
+  <h3><%= post.category.title %> </h3>
   <div class="post-cards">
    <%= link_to post_path(post) do %>
    <div class="post-card-title">
