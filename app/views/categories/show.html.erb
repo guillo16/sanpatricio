@@ -1,0 +1,27 @@
+<%= render 'shared/main_navbar' %>
+<div class="articles-navbar">
+  <h2>NOTIFICACIONES</h2>
+</div>
+<div class="post-index-container">
+  <h2><%= @category.title %></h2>
+  <% @category.posts.each do |post| %>
+  <div class="post-cards">
+   <%= link_to post_path(post) do %>
+   <div class="post-card-title">
+     <h1><%= post.title.truncate(80) %></h1>
+     <p><%= post.created_at.strftime(' %d/%m/%y') %></p>
+   </div>
+   <div class="post-card-content">
+    <p><%= post.content %></p>
+   </div>
+   <% end %>
+  </div>
+  <% end %>
+</div>
+<div class="text-center p-5">
+  <%= link_to 'Atras', user_path(current_user), class: 'btn-article'  %>
+</div>
+
+
+
+

@@ -2,16 +2,21 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-#
+
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
 puts 'clearing database'
+Post.delete_all
+Conection.delete_all
+Category.delete_all
 Article.delete_all
 Event.destroy_all
 User.destroy_all
 
 puts 'creating user'
-User.create(email: 'user1@hotmail.com', password: '123456')
+User.create(email: 'user2@hotmail.com', password: '123456')
+User.create(email: 'user1@hotmail.com', password: '123456', admin: true)
 puts 'creating articles'
 user = User.last
 Article.create(user: user,
@@ -165,7 +170,7 @@ Article.create(user: user,
   category: 'Institucional',
   title: 'Las clases se suspenden por el coronavirus',
   subtitle: 'El presidente decreto la suspencion de las clases en todo el pais',
-  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_561/v1585230669/ETLpVEmXYAEaSrN.jpg',
+  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588869/Captura_de_Pantalla_2020-03-30_a_la_s_12.39.44.png',
   content1:'El presidente decreto la suspencion de las clases en todo el pais.
   Así lo anunciará hoy el Gobierno, luego de un encuentro entre expertos y funcionarios nacionales que liderará, después de las 14, el ministro de Educación, Nicolás Trotta, que ayer había comenzado a resolver medidas que se encaminaban a esa definición.
   Ayer, horas antes, Educación había habilitado a las universidades de todo el país no solo a suspender clases presenciales por 14 días, sino también a permitir que estudiantes y docentes con patologías previas pudieran ausentarse de las aulas de manera justificada.',
@@ -230,3 +235,65 @@ Article.create(user: user,
   #   date: '/0/2020',
   #   time: '08')
   puts 'finsh events'
+  puts 'creating messages'
+  building = ['Primario', 'Secundario', 'Administracion', 'Jardines']
+
+  10.times do
+    Conection.create(building: building[0], email: Faker::Internet.email, name: Faker::Name.name, message: Faker::TvShows::Friends.quote )
+  end
+  10.times do
+    Conection.create(building: building[1], email: Faker::Internet.email, name: Faker::Name.name, message: Faker::TvShows::Friends.quote )
+  end
+  10.times do
+    Conection.create(building: building[2], email: Faker::Internet.email, name: Faker::Name.name, message: Faker::TvShows::Friends.quote )
+  end
+  10.times do
+    Conection.create(building: building[3], email: Faker::Internet.email, name: Faker::Name.name, message: Faker::TvShows::Friends.quote )
+  end
+
+  puts 'creating category'
+  primario = Category.create(title: 'Primario', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588867/Captura_de_Pantalla_2020-03-30_a_la_s_12.36.43.png')
+  administracion = Category.create(title: 'Administracion', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588935/Captura_de_Pantalla_2020-03-30_a_la_s_14.19.06.png')
+  jardines = Category.create(title: 'Jardines', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588844/Captura_de_Pantalla_2020-03-30_a_la_s_14.20.07.png')
+  secundario = Category.create(title: 'Secundario', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588869/Captura_de_Pantalla_2020-03-30_a_la_s_14.17.33.png')
+
+  puts 'Creating Noticificaciones'
+  user = User.last
+
+  10.times do
+    Post.create(title: Faker::Quotes::Shakespeare.hamlet_quote, content: Faker::TvShows::Simpsons.quote, user: user, category: primario )
+  end
+
+  10.times do
+    Post.create(title: Faker::Quotes::Shakespeare.hamlet_quote, content: Faker::TvShows::Simpsons.quote, user: user, category: administracion )
+  end
+
+  20.times do
+    Post.create(title: Faker::Quotes::Shakespeare.hamlet_quote, content: Faker::TvShows::Simpsons.quote, user: user, category: secundario )
+
+  end
+
+  20.times do
+    Post.create(title: Faker::Quotes::Shakespeare.hamlet_quote, content: Faker::TvShows::Simpsons.quote, user: user, category: jardines )
+
+  end
+
+  puts 'finish'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

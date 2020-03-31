@@ -1,0 +1,142 @@
+//admin post
+.post-admin-container{
+  width: 90%;
+  margin: 100px auto;
+}
+//categories cards
+.category-card {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  h2 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+}
+.card-categories-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  padding: 50px;
+  a {
+    text-decoration: none;
+    &:hover {
+      box-shadow: 0 0 15px grey;
+      h2 {
+        color: grey;
+      }
+    }
+  }
+}
+//post in category show
+.post-index-container {
+  width: 80%;
+  margin: 120px auto;
+  margin-bottom: 0px;
+  h2 {
+    padding-bottom: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid lightgrey;
+    font-size: 35px;
+  }
+  h3 {
+     color: $green;
+     font-size: 15px;
+     margin-bottom: 0px;
+     font-weight: bold;
+  }
+}
+
+
+.post-cards {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid lightgrey;
+  a {
+    text-decoration:none;
+  }
+
+}
+
+.post-card-title {
+  display: flex;
+  justify-content: space-between;
+  h1 {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  p {
+    color: grey;
+    font-size: 12px;
+    margin-left: 30px;
+  }
+}
+
+.post-card-content {
+  p {
+    font-size: 13px;
+    color: black;
+  }
+
+}
+
+
+@media(max-width: 780px) {
+  .card-categories-wrapper {
+    grid-gap: 30px;
+    padding: 30px;
+  }
+}
+@media(max-width: 686px) {
+  .card-categories-wrapper {
+    grid-gap: 10px;
+    padding: 10px;
+  }
+  .category-card {
+    h2 {
+      font-size: 18px;
+    }
+  }
+
+  .post-index-container {
+    width: 90%;
+    margin: 100px auto;
+    margin-bottom: 0px;
+    h2 {
+      font-size: 25px;
+
+    }
+  }
+  .post-card-title {
+
+    h1 {
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    p {
+      color: grey;
+      font-size: 10px;
+      margin-left: 30px;
+    }
+  }
+
+  .post-card-content {
+    p {
+      font-size: 11px;
+    }
+
+  }
+}

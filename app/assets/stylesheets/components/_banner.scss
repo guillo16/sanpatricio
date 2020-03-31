@@ -53,6 +53,22 @@
   }
 }
 
+.categories-banner {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  margin-top: 75px;
+  h2 {
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    font-size: 32px;
+    font-weight: bold;
+  }
+}
+
 @media(max-width: 686px){
   .banner {
     height: 60vh;
@@ -84,6 +100,13 @@
     p {
       font-size: 25px;
       margin-bottom: 40px;
+    }
+  }
+
+  .categories-banner {
+    height: 30vh;
+    h2 {
+      font-size: 25px;
     }
   }
 }

@@ -1,0 +1,29 @@
+.post-show-wrapper {
+  background-color: white;
+  margin-top: 80px;
+  height: 100vh;
+}
+.post-show-container {
+  width: 70%;
+  margin: 20px auto;
+  padding: 20px;
+  border-right: 2px solid lightgrey;
+  border-left: 2px solid lightgrey;
+  h2 {
+    font-weight: bold;
+    font-size: 30px;
+  }
+  h4 {
+    font-size: 14px;
+    color: grey;
+  }
+
+}
+
+
+@media(max-width: 686px) {
+  .post-show-container {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
