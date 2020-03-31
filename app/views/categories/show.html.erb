@@ -1,24 +1,27 @@
 <%= render 'shared/main_navbar' %>
-<div class="categories-banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url(https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588867/Captura_de_Pantalla_2020-03-30_a_la_s_12.36.43.png);">
-  <h2><%= @category.title %></h2>
-</div>
 <div class="articles-navbar">
-  notificaciones
+  <h2>NOTIFICACIONES</h2>
 </div>
 <div class="post-index-container">
+  <h2><%= @category.title %></h2>
   <% @category.posts.each do |post| %>
   <div class="post-cards">
    <%= link_to post_path(post) do %>
    <div class="post-card-title">
-     <h1><%= post.title %></h1>
-     <p><%= post.created_at.strftime(' %d/%m/%y - %H/%M') %></p>
+     <h1><%= post.title.truncate(80) %></h1>
+     <p><%= post.created_at.strftime(' %d/%m/%y') %></p>
    </div>
    <div class="post-card-content">
     <p><%= post.content %></p>
+   </div>
+   <% end %>
   </div>
   <% end %>
 </div>
-
-<% end %>
+<div class="text-center p-5">
+  <%= link_to 'Atras', user_path(current_user), class: 'btn-article'  %>
 </div>
+
+
+
 

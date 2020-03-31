@@ -3,7 +3,6 @@
   width: 90%;
   margin: 100px auto;
 }
-
 //categories cards
 .category-card {
   background-size: cover;
@@ -21,7 +20,6 @@
     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
 }
-
 .card-categories-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -37,17 +35,28 @@
     }
   }
 }
-
 //post in category show
 .post-index-container {
-  width: 90%;
-  margin: 10px auto;
+  width: 80%;
+  margin: 120px auto;
+  margin-bottom: 0px;
+  h2 {
+    padding-bottom: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid lightgrey;
+    font-size: 35px;
+
+  }
 }
+
+
 .post-cards {
   padding: 10px;
-  box-shadow: 0px 0px 10px lightgrey;
   margin-bottom: 10px;
-
+  border-bottom: 1px solid lightgrey;
+  a {
+    text-decoration:none;
+  }
 }
 
 .post-card-title {
@@ -55,14 +64,27 @@
   justify-content: space-between;
   h1 {
     color: black;
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 6px;
   }
 
   p {
     color: grey;
-    font-size: 14px;
+    font-size: 12px;
+    margin-left: 30px;
   }
 }
+
+.post-card-content {
+  p {
+    font-size: 13px;
+    color: black;
+  }
+
+}
+
+
 @media(max-width: 780px) {
   .card-categories-wrapper {
     grid-gap: 30px;
@@ -78,5 +100,37 @@
     h2 {
       font-size: 18px;
     }
+  }
+
+  .post-index-container {
+    width: 90%;
+    margin: 100px auto;
+    margin-bottom: 0px;
+    h2 {
+      font-size: 25px;
+
+    }
+  }
+  .post-card-title {
+
+    h1 {
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    p {
+      color: grey;
+      font-size: 10px;
+      margin-left: 30px;
+    }
+  }
+
+  .post-card-content {
+    p {
+      font-size: 11px;
+    }
+
   }
 }
