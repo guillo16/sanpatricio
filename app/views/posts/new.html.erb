@@ -4,10 +4,8 @@
 
 <%= f.input :title %>
 <%= f.input :content %>
+<%= f.association :category %>
 
-<p>importante no olvidar poner categoria</p>
-<%= select_tag(:category_id, options_for_select(@categories), :prompt => "categorias") %>
 
-<br><br>
 <%= f.submit class:"btn btn-primary btn-lg btn-block" %>
 <% end %>

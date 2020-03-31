@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-
   def index
     @posts = Post.all
   end
@@ -10,12 +9,10 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
-    @categories = Category.all.map { |c| [c.title, c.id] }
   end
 
   def create
     @post = Post.new(post_params)
-    @post.category_id = params[:category_id]
     @post.user = current_user
     if @post.save
       redirect_to post_path(@post)
@@ -27,6 +24,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :subtitle, :photo)
+    params.require(:post).permit(:title, :subtitle, :photo, :category_id)
   end
 end
