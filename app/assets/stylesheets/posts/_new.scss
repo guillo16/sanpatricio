@@ -1,0 +1,38 @@
+.post-new-title {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 0px;
+  padding: 10px;
+  background-color: #115f2e;
+  color: white;
+  text-align: center;
+  margin-top: 76px;
+}
+.post-new-container {
+  width: 60%;
+  margin: 10px auto;
+}
+
+@media(max-width: 1030px) {
+  .post-new-container {
+    width: 60%;
+    margin: 230px auto;
+  }
+}
+
+@media(max-width: 770px) {
+  .post-new-container {
+    width: 60%;
+    margin: 60px auto;
+  }
+}
+
+@media(max-width: 650px) {
+  .post-new-title {
+    font-size: 20px;
+  }
+  .post-new-container {
+    width: 100%;
+    margin: 5px auto;
+  }
+}

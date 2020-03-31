@@ -1,19 +1,23 @@
 <%= render 'shared/main_navbar' %>
-<div class="post-container">
-  <h1>Crear notificacion para padres</h1>
+<h1 class='post-new-title'>Crear notificacion para padres</h1>
+<div class="post-new-container">
   <div class="form-container">
+    <p><%= link_to 'Volver al perfil', user_path(current_user)  %> </p>
     <%= simple_form_for (@post) do |f| %>
     <h3>Titulo<strong style="color:red; font-size: 16px;">*</strong></h3>
     <%= f.input :title, input_html: { class: "form-control-lg form-control"}, label: false %>
     <h3>Contenido<strong style="color:red; font-size: 16px;">*</strong></h3>
-    <%= f.input :content, input_html: { class: "form-control-lg form-control", rows:"5"}, label: false %>
+    <%= f.input :content, input_html: { class: "form-control-lg form-control", id:"exampleFormControlTextarea1", rows:"5"}, label: false %>
     <h3>Categoria<strong style="color:red; font-size: 16px;">*</strong></h3>
     <%= f.association :category, input_html: { class: "form-control-lg form-control"}, label: false %>
 
-    <%= f.submit class:"btn btn-primary btn-lg btn-block" %>
+    <%= f.submit 'Crear Notificación', class:"btn btn-primary btn-lg btn-block" %>
     <% end %>
   </div>
-
 </div>
+<div class="p-5">
+  <%= link_to 'Ver Noticicaciones', posts_path, class: 'btn btn-dark btn-lg btn-block' %>
+</div>
+
 
 
