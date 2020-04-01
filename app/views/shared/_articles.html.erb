@@ -1,0 +1,31 @@
+<div class="home-container">
+  <h3>NOVEDADES</h3>
+  <h5>Las ultimas noticias del colegio <i class="fas fa-caret-down"></i></h5>
+  <div class="articles-wrapper">
+    <div class="articles-main-container">
+      <div class="main-article">
+        <% @articles.last(1).each do |article| %>
+        <%= render 'cards/main_article_cards', article: article %>
+        <% end %>
+      </div>
+      <div class="main-article">
+        <% @articles.last(2).reverse.drop(1).each do |article| %>
+        <%= render 'cards/second_article_cards', article: article %>
+        <% end %>
+      </div>
+      <div class="main-article">
+        <% @articles.last(3).reverse.drop(2).each do |article| %>
+        <%= render 'cards/second_article_cards', article: article %>
+        <% end %>
+      </div>
+    </div>
+    <div class="articles-container">
+      <% @articles.last(6).reverse.drop(3).each do |article| %>
+      <%= render 'cards/third_article_cards', article: article %>
+      <% end %>
+    </div>
+  </div>
+  <div class="article-button">
+    <%= link_to 'Todas las noticias', articles_path, class: "btn-article"  %>
+  </div>
+</div>
