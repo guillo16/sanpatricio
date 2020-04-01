@@ -48,7 +48,7 @@
     <h5>Los proximos eventos del colegio <i class="fas fa-caret-down"></i></h5>
     <div class="event-container-home">
       <% @events.each do |event| %>
-      <%= render 'shared/event_card', event: event %>
+      <%= render 'cards/event_main_cards', event: event %>
       <% end %>
     </div>
     <div class="article-button">

@@ -7,7 +7,7 @@
 </div>
 <div class="wrapper-event">
   <% @events.last(10).each do |event| %>
-  <%= render 'shared/event-cards', event: event %>
+  <%= render 'cards/event_cards', event: event %>
   <% end %>
 </div>
 
