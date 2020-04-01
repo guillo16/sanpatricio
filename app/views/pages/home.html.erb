@@ -14,23 +14,23 @@
       <div class="articles-main-container">
         <div class="main-article">
           <% @articles.last(1).each do |article| %>
-          <%= render 'shared/main-cards', article: article %>
+          <%= render 'cards/main_article_cards', article: article %>
           <% end %>
         </div>
         <div class="main-article">
           <% @articles.last(2).reverse.drop(1).each do |article| %>
-          <%= render 'shared/second-card', article: article %>
+          <%= render 'cards/second_article_cards', article: article %>
           <% end %>
         </div>
         <div class="main-article">
           <% @articles.last(3).reverse.drop(2).each do |article| %>
-          <%= render 'shared/second-card', article: article %>
+          <%= render 'cards/second_article_cards', article: article %>
           <% end %>
         </div>
       </div>
       <div class="articles-container">
         <% @articles.last(6).reverse.drop(3).each do |article| %>
-        <%= render 'shared/cards', article: article %>
+        <%= render 'cards/third_article_cards', article: article %>
         <% end %>
       </div>
     </div>
