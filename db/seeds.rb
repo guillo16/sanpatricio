@@ -163,7 +163,7 @@ Article.create(user: user,
   created_at: '03/03/2020')
 
 Article.create(user: user,
-  category: 'Jardines',
+  division: jardines,
   title: 'Los Alumnos empezaron el ciclo lectivo 2020',
   subtitle: 'Los Alumnos de los Jardines empezaron el ciclo lectivo 2020',
   photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156076/44267120_1919928638053275_7998990119052771328_o.jpg',

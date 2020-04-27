@@ -8,31 +8,13 @@
   <% end %>
   <h2><%= link_to 'TODAS', articles_path %></h2>
 </div>
-<section id="article-all">
-  <div class="articles-wrapper">
-    <div class="articles-main-container">
-      <div class="main-article">
-        <% @articles.last(1).each do |article| %>
-        <%= render 'cards/main_article_cards', article: article %>
-        <% end %>
-      </div>
-      <div class="main-article">
-        <% @articles.last(2).reverse.drop(1).each do |article| %>
-        <%= render 'cards/second_article_cards', article: article %>
-        <% end %>
-      </div>
-      <div class="main-article">
-        <% @articles.last(3).reverse.drop(2).each do |article| %>
-        <%= render 'cards/second_article_cards', article: article %>
-        <% end %>
-      </div>
-    </div>
-    <div class="articles-container">
-      <% @articles.last(12).reverse.drop(3).each do |article| %>
-      <%= render 'cards/third_article_cards', article: article %>
-      <% end %>
-    </div>
-  </div>
-</section>
-
-
+<div class="division-container">
+  <% @articles.last(2).each do |article| %>
+  <%= render 'cards/division_card', article: article %>
+  <% end %>
+</div>
+<div class="division-container-2">
+  <% @articles.drop(2).each do |article| %>
+  <%= render 'cards/division_card', article: article %>
+  <% end %>
+</div>
