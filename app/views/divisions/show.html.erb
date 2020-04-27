@@ -1,2 +1,13 @@
-<h1>Divisions#show</h1>
-<p>Find me in app/views/divisions/show.html.erb</p>
+<%= render 'shared/main_navbar' %>
+<div class="banner-articles" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= @division.photo %>);">
+ <h2><%= @division.title.upcase %></h2>
+</div>
+<div class="articles-navbar mb-3">
+  <% @divisions.each do |division| %>
+  <h2><%= link_to division.title.upcase,division_path(division) %></h2>
+  <% end %>
+  <h2><%= link_to 'TODAS', articles_path %></h2>
+</div>
+<% @division.articles.each do |article| %>
+<%= render 'cards/division_cards', article: article %>
+<% end %>
