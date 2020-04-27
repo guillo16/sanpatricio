@@ -22,13 +22,14 @@
   padding: 10px;
   margin-bottom: 28px;
   h2 {
-    margin-left: 20px;
+    width: 90%;
+    margin: 0 auto;
     color: white;
     font-size: 20px;
   }
 }
 .wrapper-event {
-  width: 70%;
+  width: 90%;
   margin: 20px auto;
   h1 {
     padding: 20px;
@@ -93,7 +94,6 @@
 
 @media(max-width: 686px){
   .wrapper-event {
-    width: 90%;
     margin: 10px auto;
   }
   .event-container {

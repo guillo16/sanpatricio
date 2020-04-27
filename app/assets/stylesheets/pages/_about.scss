@@ -33,6 +33,18 @@
  }
 }
 
+.nav-pills .nav-link.active {
+    color: #fff;
+    background-color: $green;
+}
+.nav-link {
+    color: $green;
+    font-weight: bold;
+    &:hover {
+      color: darkgreen;
+    }
+}
+
 @media(max-width: 686px) {
   .about-container {
     margin: 90px auto;

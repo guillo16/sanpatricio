@@ -17,8 +17,9 @@
     font-size: 20px;
     text-align: left;
     padding: 8px;
-    padding-left: 30px;
     color: $green;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 //Ib section
@@ -39,11 +40,11 @@
 @media(max-width: 686px) {
   .home-container {
     h3 {
-      font-size: 28px;
+      font-size: 24px;
       padding: 12px;
     }
     h5 {
-      font-size: 18px;
+      font-size: 16px;
       text-align: center;
     }
   }
