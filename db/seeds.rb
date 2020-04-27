@@ -25,7 +25,7 @@ secundario = Division.create(title: 'secundario',
  jardines = Division.create(title: 'jardines',
  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585236318/ZcMqJE5hRYIAPMpSjGtn6MG6yOzniVtweqTlqsWW9Ioj9du-g7R7UaH-0oxR4wq7W9GPI_4m3Fv6QBzy_uUZ5lqNWzJ0_yLW-5Vz1cD6bj4.jpg')
  ib = Division.create(title: 'ib',
- photo: 'https://images.unsplash.com/photo-1568792923760-d70635a89fdc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')
+ photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1588027161/cambridge.JPG.jpg')
  institucional = Division.create(title: 'institucional',
  photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156046/61489059_2240313456014790_473916157548560384_n.jpg')
 puts 'creating articles'
