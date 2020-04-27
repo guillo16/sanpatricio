@@ -1,14 +1,14 @@
 //home buttons
 .btn-article {
-  padding: 15px 80px;
-  background-color:  #115f2e;
+  padding: 12px 40px;
+  background-color: $green;
   color: white;
   font-weight: bold;
   margin: 20px 0px;
   border: 2px solid $red;
+  border-radius: 8px;
   &:hover {
     text-decoration: none;
-    background-color: darkgreen;
     color:grey;
   }
 }
@@ -17,7 +17,6 @@
     padding: 10px 25px;
   }
 }
-
 
 .btn-ib {
   padding: 15px 100px;
