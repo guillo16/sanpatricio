@@ -3,6 +3,8 @@ class Event < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :date, presence: true
+  validates :address, presence: true
+  validates :location, presence: true
   validate :end_date
 
   def end_date
