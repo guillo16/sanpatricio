@@ -4,13 +4,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
-    if params["category"]
-      @articles = Article.where(category: params["category"])
-    elsif params["created_at"]
-      @articles = Article.order(created_at: :desc)
-    else
-      @articles
-    end
+    @divisions = Division.all
   end
 
   def show
