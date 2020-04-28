@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_28_171747) do
+ActiveRecord::Schema.define(version: 2020_04_28_201035) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,6 +89,15 @@ ActiveRecord::Schema.define(version: 2020_04_28_171747) do
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
+  create_table "galleries", force: :cascade do |t|
+    t.string "title"
+    t.string "photo"
+    t.bigint "article_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["article_id"], name: "index_galleries_on_article_id"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "subtitle"
@@ -119,6 +128,7 @@ ActiveRecord::Schema.define(version: 2020_04_28_171747) do
   add_foreign_key "articles", "divisions"
   add_foreign_key "articles", "users"
   add_foreign_key "events", "users"
+  add_foreign_key "galleries", "articles"
   add_foreign_key "posts", "categories"
   add_foreign_key "posts", "users"
 end
