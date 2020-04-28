@@ -6,4 +6,12 @@
     <h2><%= article.title %></h2>
   </div>
   <% end %>
+  <% if current_user.admin? %>
+  <div class=" p-5">
+    <%= link_to 'Editar Noticia', edit_article_path(article), class: 'btn btn-warning btn-block' %>
+    <br>
+    <%= link_to 'Eliminar Noticia',  article,  method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-danger btn-block' %>
+    <% else %>
+    <% end %>
+  </div>
 </div>

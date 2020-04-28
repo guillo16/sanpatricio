@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_articles, only: [:show, :destroy]
+  before_action :set_articles, only: [:show, :edit, :update, :destroy]
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
@@ -23,6 +23,14 @@ class ArticlesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+  end
+
+  def update
+    @article.update(article_params)
+    redirect_to article_path(@article)
   end
 
   def destroy
