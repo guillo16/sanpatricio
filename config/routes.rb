@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'galleries/index'
+  get 'galleries/show'
+  get 'galleries/create'
+  get 'galleries/edit'
+  get 'galleries/update'
+  get 'galleries/destroy'
   devise_for :users
   root to: 'pages#home'
 
