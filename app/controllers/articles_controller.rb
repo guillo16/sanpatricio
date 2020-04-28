@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @divisions = Division.all
   end
 
   def new
