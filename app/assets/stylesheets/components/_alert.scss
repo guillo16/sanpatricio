@@ -2,9 +2,23 @@
   top: 100px;
   background-color: white;
 }
+.guillo {
+  position: fixed;
+  bottom: 100px;
+  background-color: white;
+  padding: 20px;
+  right: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 10px lightgrey;
+  font-weight: bold;
+}
 @media(max-width: 686px){
   .alert {
     top: 75px;
     background-color: white;
   }
+}
+
+@media(max-width: 686px){
+
 }
