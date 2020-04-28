@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
 
   def show
     @divisions = Division.all
+    @gallery = Gallery.new
   end
 
   def new

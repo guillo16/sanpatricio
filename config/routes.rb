@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
 
-  get 'galleries/index'
-  get 'galleries/show'
-  get 'galleries/create'
-  get 'galleries/edit'
-  get 'galleries/update'
-  get 'galleries/destroy'
+
+
   devise_for :users
   root to: 'pages#home'
 
-  resources :articles
+  resources :articles do
+    resources :galleries, only: [:show, :create]
+  end
   resources :contacts, only: [:new, :create]
   resources :conections, exept: [:update, :edit]
 
@@ -21,6 +19,7 @@ Rails.application.routes.draw do
   resources :categories, only: [:index, :show]
   resources :posts
   resources :divisions, only: :show
+  resources :galleries, only: :index
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
