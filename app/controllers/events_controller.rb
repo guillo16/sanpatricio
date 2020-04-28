@@ -33,6 +33,7 @@ class EventsController < ApplicationController
 
   def destroy
     @event.delete
+    redirect_to events_path
   end
 
   private
