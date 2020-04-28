@@ -1,6 +1,13 @@
 <%= gallery.title %>
+<div class="d-flex">
+  <% gallery.photos.each do |photo| %>
+  <div class="gallery-container"data-toggle="modal" data-target=".bd-example-modal-xl">
+    <%= cl_image_tag photo.key, height: 100, width: 100, crop: :fill %>
+  </div>
+  <% end %>
+</div>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Extra large modal</button>
+
 
 <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
@@ -39,6 +46,13 @@
   </div>
 </div>
 
+<style>
+  .gallery-container{
 
+    display: flex;
+  }
+  .gallery-container img {
 
-
+    border: 5px solid green;
+  }
+</style>
