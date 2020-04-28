@@ -3,11 +3,12 @@ class ArticlesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @articles = Article.all
+    @articles = Article.order(created_at: :desc)
     @divisions = Division.all
   end
 
   def show
+    @divisions = Division.all
   end
 
   def new

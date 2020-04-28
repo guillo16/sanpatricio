@@ -32,6 +32,14 @@
   }
 }
 
+.btn-green {
+  background-color: $green;
+  color: white;
+  &:hover {
+    color: grey;
+  }
+}
+
 
 @media(max-width: 323px) {
 

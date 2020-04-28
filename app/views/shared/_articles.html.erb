@@ -2,12 +2,12 @@
   <h3>NOVEDADES</h3>
   <h5>Las ultimas noticias del colegio <i class="fas fa-caret-down"></i></h5>
   <div class="article-container main">
-    <% @articles.last(2).each do |article| %>
+    <% @articles.take(2).each do |article| %>
     <%= render 'cards/article_card', article: article %>
     <% end %>
   </div>
   <div class="article-container-2">
-    <% @articles.drop(2).last(3).each do |article| %>
+    <% @articles.drop(2).take(3).each do |article| %>
     <%= render 'cards/article_card', article: article %>
     <% end %>
   </div>

@@ -2,7 +2,7 @@
   <%= link_to event_path(event) do  %>
   <div class="main-event-container">
     <div class="main-event-img">
-      <img src="<%= event.photo %>" alt="">
+      <%= cl_image_tag event.photo.key %>
     </div>
     <div class="main-event-content">
       <div class="date-box">
