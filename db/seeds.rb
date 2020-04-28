@@ -281,48 +281,48 @@ article10.save
   #   content1:'',
   # created_at: '')
   puts 'creating events'
-  Event.create(user: user,
+  archivo = URI.open('https://www.noticiasdel6.com/wp-content/uploads/2018/06/3-1.gif')
+  event = Event.new(user: user,
    title: 'Dia de la independencia',
    description: 'Se celebra el 9 de julio el dia de nuestra independencia los esperamos a todos',
    date: '09/07/2020',
    time: '08',
-   photo: 'https://www.noticiasdel6.com/wp-content/uploads/2018/06/3-1.gif',
    address: 'Las Acacias 2200',
    location: 'Pirmario'
    )
-  Event.create(user: user,
-   title: 'Dia de la bandera',
-   description: 'Se celebra el 20 de junio el dia de nuestra bandera los esperamos a todos',
-   date: '20/06/2020',
-   time: '08',
-   photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585175227/fsj9xujujz5lrrhw9mn9.jpg',
-   address: 'Las Acacias 2200',
-   location: 'Secundario'
-   )
-  Event.create(user: user,
+  event.photo.attach(io: archivo, filename: 'nes.jpg', content_type: 'image/jpg')
+  event.save
+  archivo2 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156055/60997228_2240313369348132_358752390532300800_n.jpg')
+  event2 = Event.new(user: user,
    title: 'Celebracion del 25 de mayo ',
    description: 'El 25 de mayo es una de las fechas patrias más importantes para la República Argentina, que conmemora la Revolución de Mayo. Los esperamos a todos',
    date: '25/05/2020',
    time: '08',
-   photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156055/60997228_2240313369348132_358752390532300800_n.jpg',
    address: 'Las Acacias 2200',
    location: 'Secundario'
    )
-  Event.create(user: user,
+  event2.photo.attach(io: archivo2, filename: 'nes.jpg', content_type: 'image/jpg')
+  event2.save
+  archivo3 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585175662/jose.jpg')
+  event3 = Event.new(user: user,
     title: 'Acto por el General San Martin ',
     description: 'Se Celebra el acto por el paso a la inmortalidad del Padre de la Patria, el general Jose De San Martin',
-    photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585175662/jose.jpg',
     date: '17/08/2020',
     time: '08',
     address: 'Las Acacias 2200',
     location: 'Jardines'
     )
-  # Event.create(user: user,
+  event3.photo.attach(io: archivo3, filename: 'nes.jpg', content_type: 'image/jpg')
+  event3.save
+  # archivo = URI.open('')
+  # Event.new(user: user,
   #   title: '',
   #   description: '',
   #   photo: '',
   #   date: '/0/2020',
-  #   time: '08')
+  #   time: '08'
+  # event.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+  # event.save
   puts 'finsh events'
   puts 'creating messages'
   building = ['Primario', 'Secundario', 'Administracion', 'Jardines']
@@ -368,21 +368,3 @@ article10.save
   end
 
   puts 'finish'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
