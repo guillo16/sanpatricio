@@ -6,6 +6,7 @@ class Event < ApplicationRecord
   validates :address, presence: true
   validates :location, presence: true
   validate :end_date
+  has_one_attached :photo
 
   def end_date
     dates = Date.current
