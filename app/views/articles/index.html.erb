@@ -8,13 +8,13 @@
   <% end %>
   <h2><%= link_to 'TODAS', articles_path %></h2>
 </div>
-<div class="division-container">
+<div class="article-container">
   <% @articles.last(2).each do |article| %>
-  <%= render 'cards/division_card', article: article %>
+  <%= render 'cards/article_card', article: article %>
   <% end %>
 </div>
-<div class="division-container-2">
+<div class="article-container-2">
   <% @articles.drop(2).each do |article| %>
-  <%= render 'cards/division_card', article: article %>
+  <%= render 'cards/article_card', article: article %>
   <% end %>
 </div>
