@@ -10,7 +10,8 @@
     <%= f.input :content1, placeholder: "Primer Contenido", required: false %>
     <%= f.input :content2, placeholder: "Segundo Contenido", required: false %>
     <%= f.input :content3, placeholder: "Tercer Contenido", required: false %>
-    <%= f.input :photo, required: false %>
+    <%= f.input :photo, as: :file %>
+
     <%= f.submit 'Crear Noticia', class:"btn btn-primary btn-lg btn-block " %>
     <% end %>
   </div>
