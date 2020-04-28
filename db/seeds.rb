@@ -13,6 +13,7 @@ Category.delete_all
 Article.delete_all
 Event.destroy_all
 User.destroy_all
+Division.destroy_all
 
 puts 'creating user'
 User.create(email: 'user2@hotmail.com', password: '123456')
