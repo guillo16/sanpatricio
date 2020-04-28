@@ -4,13 +4,7 @@ class ArticlesController < ApplicationController
 
   def index
     @articles = Article.all
-    if params["category"]
-      @articles = Article.where(category: params["category"])
-    elsif params["created_at"]
-      @articles = Article.order(created_at: :desc)
-    else
-      @articles
-    end
+    @divisions = Division.all
   end
 
   def show
@@ -42,6 +36,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :subtitle, :content1, :content2, :content3, :photo, :category)
+    params.require(:article).permit(:title, :subtitle, :content1, :content2, :content3, :photo, :category, :division_id)
   end
 end
