@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
-  before_action :set_articles, only: [:show, :destroy]
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_articles, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index]
 
   def index
     @articles = Article.order(created_at: :desc)
@@ -9,6 +9,7 @@ class ArticlesController < ApplicationController
 
   def show
     @divisions = Division.all
+    @gallery = Gallery.new
   end
 
   def new
@@ -23,6 +24,14 @@ class ArticlesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+  end
+
+  def update
+    @article.update(article_params)
+    redirect_to article_path(@article)
   end
 
   def destroy
