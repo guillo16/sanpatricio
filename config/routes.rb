@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'ib', to: 'pages#ib'
 
   resources :events
-  resources :users, only: :show
+  resources :users, only: [:show, :destroy]
   resources :categories, only: [:index, :show]
   resources :posts
   resources :divisions, only: :show
