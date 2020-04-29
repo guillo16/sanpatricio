@@ -9,13 +9,14 @@ class GalleriesController < ApplicationController
   end
 
   def create
+    @divisions = Division.all
     @article = Article.find(params[:article_id])
     @gallery = Gallery.new(gallery_params)
     @gallery.article = @article
     if @gallery.save
       redirect_to article_path(@article)
     else
-      render 'article/show'
+      render 'articles/show'
     end
   end
 

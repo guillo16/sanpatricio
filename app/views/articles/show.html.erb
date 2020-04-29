@@ -1,4 +1,25 @@
 <%= render 'shared/main_navbar' %>
+<section id="show-admin-container">
+  <div class="show-admin-container">
+    <% if current_user.admin? %>
+    <div>
+      <h2>Noticias</h2>
+      <%= link_to 'Editar Noticia', edit_article_path(@article), class: 'btn btn-warning btn-block' %>
+      <br>
+      <%= link_to 'Eliminar Noticia',  @article,  method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-danger btn-block' %>
+    </div>
+    <div class="mt-5">
+      <h2>Crear galeria de fotos</h2>
+      <%= simple_form_for([ @article, @gallery ]) do |f| %>
+      <%= f.input :title, required: false, label: 'Titulo' %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.submit 'Crear Galeria', class: 'btn btn-dark btn-block' %>
+    </div>
+    <% end %>
+    <% else %>
+    <% end %>
+  </div>
+</section>
 <div class="articles-navbar mb-3">
   <% @divisions.each do |division| %>
   <h2><%= link_to division.title.upcase,division_path(division) %></h2>
@@ -21,24 +42,6 @@
   <div class="show-articles-footer">
   </div>
   <div>
-    <% if current_user.admin? %>
-    <div class=" p-5">
-      <%= link_to 'Editar Noticia', edit_article_path(@article), class: 'btn btn-warning btn-block' %>
-      <br>
-      <%= link_to 'Eliminar Noticia',  @article,  method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-danger btn-block' %>
-    </div>
-    <div class="p-3">
-      <%= simple_form_for([ @article, @gallery ]) do |f| %>
-      <%= f.input :title %>
-      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-
-      <%= f.button :submit, class: 'btn btn-dark btn-block' %>
-    </div>
-    <% end %>
-    <% else %>
-    <% end %>
-  </div>
-  <div>
     <% @article.galleries.each do |gallery| %>
     <%= render 'shared/gallery', gallery: gallery %>
     <% end %>
@@ -47,4 +50,6 @@
 <div class="text-center mt-5 mb-5">
   <%= link_to 'Mas Noticias', articles_path, class: 'btn-article'  %>
 </div>
+
+
 
