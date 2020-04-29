@@ -1,5 +1,5 @@
+<% if current_user.admin? %>
 <div class="show-admin-container">
-  <% if current_user.admin? %>
   <div>
     <h2>Noticias</h2>
     <%= link_to 'Editar Noticia', edit_article_path(@article), class: 'btn btn-warning btn-block' %>
@@ -17,5 +17,5 @@
   </div>
   <% end %>
   <% else %>
-  <% end %>
 </div>
+<% end %>
