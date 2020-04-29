@@ -65,6 +65,9 @@
 }
 
 @media(max-width: 686px) {
+  .show-admin-container {
+    padding: 30px;
+  }
   .show-articles-wrapper {
     width: 90%;
     margin: 10px auto;
