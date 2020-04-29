@@ -58,7 +58,14 @@
   margin-top: 30px;
   width: 70%;
   margin: 20px auto;
+  h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bolder;
+  }
 }
+
 @media(max-width: 686px) {
   .show-articles-wrapper {
     width: 90%;
@@ -67,9 +74,9 @@
     padding: 5px;
   }
   .show-gallery-wrapper {
-  width: 90%;
-  margin: 20px auto;
-}
+    width: 90%;
+    margin: 20px auto;
+  }
 
   .show-articles-container {
     h2 {
