@@ -1,4 +1,6 @@
 <%= render 'shared/main_navbar' %>
+
+
 <div class="articles-navbar mb-3">
   <% @divisions.each do |division| %>
   <h2><%= link_to division.title.upcase,division_path(division) %></h2>
@@ -6,6 +8,15 @@
   <h2><%= link_to 'TODAS', articles_path %></h2>
 </div>
 <br><br><br>
+ <% if current_user.admin? %>
+  <div class=" p-5">
+    <%= link_to 'Editar Noticia', edit_article_path(article), class: 'btn btn-warning btn-block' %>
+    <br>
+    <%= link_to 'Eliminar Noticia',  article,  method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-danger btn-block' %>
+    <% else %>
+
+  </div>
+ <% end %>
 <div class="show-articles-wrapper">
   <div class="show-articles-container">
     <div class="show-articles-title">
