@@ -1,13 +1,4 @@
 class GalleriesController < ApplicationController
-  before_action :set_galleries, only: [ :show, :edit, :destroy]
-
-  def index
-    @galleries = Gallery.all
-  end
-
-  def show
-  end
-
   def create
     @divisions = Division.all
     @article = Article.find(params[:article_id])
@@ -20,20 +11,7 @@ class GalleriesController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
-  end
-
   private
-
-  def set_galleries
-    @gallery = Gallery.find(params[:id])
-  end
 
   def gallery_params
     params.require(:gallery).permit(:title, photos: [])
