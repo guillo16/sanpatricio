@@ -1,6 +1,4 @@
 <%= render 'shared/main_navbar' %>
-
-
 <div class="articles-navbar mb-3">
   <% @divisions.each do |division| %>
   <h2><%= link_to division.title.upcase,division_path(division) %></h2>
@@ -8,15 +6,6 @@
   <h2><%= link_to 'TODAS', articles_path %></h2>
 </div>
 <br><br><br>
- <% if current_user.admin? %>
-  <div class=" p-5">
-    <%= link_to 'Editar Noticia', edit_article_path(article), class: 'btn btn-warning btn-block' %>
-    <br>
-    <%= link_to 'Eliminar Noticia',  article,  method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-danger btn-block' %>
-    <% else %>
-
-  </div>
- <% end %>
 <div class="show-articles-wrapper">
   <div class="show-articles-container">
     <div class="show-articles-title">
@@ -31,25 +20,30 @@
   </div>
   <div class="show-articles-footer">
   </div>
-</div>
-<% if current_user.admin? %>
-<div class="p-3">
-  <%= simple_form_for([ @article, @gallery ]) do |f| %>
-  <%= f.input :title %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+  <div>
+    <% if current_user.admin? %>
+    <div class=" p-5">
+      <%= link_to 'Editar Noticia', edit_article_path(@article), class: 'btn btn-warning btn-block' %>
+      <br>
+      <%= link_to 'Eliminar Noticia',  @article,  method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-danger btn-block' %>
+    </div>
+    <div class="p-3">
+      <%= simple_form_for([ @article, @gallery ]) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
 
-  <%= f.button :submit, class: 'btn btn-dark btn-block' %>
+      <%= f.button :submit, class: 'btn btn-dark btn-block' %>
+    </div>
+    <% end %>
+    <% else %>
+    <% end %>
+  </div>
+  <div>
+    <% @article.galleries.each do |gallery| %>
+    <%= render 'shared/gallery', gallery: gallery %>
+    <% end %>
+  </div>
 </div>
-<% end %>
-<% else %>
-<% end %>
-
-<div class="container">
-  <% @article.galleries.each do |gallery| %>
-  <%= render 'shared/gallery', gallery: gallery %>
-  <% end %>
-</div>
-
 <div class="text-center mt-5 mb-5">
   <%= link_to 'Mas Noticias', articles_path, class: 'btn-article'  %>
 </div>
