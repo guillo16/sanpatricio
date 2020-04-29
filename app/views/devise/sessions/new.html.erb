@@ -8,7 +8,6 @@
     <div class="text-center">
       <hr class="hr-text" data-content="Iniciar sesíon">
     </div>
-
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-inputs">
       <p>Email</p>
@@ -20,7 +19,7 @@
       <div class="remember d-flex justify-content-between">
         <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
         <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-        <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+        <%= link_to "Olvidaste tu contraseña?", new_password_path(resource_name) %><br />
         <% end %>
       </div>
     </div>
@@ -32,14 +31,7 @@
     <div class="text-center mt-3">
       <p>No tienes cuenta? <%= render "devise/shared/links" %></p>
     </div>
-
   </div>
-
-
-
-
-
-
 </div>
 
 

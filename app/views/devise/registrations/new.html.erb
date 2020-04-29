@@ -1,7 +1,40 @@
-<br><br><br><br>
-<div class='text-center'>
-  <h2>Pagina no disponible</h2>
-  <%= link_to 'Volver', root_path, class: 'btn btn-primary btn-lg'  %>
+<div class="login-wrapper">
+  <div class="login-navbar">
+    <%= link_to root_path do  %>
+    <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/v1585140067/san_patricio_logo.png" alt="">
+    <% end %>
+  </div>
+  <div class="login-container">
+    <div class="text-center">
+      <hr class="hr-text" data-content="Registrarse">
+    </div>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
+    <div class="form-inputs">
+      <p>Email</p>
+      <%= f.input :email,
+      required: true,
+      autofocus: true,
+      input_html: { autocomplete: "email", class: "form-control form-control" }, label: false, placeholder: "usuario@mail.com" %>
+      <p>Contraseña</p>
+      <%= f.input :password,
+      required: true,
+      label: false,
+      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+      input_html: { autocomplete: "new-password" } %>
+      <p>Confirmar contraseña</p>
+      <%= f.input :password_confirmation,
+      required: true,
+      label: false,
+      input_html: { autocomplete: "new-password" } %>
+    </div>
+
+    <div class="form-actions mt-1">
+      <%= f.button :submit, "Ingresar", class: 'btn btn-green btn-block' %>
+    </div>
+    <% end %>
+    <div class="text-center mt-3">
+      <p>Ya tienes cuenta? <%= render "devise/shared/links" %></p>
+    </div>
+  </div>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br>
-<h2></h2>

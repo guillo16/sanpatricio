@@ -1,10 +1,13 @@
 <%= render 'shared/main_navbar' %>
+<% if user_signed_in? %>
 <% if current_user.admin? %>
 <div class="mt-5 p-5">
   <%= link_to 'Editar evento', edit_event_path(@event), class: 'btn btn-warning btn-block' %>
   <br>
   <%= link_to 'Destruir evento',  @event,  method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-danger btn-block' %>
 </div>
+<% else %>
+<% end %>
 <% else %>
 <% end %>
 <div class="show-event-container">
@@ -34,12 +37,3 @@
     <%= link_to 'Volver', events_path  %>
   </div>
 </div>
-
-
-
-
-
-
-
-
-

@@ -31,13 +31,11 @@
   }
 }
 .show-articles-container {
-
   h6 {
     padding: 10px 0px;
     color: grey;
     font-size: 14px;
   }
-
   img {
     width: 100%;
     object-fit: cover;
@@ -67,6 +65,9 @@
 }
 
 @media(max-width: 686px) {
+  .show-admin-container {
+    padding: 30px;
+  }
   .show-articles-wrapper {
     width: 90%;
     margin: 10px auto;

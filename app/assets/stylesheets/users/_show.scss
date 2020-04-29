@@ -14,20 +14,31 @@
 
 .title-green {
   border-bottom: 2px solid lightgrey;
-  font-size: 30px;
+  font-size: 24px;
   text-align: left;
   font-weight: bold;
   padding: 15px;
-  padding-left: 10px;
+  padding-left: 50px;
   color: $green;
   background-color: white;
   margin-bottom: 0px;
 }
-.user-avatar {
+.log-out {
+  background-color: white;
+  padding: 0px 10px;
   border-bottom: 2px solid lightgrey;
+  p {
+    margin-bottom: 0px;
+  }
+  a {
+   color: darkgreen;
+ }
+}
+.user-avatar {
   font-size: 30px;
   text-align:center;
-  padding: 15px;
+  padding: 5px 15px;
+  padding-top: 20px;
   padding-left: 10px;
   color: $green;
   background-color: white;
@@ -53,3 +64,31 @@
   margin: 50px auto;
 }
 
+@media(max-width: 680px){
+
+  .user-wrapper {
+    h1 {
+      font-size: 24px;
+    }
+  }
+
+  .user-avatar {
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    h2 {
+      color: grey;
+      font-size: 16px;
+      margin-bottom: 0px;
+      margin-right: 10px;
+    }
+  }
+  .title-green {
+    font-size: 18px;
+
+    padding: 15px;
+    padding-left: 10px;
+
+  }
+}
