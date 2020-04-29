@@ -1,0 +1,14 @@
+.gallery-main-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 8px;
+  padding: 8px;
+}
+
+.gallery-container {
+  img {
+   height: 150px;
+   width: 100%;
+   object-fit: cover;
+ }
+}

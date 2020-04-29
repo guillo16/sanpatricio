@@ -53,6 +53,12 @@
   border-bottom: 1px solid grey;
   margin-top: 50px;
 }
+
+.show-gallery-wrapper {
+  margin-top: 30px;
+  width: 70%;
+  margin: 20px auto;
+}
 @media(max-width: 686px) {
   .show-articles-wrapper {
     width: 90%;
@@ -60,6 +66,10 @@
     border: none;
     padding: 5px;
   }
+  .show-gallery-wrapper {
+  width: 90%;
+  margin: 20px auto;
+}
 
   .show-articles-container {
     h2 {

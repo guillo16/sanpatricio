@@ -41,11 +41,11 @@
   </div>
   <div class="show-articles-footer">
   </div>
-  <div>
-    <% @article.galleries.each do |gallery| %>
-    <%= render 'shared/gallery', gallery: gallery %>
-    <% end %>
-  </div>
+</div>
+<div class="show-gallery-wrapper">
+  <% @article.galleries.each do |gallery| %>
+  <%= render 'shared/gallery', gallery: gallery %>
+  <% end %>
 </div>
 <div class="text-center mt-5 mb-5">
   <%= link_to 'Mas Noticias', articles_path, class: 'btn-article'  %>
