@@ -1,0 +1,21 @@
+<div class="show-admin-container">
+  <% if current_user.admin? %>
+  <div>
+    <h2>Noticias</h2>
+    <%= link_to 'Editar Noticia', edit_article_path(@article), class: 'btn btn-warning btn-block' %>
+    <br>
+    <%= link_to 'Eliminar Noticia',  @article,  method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-danger btn-block' %>
+  </div>
+  <div class="mt-5">
+    <% unless @article.galleries.present? %>
+    <h2>Crear galeria de fotos</h2>
+    <%= simple_form_for([ @article, @gallery ]) do |f| %>
+    <%= f.input :title, required: false, label: 'Titulo' %>
+    <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+    <%= f.submit 'Crear Galeria', class: 'btn btn-dark btn-block' %>
+    <% end %>
+  </div>
+  <% end %>
+  <% else %>
+  <% end %>
+</div>

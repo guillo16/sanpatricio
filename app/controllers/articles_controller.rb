@@ -35,7 +35,7 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article.delete
+    @article.destroy
     redirect_to articles_path
   end
 
