@@ -11,6 +11,7 @@ puts 'clearing database'
 Post.delete_all
 Conection.delete_all
 Category.delete_all
+Gallery.delete_all
 Article.delete_all
 Event.destroy_all
 User.destroy_all
@@ -47,6 +48,21 @@ article = Article.new(user: user,
 article.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 article.save
 
+
+file13 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156072/40029739_1854585191254287_6456261823657148416_o.jpg')
+article13 = Article.new(user: user,
+  division: jardines,
+  title: 'Los alumnos del jardin y la educacion vial',
+  subtitle: 'Los alumnos del primario colaboraron en la enseñanza de las normas de transito a los chicos de los jardines',
+  content1:'Los alumnos del primario colaboraron en la enseñanza de las normas de transito a los chicos de los jardines.
+  Esta actividad se realizo acompañada por docentes y expretos en seguridad vial.',
+  created_at: '25/08/2018')
+article13.photo.attach(io: file13, filename: 'nes.jpg', content_type: 'image/jpg')
+article13.save
+
+
+
+
 file1 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585233891/IMG_3035.jpg')
 
 article1 = Article.new(user: user,
@@ -57,6 +73,11 @@ article1 = Article.new(user: user,
   created_at: '10/12/2018')
 article1.photo.attach(io: file1, filename: 'nes.jpg', content_type: 'image/jpg')
 article1.save
+
+
+
+
+
 
 file2 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156086/73188402_2556116157767850_6243152740499849216_n.jpg')
 article2 = Article.new(user: user,
@@ -70,26 +91,22 @@ article2.save
 
 
 
+
+
+
+
+
 file3 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156066/77268036_2589662987746500_8735371027980222464_n.jpg')
 article3 = Article.new(user: user,
   division: primario,
-  title: 'Proteger al medio ambientee',
-  subtitle: 'Los alumnos del primario presentaron sus proyectos de reciclaje y ayuda al medio ambiente',
-  content1:'En el marco de la feria de ciencia , alumnos del primario presentaron sus proyectos sobre medio ambiente y reciclaje.
-  El evento se llevo a cabo en el primario con presencia de algunos padres y expretos en reciclaje.',
-  created_at: '21/04/2019')
+  title: '1ª Exposición PEP del IB',
+  subtitle: 'Los alumnos del primario presentaron sus proyectos de ayuda al medio ambiente.',
+  content1:'1ª Exposición PEP del IB de los alumnos de Sexto año del Nivel Primario. Trabajo de Excelencia de los docentes y de todos los alumnos que participan en la muestra. No dejen de visitarla. Orgullosos de nuestro colegio!!
+',
+  created_at: '28/11/2019')
 article3.photo.attach(io: file3, filename: 'nes.jpg', content_type: 'image/jpg')
 article3.save
 
-file4 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156076/44267120_1919928638053275_7998990119052771328_o.jpg')
-article4 = Article.new(user: user,
- division: primario,
- title: 'Los Alumnos empezaron el ciclo lectivo 2020',
- subtitle: 'Los Alumnos del Primario empezaron el ciclo lectivo 2020 , y los padres estuvieron presentes',
- content1: 'Los Alumnos del Primario empezaron el ciclo lectivo 2020 , y los padres estuvieron presentes',
- created_at: '03/03/2020' )
-article4.photo.attach(io: file4, filename: 'nes.jpg', content_type: 'image/jpg')
-article4.save
 
 
 
@@ -99,9 +116,18 @@ article5 = Article.new(user: user,
   title: 'Ayuda de los alumnos en los comedores de la zona',
   subtitle: 'En el marco de la materia C.A.S , los alumnos colaboraron con el comedor "Padre Mujica" ubicado en Yerba Buena',
   content1:'En el marco de la materia C.A.S , los alumnos colaboraron con el comedor "Padre Mujica" ubicado en Yerba Buena. Felicitamos a alumnos y profesores por esta gran iniciativa.',
-  created_at: '15/05/2019')
+  created_at: '12/10/2018')
 article5.photo.attach(io: file5, filename: 'nes.jpg', content_type: 'image/jpg')
 article5.save
+
+
+
+
+
+
+
+
+
 
 
 file6 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156055/60997228_2240313369348132_358752390532300800_n.jpg')
@@ -109,12 +135,24 @@ article6 = Article.new(user: user,
   division: secundario,
   title: 'Se celebro el 25 de Mayo',
   subtitle: 'Los alumnos realizaron el acto en conmemoracion al 25 de Mayo de 1810 ',
-  content1:'en conmemoracion al 25 de Mayo de 1810, los alumnos y profesores realizaron el tradicional acto.
+  content1:'En conmemoracion al 25 de Mayo de 1810, los alumnos y profesores realizaron el tradicional acto.
   El 25 de mayo es una de las fechas patrias más importantes para la República Argentina, que conmemora la Revolución de Mayo, una gesta que concluyó en la constitución de la Primera Junta de Gobierno que depuso la autoridad del virrey español Baltasar Hidalgo de Cisneros sobre el Virreinato del Río de la Plata.
   Los alumnos estuvieron acompañados por los padres que se hicieron presente para el acto patrio.',
   created_at: '25/05/2019')
 article6.photo.attach(io: file6, filename: 'nes.jpg', content_type: 'image/jpg')
 article6.save
+
+
+
+
+
+
+
+
+
+
+
+
 
 file7 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585173597/GZTLMSWJK5AMLAZ6MAI7J4CVY4.jpg')
 article7 = Article.new(user: user,
@@ -126,7 +164,7 @@ article7 = Article.new(user: user,
   Simultaneously, we as an organization started migrating to virtual. Our Singapore office transitioned to virtual working seven weeks ago and so have all other locations in the last two weeks. Our 700 employees worldwide are continuing to do what we are here to do, which is to provide services to schools, now as a suddenly virtual organization.
     The impact of the pandemic on our students and their ability to go through a fair assessment process was a major focal point throughout this entire process.
     Due to the nature of the IB programme, we could not make the decision one country at a time. We had to make the right decision for our entire global community of teachers, examiners and students.',
-    created_at: '20/03/2020')
+    created_at: '20/04/2020')
 article7.photo.attach(io: file7, filename: 'nes.jpg', content_type: 'image/jpg')
 article7.save
 
@@ -151,13 +189,24 @@ file9 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588869/
 article9 = Article.new(user: user,
   division: institucional,
   title: 'Las clases se suspenden por el coronavirus',
-  subtitle: 'El presidente decreto la suspencion de las clases en todo el pais',
-  content1:'El presidente decreto la suspencion de las clases en todo el pais.
-  Así lo anunciará hoy el Gobierno, luego de un encuentro entre expertos y funcionarios nacionales que liderará, después de las 14, el ministro de Educación, Nicolás Trotta, que ayer había comenzado a resolver medidas que se encaminaban a esa definición.
-  Ayer, horas antes, Educación había habilitado a las universidades de todo el país no solo a suspender clases presenciales por 14 días, sino también a permitir que estudiantes y docentes con patologías previas pudieran ausentarse de las aulas de manera justificada.',
-  created_at: '16/03/2020')
+  subtitle: '',
+  content1:'
+  Sres. Padres
+  Nos dirijimos a uds para informarles que a pesar de que en nuestro
+  colegio no tenemos ningún caso de alumno enfermo ni sospechado de
+  enfermedad COVID - 19, la institución en sus 3 Niveles, decide suspender las clases por 14 días para
+  cuidar la salud de toda la Comunidad Educativa y favorecer el aislamiento de las
+  personas en las casas. Esta medida es la única que está siendo efectiva en el mundo para cortar la
+  circulación del virus.  Pero lo hace con eficiencia si se toma a tiempo.',
+  content2: 'Contamos desde ya con su colaboración y compromiso en el cumplimiento estricto y responsable de la cuarentena
+  que se solicita.',
+  content3: 'Daremos respuesta a lo académico como lo hacemos simepre tomando las medidas que debamos tomar al respecto
+  en su momento. Se los mantendrá informados permanentemente.
+  Equipo Directivo de los 3 Niveles del Colegio San Patricio.',
+  created_at: '15/03/2020')
 article9.photo.attach(io: file9, filename: 'nes.jpg', content_type: 'image/jpg')
 article9.save
+
 file10 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156076/44267120_1919928638053275_7998990119052771328_o.jpg')
 article10 = Article.new(user: user,
   division: jardines,
@@ -170,15 +219,50 @@ article10.photo.attach(io: file10, filename: 'nes.jpg', content_type: 'image/jpg
 article10.save
 
 
+file14 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229647/secundario_legislatura.jpg')
+article14 = Article.new(user: user,
+  division: secundario,
+  title: 'Visita a la Legislatura',
+  subtitle: 'Los alumnos visitaron la Legislatura de la provincia',
+  content1:'Invitados por un legislador los alumnos del secundario visitaron la Legislatura. Fue una linda jornada donde los alumnos conocieron el funcionamiento de la Legislatura.',
+  created_at: '01/04/2019')
+article14.photo.attach(io: file14, filename: 'nes.jpg', content_type: 'image/jpg')
+article14.save
 
-# Article.new(user: user,
-#   division: secundario,
-#   title: 'Se celebro el dia de la Bandera',
-#   subtitle: 'Los alumnos juraron la bandera en el acto realizado en el Secundario ',
-#   photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585161507/13483383_1073075972738550_5614390916278140258_o.jpg',
-#   content1:'En el marco de los festejos por el dia de la bandera los alumnos de tercer año realizaron la jura de la bandera.
-#   Estuvieron acompañados por sus padres en este importante momento.',
-#   created_at: '20/06/2019')
+file15 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229647/secundario_legislatura.jpg')
+article15 = Article.new(user: user,
+  division: secundario,
+  title: 'Visita a la Legislatura',
+  subtitle: 'Los alumnos visitaron la Legislatura de la provincia',
+  content1:'Invitados por un legislador los alumnos del secundario visitaron la Legislatura. Fue una linda jornada donde los alumnos conocieron el funcionamiento de la Legislatura.',
+  created_at: '30/04/2019')
+article15.photo.attach(io: file15, filename: 'nes.jpg', content_type: 'image/jpg')
+article15.save
+
+
+file16 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229647/secundario_legislatura.jpg')
+article16 = Article.new(user: user,
+  division: primario,
+  title: 'Feria del Libro',
+  subtitle: 'Los alumnos visitaron la Legislatura de la provincia',
+  content1:'Invitados por un legislador los alumnos del secundario visitaron la Legislatura. Fue una linda jornada donde los alumnos conocieron el funcionamiento de la Legislatura.',
+  created_at: '16/10/2018')
+article16.photo.attach(io: file16, filename: 'nes.jpg', content_type: 'image/jpg')
+article16.save
+
+
+
+file17 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229647/secundario_legislatura.jpg')
+article17 = Article.new(user: user,
+  division: secundario,
+  title: 'Se celebro el dia de la Independencia',
+  subtitle: 'Los alumnos juraron la bandera en el acto realizado en el Secundario ',
+  content1:'En el marco de los festejos por el dia de la Independencia los alumnos y profesores realizaron un acto.',
+  created_at: '09/07/2019')
+article17.photo.attach(io: file17, filename: 'nes.jpg', content_type: 'image/jpg')
+article17.save
+
+
 # Article.new(user: user,
 #   division: primario,
 #   title: 'Exposición P.E.P en el primario ',
@@ -219,13 +303,7 @@ article10.save
 #   In Argentina and the US, Skype calls were organised between young PYP student teams to discuss healthy eating habits. In India, students invented a cost-effective water purifier. And in Hawaii, the Wipeout Crew (pictured above) took on coastal environmental challenges.
 #   Solutions are still coming in across all of the IB’s social media channels, and we’ll continue to share the inspiration.',
 #   created_at: '24/09/2019')
-# Article.new(user: user,
-#   division: secundario,
-#   title: 'Visita a la Legislatura',
-#   subtitle: 'Los alumnos visitaron la Legislatura de la provincia',
-#   photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229647/secundario_legislatura.jpg',
-#   content1:'Invitados por un legislador los alumnos del secundario visitaron la Legislatura. Fue una linda jornada donde los alumnos conocieron el funcionamiento de la Legislatura.',
-#   created_at: '21/10/2019')
+
 
 # Article.new(user: user,
 #   division: ib,
@@ -255,14 +333,6 @@ article10.save
 #   content1:'Los Alumnos del Secundario empezaron el ciclo lectivo 2020.',
 #   created_at: '03/03/2020')
 
-# Article.new(user: user,
-#   division: primario,
-#   title: 'Los alumnos del primario y la educacion vial',
-#   subtitle: 'Los alumnos del primario colaboraron en la enseñanza de las normas de transito a los chicos de los jardines',
-#   photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156072/40029739_1854585191254287_6456261823657148416_o.jpg',
-#   content1:'Los alumnos del primario colaboraron en la enseñanza de las normas de transito a los chicos de los jardines.
-#   Esta actividad se realizo acompañada por docentes y expretos en seguridad vial.',
-#   created_at: '12/03/2020')
 
 
 
@@ -324,21 +394,6 @@ article10.save
   # event.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
   # event.save
   puts 'finsh events'
-  puts 'creating messages'
-  building = ['Primario', 'Secundario', 'Administracion', 'Jardines']
-
-  10.times do
-    Conection.create(building: building[0], email: Faker::Internet.email, name: Faker::Name.name, message: Faker::TvShows::Friends.quote )
-  end
-  10.times do
-    Conection.create(building: building[1], email: Faker::Internet.email, name: Faker::Name.name, message: Faker::TvShows::Friends.quote )
-  end
-  10.times do
-    Conection.create(building: building[2], email: Faker::Internet.email, name: Faker::Name.name, message: Faker::TvShows::Friends.quote )
-  end
-  10.times do
-    Conection.create(building: building[3], email: Faker::Internet.email, name: Faker::Name.name, message: Faker::TvShows::Friends.quote )
-  end
 
   puts 'creating category'
   primario = Category.create(title: 'Primario', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588867/Captura_de_Pantalla_2020-03-30_a_la_s_12.36.43.png')
@@ -346,25 +401,15 @@ article10.save
   jardines = Category.create(title: 'Jardines', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588844/Captura_de_Pantalla_2020-03-30_a_la_s_14.20.07.png')
   secundario = Category.create(title: 'Secundario', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588869/Captura_de_Pantalla_2020-03-30_a_la_s_14.17.33.png')
 
-  puts 'Creating Noticificaciones'
-  user = User.last
-
-  10.times do
-    Post.create(title: Faker::Quotes::Shakespeare.hamlet_quote, content: Faker::TvShows::Simpsons.quote, user: user, category: primario )
-  end
-
-  10.times do
-    Post.create(title: Faker::Quotes::Shakespeare.hamlet_quote, content: Faker::TvShows::Simpsons.quote, user: user, category: administracion )
-  end
-
-  20.times do
-    Post.create(title: Faker::Quotes::Shakespeare.hamlet_quote, content: Faker::TvShows::Simpsons.quote, user: user, category: secundario )
-
-  end
-
-  20.times do
-    Post.create(title: Faker::Quotes::Shakespeare.hamlet_quote, content: Faker::TvShows::Simpsons.quote, user: user, category: jardines )
-
-  end
+  puts 'Creating Galleries'
 
   puts 'finish'
+
+
+
+
+
+
+
+
+
