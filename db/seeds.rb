@@ -154,7 +154,7 @@ article6.save
 
 
 
-file7 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585173597/GZTLMSWJK5AMLAZ6MAI7J4CVY4.jpg')
+file7 = URI.open('https://images.unsplash.com/photo-1584118624012-df056829fbd0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80')
 article7 = Article.new(user: user,
   division: ib,
   title: 'The cancellation of the May 2020 IB examinations',
@@ -189,9 +189,8 @@ file9 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588869/
 article9 = Article.new(user: user,
   division: institucional,
   title: 'Las clases se suspenden por el coronavirus',
-  subtitle: '',
-  content1:'
-  Sres. Padres
+  subtitle: 'Comunicado',
+  content1:'Sres. Padres
   Nos dirijimos a uds para informarles que a pesar de que en nuestro
   colegio no tenemos ningún caso de alumno enfermo ni sospechado de
   enfermedad COVID - 19, la institución en sus 3 Niveles, decide suspender las clases por 14 días para
@@ -232,7 +231,7 @@ article14.save
 file15 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229647/secundario_legislatura.jpg')
 article15 = Article.new(user: user,
   division: secundario,
-  title: 'Visita a la Legislatura',
+  title: 'Visita a la Reserva Ecologica',
   subtitle: 'Los alumnos visitaron la Legislatura de la provincia',
   content1:'Invitados por un legislador los alumnos del secundario visitaron la Legislatura. Fue una linda jornada donde los alumnos conocieron el funcionamiento de la Legislatura.',
   created_at: '30/04/2019')
