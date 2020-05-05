@@ -5,7 +5,7 @@
   height: 100vh;
 }
 .login-container {
-  width: 400px;
+  width: 450px;
   margin: 50px auto;
   padding: 20px;
   h2 {
@@ -116,7 +116,7 @@
   }
   .remember {
     a {
-      margin-left: 80px;
+      margin-left: 70px;
     }
   }
 }
@@ -124,7 +124,7 @@
 @media(max-width: 330px){
   .remember {
     a {
-      margin-left: 40px;
+      margin-left: 18px;
     }
   }
 }
