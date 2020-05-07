@@ -15,7 +15,7 @@
       <h2><%= @article.title %></h2>
       <h3><%= @article.subtitle %></h3>
     </div>
-    <h6><%= @article.created_at.strftime(" %d %b %Y - %I:%M %P") %></h6>
+    <h6><%= @article.created_at.in_time_zone("Buenos Aires").strftime(" %d %b %Y - %I:%M %P") %></h6>
     <%= cl_image_tag @article.photo.key %>
     <p><%= @article.content1 %></p>
     <p><%= @article.content2 %></p>
