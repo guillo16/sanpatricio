@@ -7,6 +7,8 @@ class Article < ApplicationRecord
   has_many :galleries, dependent: :destroy
   validate :photo_attach
 
+  private
+
   def photo_attach
     if photo.attached? == false
       errors.add(:photo, 'Tienes que elegir una foto')
