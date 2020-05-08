@@ -9,12 +9,7 @@
   <h2><%= link_to 'TODAS', articles_path %></h2>
 </div>
 <div class="article-container">
-  <% @division.articles.last(2).each do |article| %>
-  <%= render 'cards/article_card', article: article %>
-  <% end %>
-</div>
-<div class="article-container-2">
-  <% @division.articles.drop(2).each do |article| %>
+  <% @division.articles.reverse_each do |article| %>
   <%= render 'cards/article_card', article: article %>
   <% end %>
 </div>

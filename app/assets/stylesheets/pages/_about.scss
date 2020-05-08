@@ -15,6 +15,7 @@
   margin-bottom: 400px;
 }
 .mission-container {
+  margin-bottom: 400px;
   h2 {
     text-align: center;
     margin-top: 10px;
@@ -28,16 +29,31 @@
  }
 }
 
+.autoridades-title {
+  border-bottom: 1px solid lightgrey;
+  padding: 20px 0px;
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: $green;
+  }
+  p {
+    font-size: 16px;
+    margin-bottom: 0px;
+  }
+}
+
 .nav-pills .nav-link.active {
-    color: #fff;
-    background-color: $green;
+  color: #fff;
+  background-color: $green;
 }
 .nav-link {
-    color: $green;
-    font-weight: bold;
-    &:hover {
-      color: darkgreen;
-    }
+  color: $green;
+  font-weight: bold;
+  &:hover {
+    color: darkgreen;
+  }
 }
 
 @media(max-width: 686px) {
