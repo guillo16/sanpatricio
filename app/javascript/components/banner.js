@@ -8,4 +8,12 @@ const loadDynamicBannerText = () => {
   });
 }
 
-export { loadDynamicBannerText };
+const loadDynamicBannerTextTwo = () => {
+  new Typed('#banner-typed-text-secondary', {
+    strings: ["Colegio SAN PATRICIO", "Fundado en 1976"],
+    typeSpeed: 80,
+    loop: true
+  });
+}
+
+export { loadDynamicBannerText, loadDynamicBannerTextTwo };
