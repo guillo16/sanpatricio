@@ -81,7 +81,7 @@
   .banner-container {
     text-align: center;
     img {
-      width: 80px;
+      height: 100px !important;
       margin-bottom: 6px;
     }
     h1 {
@@ -120,7 +120,6 @@
   .banner-container {
     text-align: center;
     img {
-      width: 80px;
       margin-bottom: 20px;
     }
     h2 {
