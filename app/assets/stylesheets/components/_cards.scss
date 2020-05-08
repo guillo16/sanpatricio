@@ -185,29 +185,3 @@
     }
   }
 }
-@media(max-width: 680px) {
-  .main-card-article {
-    display: none;
-  }
-
-  .main-card-article-2 {
-    display: block;
-  }
-
-  .second-card-article-3 {
-   display: none;
- }
-
- .card-article {
-  padding: 10px 5px;
-  img{
-    display: none;
-  }
-  h2 {
-    font-size: 14px;
-  }
-  h4 {
-    font-size: 15px;
-  }
-}
-}

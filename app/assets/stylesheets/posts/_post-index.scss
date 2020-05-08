@@ -47,11 +47,11 @@
     font-size: 35px;
   }
   h3 {
-     color: $green;
-     font-size: 15px;
-     margin-bottom: 0px;
-     font-weight: bold;
-  }
+   color: $green;
+   font-size: 15px;
+   margin-bottom: 0px;
+   font-weight: bold;
+ }
 }
 
 
@@ -60,8 +60,14 @@
   margin-bottom: 10px;
   border-bottom: 1px solid lightgrey;
   a {
-    text-decoration:none;
-  }
+    text-decoration: none;
+    &:hover {
+      h1{
+       color: grey;
+     }
+   }
+ }
+
 
 }
 
@@ -80,6 +86,7 @@
     font-size: 12px;
     margin-left: 30px;
   }
+
 }
 
 .post-card-content {
@@ -88,6 +95,10 @@
     color: black;
   }
 
+}
+
+.post-footer {
+  margin-bottom: 400px;
 }
 
 
