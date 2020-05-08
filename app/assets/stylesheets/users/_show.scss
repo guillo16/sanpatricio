@@ -58,6 +58,36 @@
     margin-right: 10px;
   }
 }
+
+.map {
+
+  border-top: 1px solid lightgrey;
+  width: 80%;
+  margin: 50px auto;
+  p {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid lightgrey;
+
+  }
+  a {
+    color: $green;
+  }
+}
+
+.map-title {
+ border-bottom: 2px solid lightgrey;
+ font-size: 24px;
+ text-align: left;
+ font-weight: bold;
+ padding: 15px;
+ color: $green;
+ background-color: white;
+ margin-bottom: 0px;
+ text-align: center;
+}
 //admin part
 .admin-container {
   width: 90%;
