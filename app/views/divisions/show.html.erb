@@ -13,8 +13,3 @@
   <%= render 'cards/article_card', article: article %>
   <% end %>
 </div>
-<div class="article-container-2">
-  <% @division.articles.first(20).drop(2).each do |article| %>
-  <%= render 'cards/article_card', article: article %>
-  <% end %>
-</div>
