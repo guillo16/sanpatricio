@@ -11,17 +11,10 @@ require 'faker'
 # guillos.each do |user|
 #   user.delete
 # end
-Post.delete_all
-Conection.delete_all
-Category.delete_all
-Gallery.delete_all
-Article.delete_all
-Event.destroy_all
-User.destroy_all
-Division.destroy_all
 
-  puts 'Creating Users'
-  list =
+
+puts 'Creating Users'
+list =
 ['mayracowes79@gmail.com',
 'ncerain@gmail.com',
 'guga_kazura@hotmail.com',
