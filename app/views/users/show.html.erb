@@ -9,6 +9,8 @@
   </div>
   <div class="text-right log-out">
    <p><%= link_to "Cerrar sesíon", destroy_user_session_path, method: :delete %></p>
+     <%= link_to 'Editar Perfil', edit_user_registration_path, class: "btn btn-gradient btn-lg btn-block" %>
+
  </div>
  <% if current_user.admin? %>
  <%= render 'adminpanel' %>
