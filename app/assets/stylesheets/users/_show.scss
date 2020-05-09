@@ -24,8 +24,11 @@
   margin-bottom: 0px;
 }
 .log-out {
+  display: flex;
+  justify-content: space-between;
   background-color: white;
-  padding: 0px 10px;
+  padding: 0px 50px;
+  padding-top: 20px;
   border-bottom: 2px solid lightgrey;
   p {
     margin-bottom: 0px;
@@ -119,5 +122,9 @@
     padding: 15px;
     padding-left: 10px;
 
+  }
+  .log-out {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }

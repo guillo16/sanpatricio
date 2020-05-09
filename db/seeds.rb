@@ -7,259 +7,1384 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
 require 'faker'
-puts 'clearing database'
-Post.delete_all
-Conection.delete_all
-Category.delete_all
-Gallery.delete_all
-Article.delete_all
-Event.destroy_all
-User.destroy_all
-Division.destroy_all
-
-puts 'creating user'
-User.create(email: 'user2@hotmail.com', password: '123456')
-User.create(email: 'user1@hotmail.com', password: '123456', admin: true)
-puts 'creating divisions'
-secundario = Division.create(title: 'secundario',
- photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588869/Captura_de_Pantalla_2020-03-30_a_la_s_12.39.44.png')
-primario = Division.create(title: 'primario',
- photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585228798/GYtF5EsS.jpg')
-jardines = Division.create(title: 'jardines',
- photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585236318/ZcMqJE5hRYIAPMpSjGtn6MG6yOzniVtweqTlqsWW9Ioj9du-g7R7UaH-0oxR4wq7W9GPI_4m3Fv6QBzy_uUZ5lqNWzJ0_yLW-5Vz1cD6bj4.jpg')
-ib = Division.create(title: 'ib',
- photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_1131/v1588027161/cambridge.JPG.jpg')
-institucional = Division.create(title: 'institucional',
- photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156046/61489059_2240313456014790_473916157548560384_n.jpg')
-puts 'creating articles'
-user = User.last
-
-
-
-file = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229638/secundario_ministro_de_educacion.jpg')
-
-
-article = Article.new(user: user,
-  division: secundario,
-  title: 'Reunion con el ministro de Educacion de la nacion',
-  subtitle: 'Los alumnos se reunieron con el ministro de Educacion de la nacion , Esteban Bullrich',
-  content1: 'Los alumnos se reunieron con el ministro de Educacion de la nacion , Esteban Bullrich. Autoridades , profesores y alumnos fueron parte de esta jornada.',
-  created_at: '15/04/2017')
-article.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
-article.save
-
-
-file13 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156072/40029739_1854585191254287_6456261823657148416_o.jpg')
-article13 = Article.new(user: user,
-  division: jardines,
-  title: 'Los alumnos del jardin y la educacion vial',
-  subtitle: 'Los alumnos del primario colaboraron en la enseñanza de las normas de transito a los chicos de los jardines',
-  content1:'Los alumnos del primario colaboraron en la enseñanza de las normas de transito a los chicos de los jardines.
-  Esta actividad se realizo acompañada por docentes y expretos en seguridad vial.',
-  created_at: '25/08/2018')
-article13.photo.attach(io: file13, filename: 'nes.jpg', content_type: 'image/jpg')
-article13.save
-
-
-
-
-file1 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585233891/IMG_3035.jpg')
-
-article1 = Article.new(user: user,
-  division: secundario,
-  title: 'Cierre del ciclo lectivo',
-  subtitle: 'Se festejo el acto por el cierre del ciclo lectivo',
-  content1:'Se produjo el acto por el cierre del ciclo lectivo del año, padres y alumnos estuvieron presente en la entrega de distinciones a los alumnos de todos los años.',
-  created_at: '10/12/2018')
-article1.photo.attach(io: file1, filename: 'nes.jpg', content_type: 'image/jpg')
-article1.save
-
-
-
-
-
-
-file2 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156086/73188402_2556116157767850_6243152740499849216_n.jpg')
-article2 = Article.new(user: user,
- division: institucional,
- title: 'Inaguramos el nuevo comedor',
- subtitle: 'La inaguracion del nuevo comedor del Secundario',
- content1: '',
- created_at: '02/03/2019')
-article2.photo.attach(io: file2, filename: 'nes.jpg', content_type: 'image/jpg')
-article2.save
-
-
-
-
-
-
-
-
-file3 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156066/77268036_2589662987746500_8735371027980222464_n.jpg')
-article3 = Article.new(user: user,
-  division: primario,
-  title: '1ª Exposición PEP del IB',
-  subtitle: 'Los alumnos del primario presentaron sus proyectos de ayuda al medio ambiente.',
-  content1:'1ª Exposición PEP del IB de los alumnos de Sexto año del Nivel Primario. Trabajo de Excelencia de los docentes y de todos los alumnos que participan en la muestra. No dejen de visitarla. Orgullosos de nuestro colegio!!
-',
-  created_at: '28/11/2019')
-article3.photo.attach(io: file3, filename: 'nes.jpg', content_type: 'image/jpg')
-article3.save
-
-
-
-
-file5 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229668/secundario_comedores.jpg')
-article5 = Article.new(user: user,
-  division: secundario,
-  title: 'Ayuda de los alumnos en los comedores de la zona',
-  subtitle: 'En el marco de la materia C.A.S , los alumnos colaboraron con el comedor "Padre Mujica" ubicado en Yerba Buena',
-  content1:'En el marco de la materia C.A.S , los alumnos colaboraron con el comedor "Padre Mujica" ubicado en Yerba Buena. Felicitamos a alumnos y profesores por esta gran iniciativa.',
-  created_at: '12/10/2018')
-article5.photo.attach(io: file5, filename: 'nes.jpg', content_type: 'image/jpg')
-article5.save
-
-
-
-
-
-
-
-
-
-
-
-file6 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156055/60997228_2240313369348132_358752390532300800_n.jpg')
-article6 = Article.new(user: user,
-  division: secundario,
-  title: 'Se celebro el 25 de Mayo',
-  subtitle: 'Los alumnos realizaron el acto en conmemoracion al 25 de Mayo de 1810 ',
-  content1:'En conmemoracion al 25 de Mayo de 1810, los alumnos y profesores realizaron el tradicional acto.
-  El 25 de mayo es una de las fechas patrias más importantes para la República Argentina, que conmemora la Revolución de Mayo, una gesta que concluyó en la constitución de la Primera Junta de Gobierno que depuso la autoridad del virrey español Baltasar Hidalgo de Cisneros sobre el Virreinato del Río de la Plata.
-  Los alumnos estuvieron acompañados por los padres que se hicieron presente para el acto patrio.',
-  created_at: '25/05/2019')
-article6.photo.attach(io: file6, filename: 'nes.jpg', content_type: 'image/jpg')
-article6.save
-
-
-
-
-
-
-
-
-
-
-
-
-
-file7 = URI.open('https://images.unsplash.com/photo-1584118624012-df056829fbd0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80')
-article7 = Article.new(user: user,
-  division: ib,
-  title: 'The cancellation of the May 2020 IB examinations',
-  subtitle: 'For the first time in its history, the IB will not hold a May exam session due to COVID-19. We speak with IB Director General Siva Kumari to hear more about the decision.',
-  content1:'What led up to your unprecedented decision to not hold exams?
-  It’s been two intensive months of day-to-day decisions about the health and safety of our international community. In late December/early January, we were monitoring and reacting to what was happening in our schools in China, Japan and South Korea. Those schools provided insights on the impact of shutdowns to come. We paid close attention as the epidemic quickly grew to a global pandemic. All the while, we were thinking through scenarios for all situations and, “what if’s”.
-  Simultaneously, we as an organization started migrating to virtual. Our Singapore office transitioned to virtual working seven weeks ago and so have all other locations in the last two weeks. Our 700 employees worldwide are continuing to do what we are here to do, which is to provide services to schools, now as a suddenly virtual organization.
-    The impact of the pandemic on our students and their ability to go through a fair assessment process was a major focal point throughout this entire process.
-    Due to the nature of the IB programme, we could not make the decision one country at a time. We had to make the right decision for our entire global community of teachers, examiners and students.',
-    created_at: '20/04/2020')
-article7.photo.attach(io: file7, filename: 'nes.jpg', content_type: 'image/jpg')
-article7.save
-
-
-
-
-file8 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_555/v1585229134/Schools-respond-to-COVID-19-outbreak-by-going-virtual.png')
-article8 = Article.new(user: user,
-  division: ib,
-  title: 'Schools respond to COVID-19 outbreak by going virtual',
-  subtitle: 'Due to the COVID-19, also known as Coronavirus, emergency, many IB World Schools are successfully using online learning to continue students’ education, says IB Curriculum Manager Pilar Quezzaire. ',
-  content1:'Coordinating teachers and students
-  When the Chinese government ordered schools to be shut down due to the COVID-19 outbreak, students and teachers at IB World Schools Shanghai American School (SAS) and Western Academy of Beijing (WAB) were on vacation for the Chinese New Year. Faculty and families were scattered across the world and unable to return to China. Both schools had to respond to the situation as quickly as possible.
-  SAS leadership implemented an emergency online learning programme. In the process, they discovered that their students and teachers resided across five continents and 22 time zones. The first challenge for SAS was to figure out how to get everyone enough online learning and teaching time.
-  Director of Technology Alan Preis says: “At first, learning was almost entirely asynchronous [not online simultaneously] because we assumed we’d be closed for a short time. Now, we have implemented more options for synchronous [groups online at the same time] instruction. But equitable access is a huge issue based on time zones―it is almost impossible to have all students working together with a teacher at the same time.” The Shanghai American School Distance Learning Plan continues to evolve as the school must remain closed longer than originally expected.
-  SAS has had to distribute teachers’ time across different time zones, creating shorter meeting times, more one-to-one conversations with students and more spontaneous teaching moments as students worked on their assignments. SAS leadership has been impressed by how well the teachers have responded despite the stresses of teaching in a different way as well as in a new medium. “The teachers got five years’ worth of professional learning in two weeks,” adds Preis.',
-  created_at: '19/03/2020')
-article8.photo.attach(io: file8, filename: 'nes.jpg', content_type: 'image/jpg')
-article8.save
-
-file9 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588869/Captura_de_Pantalla_2020-03-30_a_la_s_12.39.44.png')
-article9 = Article.new(user: user,
-  division: institucional,
-  title: 'Las clases se suspenden por el coronavirus',
-  subtitle: 'Comunicado',
-  content1:'Sres. Padres
-  Nos dirijimos a uds para informarles que a pesar de que en nuestro
-  colegio no tenemos ningún caso de alumno enfermo ni sospechado de
-  enfermedad COVID - 19, la institución en sus 3 Niveles, decide suspender las clases por 14 días para
-  cuidar la salud de toda la Comunidad Educativa y favorecer el aislamiento de las
-  personas en las casas. Esta medida es la única que está siendo efectiva en el mundo para cortar la
-  circulación del virus.  Pero lo hace con eficiencia si se toma a tiempo.',
-  content2: 'Contamos desde ya con su colaboración y compromiso en el cumplimiento estricto y responsable de la cuarentena
-  que se solicita.',
-  content3: 'Daremos respuesta a lo académico como lo hacemos simepre tomando las medidas que debamos tomar al respecto
-  en su momento. Se los mantendrá informados permanentemente.
-  Equipo Directivo de los 3 Niveles del Colegio San Patricio.',
-  created_at: '15/03/2020')
-article9.photo.attach(io: file9, filename: 'nes.jpg', content_type: 'image/jpg')
-article9.save
-
-file10 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156076/44267120_1919928638053275_7998990119052771328_o.jpg')
-article10 = Article.new(user: user,
-  division: jardines,
-  title: 'Los Alumnos empezaron el ciclo lectivo 2020',
-  subtitle: 'Los Alumnos de los Jardines empezaron el ciclo lectivo 2020',
-  content1:'Los Alumnos de los Jardines empezaron el ciclo lectivo 2020,
-  los padres estuvieron presentes en el primer dia de clases.',
-  created_at: '03/03/2020')
-article10.photo.attach(io: file10, filename: 'nes.jpg', content_type: 'image/jpg')
-article10.save
-
-
-file14 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229647/secundario_legislatura.jpg')
-article14 = Article.new(user: user,
-  division: secundario,
-  title: 'Visita a la Legislatura',
-  subtitle: 'Los alumnos visitaron la Legislatura de la provincia',
-  content1:'Invitados por un legislador los alumnos del secundario visitaron la Legislatura. Fue una linda jornada donde los alumnos conocieron el funcionamiento de la Legislatura.',
-  created_at: '01/04/2019')
-article14.photo.attach(io: file14, filename: 'nes.jpg', content_type: 'image/jpg')
-article14.save
-
-file15 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229647/secundario_legislatura.jpg')
-article15 = Article.new(user: user,
-  division: secundario,
-  title: 'Visita a la Reserva Ecologica',
-  subtitle: 'Los alumnos visitaron la Legislatura de la provincia',
-  content1:'Invitados por un legislador los alumnos del secundario visitaron la Legislatura. Fue una linda jornada donde los alumnos conocieron el funcionamiento de la Legislatura.',
-  created_at: '30/04/2019')
-article15.photo.attach(io: file15, filename: 'nes.jpg', content_type: 'image/jpg')
-article15.save
-
-
-file16 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229647/secundario_legislatura.jpg')
-article16 = Article.new(user: user,
-  division: primario,
-  title: 'Feria del Libro',
-  subtitle: 'Los alumnos visitaron la Legislatura de la provincia',
-  content1:'Invitados por un legislador los alumnos del secundario visitaron la Legislatura. Fue una linda jornada donde los alumnos conocieron el funcionamiento de la Legislatura.',
-  created_at: '16/10/2018')
-article16.photo.attach(io: file16, filename: 'nes.jpg', content_type: 'image/jpg')
-article16.save
-
-
-
-file17 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229647/secundario_legislatura.jpg')
-article17 = Article.new(user: user,
-  division: secundario,
-  title: 'Se celebro el dia de la Independencia',
-  subtitle: 'Los alumnos juraron la bandera en el acto realizado en el Secundario ',
-  content1:'En el marco de los festejos por el dia de la Independencia los alumnos y profesores realizaron un acto.',
-  created_at: '09/07/2019')
-article17.photo.attach(io: file17, filename: 'nes.jpg', content_type: 'image/jpg')
-article17.save
+# guillos = User.last(2)
+# guillos.each do |user|
+#   user.delete
+# end
+
+
+puts 'Creating Users'
+list =
+['mayracowes79@gmail.com',
+'ncerain@gmail.com',
+'guga_kazura@hotmail.com',
+'agustin.eugenio.acuna@gmail.com',
+'raulmaguilarb@gmail.com',
+'patriciogarcia10@gmail.com',
+'leo_germain@hotmail.com',
+'germangrubert@hotmail.com',
+'andreozziemilio@gmail.com',
+'krulerdavid@hotmail.com',
+'solvalipad@gmail.com',
+'pjm.correa@gmai.com',
+'jorgelopezg83@gmail.com',
+'maritiu20@hotmail.com',
+'susana.ibarra@gmail.com',
+'florenciahuck@gmail.com',
+'gonlamarca@gmail.com',
+'gonzagranado@gmail.com',
+'gustavocomotti@gmail.com',
+'gbabot@gmail.com',
+'piniday@gmail.com',
+'alejandrinasari@yahoo.com.ar',
+'juangrellet@hotmail.com',
+'felipe_cruz78@hotmail.com',
+'francoguerinau@hotmail.com',
+'juhaustein@hotmail.com',
+'cucho_giudice@hotmail.com',
+'fermarzioni@gmail.com',
+'islagabi@gmail.com',
+'maria.donofrio@sovos.com',
+'flacobernal@hotmail.com',
+'agustin_salas@hotmail.com',
+'petuarguello@hotmail.com',
+'elsavalaje@gmail.com',
+'natisars@gmail.com',
+'paula_runco87@hotmail.com',
+'andrea_saade@hotmail.com',
+'rc_tuc@yahoo.com.ar',
+'celinasrodriguez@yahoo.com.ar',
+'alejandrohaiquel@hotmail.com',
+'juanpovi@povinainformatica.com.ar',
+'mariaanapadilla@gmail.com',
+'guillolopezgonzalez@lgfoodargentina.com',
+'robertomole@hotmail.com',
+'jperezalzaga@gmail.com',
+'sebastiannoguera@hotmail.com',
+'crissalim@hotmail.com',
+'marianaasfoura@hotmail.com',
+'agusanton@gmail.com',
+'rodolfoteran80@hotmail.com',
+'alejandor007@gmail.com',
+'solrebola@yahoo.com.ar',
+'federicoruiztorres@gmail.com',
+'eugeniamariaarias@gmail.com',
+'gabycappetta@hotmail.com',
+'fedepasquini@hotmail.es',
+'joseps10@gmail.com',
+'en@marketone.com.ar',
+'superluless@gmail.com',
+'cristiantello85@yahoo.com.ar',
+'juhaustein@hotmail.com',
+'cmafud@grupointer.com.ar',
+'licluciamerletti@gmail.com',
+'martorelljuanjose@gmail.com',
+'juanmanuelmonterrubio@gmail.com',
+'jmafs1980@yahoo.com.ar',
+'auaddiego@hotmail.com',
+'agustina_talamazzi@hotmail.com',
+'silvanafilip59@gmail.com',
+'cecidaniel@yahoo.com.ar',
+'cecifalon@hotmail.com',
+'fiauad@hotmail.com',
+'bernifilgueira@gmail.com',
+'guillermolamarca@gmail.com',
+'mudarte@live.com',
+'alejandroartigas@hotmail.com',
+'martinjcasanova@gmail.com',
+'nicoavesl@gmail.com',
+'cotidavalos13@hotmail.com.ar',
+'onacrosrl@hotmail.com',
+'mochon.analuz@gmail.com',
+'pablomoisesbravo@hotmail.com',
+'arqsolyanez@gmail.com',
+'rc_tuc@yahoo.com.ar',
+'nicolasferro_20@hotmail.com',
+'micateran@hotmail.com',
+'mariaponssa2016@gmail.com',
+'fernandogrubert9@gmail.com',
+'guillealzaga@gmail.com',
+'jcorreaaguilar@trejo-posse.com.ar',
+'villagraserrafer@gmail.com',
+'baraloricardo@gmail.com',
+'javierpazcornejo@gmail.com',
+'josefinacampisi@gmail.com',
+'javs.666@gmail.com',
+'zfede42@gmail.com',
+'feluque@hotmail.com',
+'marcosquintana161@hotmail.com',
+'mpplizzo@hotmail.com',
+'cata_sanchez_ducca@hotmail.com',
+'andres1976@hotmail.com',
+'drmartearena@gmail.com',
+'rodolfojsierra@hotmail.com',
+'nortega@hachadepiedra.com',
+'ignacionougues@hotmail.com',
+'mceciliagraig@hotmail.com',
+'marianomole@gmail.com',
+'animacome@hotmail.com',
+'benjater@gmail.com',
+'uruenaabogados@icloud.com',
+'juanmanuelramos_250@hotmail.com',
+'mariacourel@hotmail.com',
+'ignaciomichel@gmail.com',
+'bromano@chandon.com.ar',
+'marifergomezgrs@yahoo.com.ar',
+'dmztuc@hotmail.com',
+'federicoweibel@gmail.com',
+'jcorreaaguilar@trejo-posse.com.ar',
+'arq.nazarenodiaz@gmail.com',
+'ceciyanicelli3@gmail.com',
+'scheuermannhelga@gmail.com',
+'santiagogramajo@hotmail.com',
+'gabrielatosipredrosa@gmail.com',
+'dr_danieli@hotmail.com',
+'afferreteria@gmail.com',
+'luciapinero@hotmail.com',
+'aromerodeescalada@yahoo.com.ar',
+'maurihuerta@hotmail.com',
+'mcoire@hotmail.com',
+'raulicabrera@hotmail.com',
+'juhaustein@hotmail.com',
+'marianacicilia@hotmail.com',
+'gabo-leone@hotmail.com',
+'josefina.cirio@hotmail.com',
+'clemenciacolombresg@gmail.com',
+'vquevedomartin@gmail.com',
+'agustinagc81@gmail.com',
+'lucioferro23@gmail.com',
+'luisacardi@gmail.com',
+'patriciomohedano@gmail.com',
+'fr@tucumanos.com',
+'aggarano@gmail.com',
+'agusduhart@gmail.com',
+'melypittatore@gmail.com',
+'robertocaram@hotmail.com.ar',
+'pedromazza@hotmail.com',
+'lucianazamora@zamoracitrus.com.ar',
+'javierbustos_@hotmail.com',
+'juanpabloaybar1982@gmail.com',
+'anainesag@hotmail.com',
+'dralfredoamenabar@gmail.com',
+'pablochalfun@gmail.com',
+'ecoletti@coletti.com.ar',
+'adolfolopezvallejo@live.com.ar',
+'ncerain@gmail.com',
+'cucho_giudice@hotmail.com',
+'paulita_macchi@hotmail.com',
+'aldeacomunidadcreativa@gmail.com',
+'silvanachacana@hotmail.com',
+'gschifini@gmail.com',
+'mariaceciliamanson@gmail.com',
+'agustinnores@hotmail.com',
+'calesitavidal@hotmail.com',
+'paula_iocca@hotmail.com',
+'ernestorios2@gmail.com',
+'gonzanoguera@gmail.com',
+'lobosflorencia@yahoo.com.ar',
+'cucuduhart@gmail.com',
+'diegopetta@hotmail.com',
+'noeliasos@hotmail.com',
+'rodrigo_noguera@hotmail.com',
+'mjrobin@mgsrl.com.ar',
+'agusduhart@gmail.com',
+'matiasaleme@gmail.com',
+'luliherrera200@hotmail.com',
+'hvilla24@hotmail.com',
+'calamaropatricia@hotmail.com',
+'marianaasfoura@hotmail.com',
+'carolesierra@gmail.com',
+'mirene411@hotmail.com',
+'goguicossio@hotmail.com',
+'nico_tularizo@hotmail.com',
+'eliassasle@hotmail.com',
+'maiamenca@hotmail.com',
+'alejandrinacruzd@gmail.com',
+'delriojuli76@gmail.com',
+'espechedr@gmail.com',
+'adlerconrado@gmail.com',
+'gerardobemsch@hotmail.com',
+'luisalbertoparra@ymail.com.ar',
+'abbondandolodanita@gmail.com',
+'ramiro@cmzcitrus.com',
+'gabgabgab_8@hotmail.com',
+'mudarte@live.com',
+'nataliaperez33@hotmail.com',
+'anijopalermo@hotmail.com',
+'adabujazha@hotmail.com',
+'terannegrita@hotmail.com',
+'guillegasen@hotmail.com',
+'fernandocotella@hotmail.com',
+'antobonacina16@gmail.com',
+'marcoscenturion185@hotmail.com',
+'tefiseiler@hotmail.com',
+'valentina_bollini@hotmail.com',
+'fernandodezavalia@gmail.com',
+'eliasfajre@hotmail.com',
+'romynaricha@hotmail.com',
+'margotorrens@hotmail.com',
+'pedrovarelah@gmail.com',
+'crispdel@hotmail.com',
+'rc_tuc@yahoo.com.ar',
+'falzabe@hotmail.com',
+'josemgarciagonzalez@gmail.com',
+'nikoherrera99@gmail.com',
+'dariocugusi@hotmail.com',
+'guillealzaga@gmail.com',
+'jopecr82@hotmail.com',
+'tomasnores@gmail.com',
+'sofiaferrari@gmail.com',
+'josemariapuente@gmail.com',
+'fedethomsen@gmail.com',
+'vpizzolitto@hotmail.com',
+'animacome@hotmail.com',
+'mfveglia@hotmail.com.ar',
+'matiaspisa@hotmail.com',
+'nataliaelizabethvega@hotmail.com',
+'belenpindar@gmail.com',
+'cristian.laurenti@latam.com',
+'matides@hotmail.com',
+'solefriassilva@hotmail.com',
+'mfcasanova@hotmail.com',
+'rmsanjuan@hotmail.com',
+'alelaborda@hotmail.com',
+'franciscomluque@hotmail.com',
+'mjbartolucci@hotmail.com',
+'jmteran80@hotmail.com',
+'ramiro.patron@scanianet.com.ar',
+'paulaomodeo@gmail.com',
+'piperezjimenez@gmail.com',
+'valentina_bollini@hotmail.com',
+'franpovi@hotmail.com',
+'contydavid@hotmail.com',
+'leylaricha@hotmail.com',
+'pedrovarelah@gmail.com',
+'gorachnossrl@gmail.com',
+'davidalejandro.laguna@gmail.com',
+'harrymedina761@msn.com',
+'nataliagaete271@gmail.com',
+'santiagoyanicelli@hotmail.com',
+'fragolargentina@hotmail.com',
+'tgrina@hotmail.com',
+'charlielavaselli@hotmail.com',
+'nonidechazal@hotmail.com',
+'juansavino24@yahoo.com.ar',
+'celiamuro_85@gmail.com',
+'anainesag@hotmail.com',
+'mfcm2015@gmail.com',
+'ipp.impresiondigital@gmail.com',
+'alejandrinasari@yahoo.com.ar',
+'maria.josefina.sanchez@gmail.com',
+'amadkur@gmail.com',
+'sebatencia@hotmail.com',
+'luis@lecfer.com',
+'aldanagsilman@hotmail.com',
+'raulmaguilarb@gmail.com',
+'agustina_talamazzi@hotmail.com',
+'alejandrohaiquel@hotmail.com',
+'horizonte.producciones@gmail.com',
+'lucioferro23@gmail.com',
+'vteinigo@hotmail.com',
+'gustavocomotti@gmail.com',
+'agustinagc81@gmail.com',
+'martindagostini@hotmail.com',
+'krulerdavid@hotmail.com',
+'horaciocastellanos@gmail.com',
+'cristiandario.brito@jumbo.com.ar',
+'diegocourel@hotmail.com',
+'fer_sain@hotmail.com',
+'anacgaray@gmail.com',
+'martinh_tuc@hotmail.com',
+'ggarciahamilton@hotmail.com',
+'jonigoldman@gmail.com',
+'javierahualli@hotmail.com',
+'gabrielbartolucci15@gmail.com',
+'flaviacerioni0@gmail.com',
+'andreozziemilio@gmail.com',
+'piniday@gmail.com',
+'gabyservetto@hotmail.com',
+'nanspector@hotmail.com',
+'vanina.castillo@bbva.com',
+'gustavopaterlini@hotmail.com',
+'gustavo.lovera@marriott.com',
+'gastech@live.com.ar',
+'arturonavarro37@gmail.com',
+'lvaliente@sandl.com.ar',
+'agustinnores@hotmail.com',
+'monikaaguirre@gmail.com',
+'silviakaufman@gmail.com',
+'jamizrahi@gmail.com',
+'fernando@js-ferreteria.com.ar',
+'leiramtb10@hotmail.com',
+'ricardo-quintana@hotmail.com',
+'eugeml@hotmail.com',
+'rodolfoteran80@hotmail.com',
+'pabloserrano500@gmai.com',
+'juanpovi@povinainformatica.com.ar',
+'nadiaumana85@hotmail.com',
+'fpesa@sanatorio9dejuliosa.com.ar',
+'mlavergne@herrera.unt.edu.ar',
+'goguicossio@hotmail.com',
+'carolinalopezosa@zafrasa.com.ar',
+'lucianalopezosa@zafrasa.com.ar',
+'enanashaw@hotmail.com',
+'felipesund@hotmail.com',
+'javierahualli@hotmail.com',
+'leandrosoraire@gmail.com',
+'soledadg@frutex.com.ar',
+'agusanton@gmail.com',
+'natisars@gmail.com',
+'chavocalleri@hotmail.com',
+'sorayasebih@yahoo.com',
+'maritiu20@hotmail.com',
+'rc_tuc@yahoo.com.ar',
+'plbossini@hotmail.com',
+'fedeallori@hotmail.com',
+'joselucascamara@gmail.com',
+'rodolfogcortes@hotmail.com',
+'alejandrah@azucarsantarosa.com.ar',
+'lissienasca@hotmail.com',
+'nortega@hachadepiedra.com',
+'sofyruizlocascio@icloud.com',
+'jaauad@gmail.com',
+'eforenza@trasur.com.ar',
+'lu_leone@hotmail.com',
+'auaddiego@hotmail.com',
+'vallejoelisa@hotmail.com',
+'prufay2000@hotmail.com',
+'juanpiabella@hotmail.com',
+'nicolasferro_20@hotmail.com',
+'efernandezbravo_7@hotmail.com',
+'catalanisolina@gmail.com',
+'micateran@hotmail.com',
+'ecastroalmeyra@gmail.com',
+'carlos_bh@yahoo.com',
+'celinamartineza@hotmail.com',
+'pmartinezladetto1@hotmail.com',
+'mariayanicelli@hotmail.com',
+'legales@zeramiko.com',
+'juliocaltam@hotmail.com',
+'ciullua@gmail.com',
+'jnnougues@yahoo.com.ar',
+'jueurnekian@gmail.com',
+'naucam@hotmail.com',
+'leticiatoribio@yahoo.com',
+'luciana@buloneriareginato.com.ar',
+'morenofred@hotmail.com',
+'alejandor007@gmail.com',
+'hperezgar@hotmail.com',
+'gustavosilva@gruposilva.com.ar',
+'steinalbertoh@gmail.com',
+'paulabartolucci@live.com.ar',
+'estebannoguera@hotmail.com',
+'facurissopatron@yahoo.com.ar',
+'javierpazcornejo@gmail.com',
+'guadydaniel@hotmail.com',
+'irinacruzado@gmail.com',
+'rodolfojsierra@hotmail.com',
+'feluque@hotmail.com',
+'belencollareco@gmail.com',
+'maxthomsen@gmail.com',
+'marcossolorzano1@hotmail.com',
+'ignaciomichel@gmail.com',
+'julianpaz@hotmail.com',
+'guadacabezon@hotmail.com',
+'inesteran@hotmail.com',
+'benjater@gmail.com',
+'hernannvillarreal@hotmail.com',
+'rodolfomoisa@hotmail.com',
+'ptmaciel@gmail.com',
+'juanandresromero@hotmail.com',
+'veroleone83@gmail.com',
+'piaferro@hotmail.com',
+'javierternanvega@yahoo.com.ar',
+'josefinabercetche@gmail.com',
+'pedrocabrera@dospe.com.ar',
+'luciapinero@hotmail.com',
+'geogas-srl@hotmail.com',
+'raulicabrera@hotmail.com',
+'eugemiranda20@hotmail.com',
+'gbabot@gmail.com',
+'mjosecabezon@gmail.com',
+'carobarbieri@gmail.com',
+'mariajose.asesoramiento@gmail.com',
+'adrianca66@gmail.com',
+'gabriel.marrassini@gmail.com',
+'imoncorvo@hotmail.com',
+'felipe_cruz78@hotmail.com',
+'joshawg@hotmail.com',
+'carolinamagni@hotmail.com',
+'clemenciacolombresg@gmail.com',
+'rociog1988@hotmail.com',
+'danigolitz@hotmail.com',
+'josefinadaniel@hotmail.com',
+'fdandrea@seda-sa.com.ar',
+'jcorreaaguilar@trejo-posse.com.ar',
+'mmmarialk@gmail.com',
+'vquevedomartin@gmail.com',
+'villagraserrafer@gmail.com',
+'contadora-cr@hotmail.com',
+'pbarzola@yahoo.com.ar',
+'gustavocomotti@gmail.com',
+'juanjosearaoz@gmail.com',
+'nicolasalberti@hotmail.com',
+'horaciocastellanos@gmail.com',
+'carlosmines19@gmail.com',
+'gabyservetto@hotmail.com',
+'terannegrita@hotmail.com',
+'licenciada_eugenia@hotmail.com',
+'luisalbertoparra@ymail.com.ar',
+'sebastianmaris14@gmail.com',
+'covuncocentro@hotmail.com',
+'popefs@hotmail.com',
+'andres1976@hotmail.com',
+'marianacasadey|@hotmail.com',
+'carolinamagni@hotmail.com',
+'paula_runco87@hotmail.com',
+'mcoire@hotmail.com',
+'guillermoviejobueno@gmail.com',
+'jipipetriz@hotmail.com',
+'crissalim@hotmail.com',
+'gon_veglia@hotmail.com',
+'oscar.jimenez.calleri@gmail.com',
+'jessy_max@hotmail.com',
+'joponcedeleon@hotmail.com',
+'ceciyanicelli3@gmail.com',
+'estudiosm1@gmail.com',
+'mpplizzo@hotmail.com',
+'mariacourel@hotmail.com',
+'ezevaz@hotmail.com',
+'machipaz@hotmail.com.ar',
+'pablormerlo@gmail.com',
+'solrebola@yahoo.com.ar',
+'fervisconti@hotmail.com',
+'rovejero@mendoza-conicet.gov.ar',
+'gonzagranado@gmail.com',
+'rinaturbay@hotmail.com',
+'eliananowak@gmail.com',
+'mochon.analuz@gmail.com',
+'delatorrepatricioe@gmail.com',
+'ticuchi@hotmail.com',
+'medina.arq@gmail.com',
+'luciabartolucci@gmail.com',
+'nataliaelizabethvega@hotmail.com',
+'gabrielbartolucci15@gmail.com',
+'priscilamettola@hotmail.com',
+'fiauad@hotmail.com',
+'alejandroartigas@hotmail.com',
+'romigomezleggio@gmail.com',
+'nicoavesl@gmail.com',
+'gonzalezcandelaria@gmail.com',
+'nicolopezcross@hotmail.com',
+'javgarbou@gmail.com',
+'bernibaralo@hotmail.com',
+'paulaperezaguirre@gmail.com',
+'vibelmont@hotmail.com',
+'gabrielbrahim@gmail.com',
+'guillegasen@hotmail.com',
+'contiguar@hotmail.com',
+'eliasfajre@hotmail.com',
+'arqsolyanez@gmail.com',
+'bernabeforenza@gmail.com',
+'patriciogimenez1983@hotmail.com',
+'mesonagustina@gmail.com',
+'harrymedina761@msn.com',
+'fernandogrubert9@gmail.com',
+'jose.boneff@icbc.com.ar',
+'drjure@tucbbs.com.ar',
+'josefinacampisi@gmail.com',
+'ignacionougues@hotmail.com',
+'kukasarmiento@hotmail.com',
+'flopy_pon@hotmail.com',
+'natsbanegas@gmail.com',
+'gabygomezaltam@hotmail.com',
+'josemgarciagonzalez@gmail.com',
+'contydavid@hotmail.com',
+'silvanafilip59@gmail.com',
+'veroleone83@gmail.com',
+'estudioquilessainz@gmail.com',
+'florhuert@hotmail.com',
+'alelaborda@hotmail.com',
+'abelnovillo@hotmail.com',
+'zfede42@gmail.com',
+'cordobagabriela@yahoo.com.ar',
+'matides@hotmail.com',
+'petrizcecilia@gmail.com',
+'belenpindar@gmail.com',
+'santiagoyanicelli@hotmail.com',
+'solevarela2044@gmail.com',
+'mariacastellote26@hotmail.com',
+'paulabartolucci@live.com.ar',
+'jmteran80@hotmail.com',
+'mceciliagraig@hotmail.com',
+'joseaprado@hotmail.com',
+'alebtv@yahoo.com',
+'je_bou@hotmail.com',
+'feluque@hotmail.com',
+'ncerain@gmail.com',
+'macaheguy@yahoo.com',
+'patriciofi@hotmail.com',
+'nonidechazal@hotmail.com',
+'claudiaharo22@hotmail.com',
+'cpampalone@hotmail.com',
+'colettimax@gmail.com',
+'travaini_sp@hotmail.com',
+'aldeacomunidadcreativa@gmail.com',
+'mfcm2015@gmail.com',
+'maurihuerta@hotmail.com',
+'aromerodeescalada@yahoo.com.ar',
+'anitameson@hotmail.com',
+'jimenadiazotero@gmail.com',
+'maria.josefina.sanchez@gmail.com',
+'alegiu79@hotmail.com',
+'gabo-leone@hotmail.com',
+'rociog1988@hotmail.com',
+'carosomonte@hotmail.com',
+'marianavargasmv@hotmail.com',
+'joselucascamara@gmail.com',
+'pjm.correa@gmai.com',
+'alejandrinasari@yahoo.com.ar',
+'valegauchat@gmail.com',
+'pierohtls@gmail.com',
+'carmeforever@hotmail.com',
+'carobarbieri@gmail.com',
+'falzabe@hotmail.com',
+'slvfonio@gmail.com',
+'rodrigolopez72@hotmail.com',
+'pablofernandez_04@hotmail.com',
+'raquelestelapaz@hotmail.com',
+'raquelestelapaz@hotmail.com',
+'anacaromoya@hotmail.com',
+'juhaustein@hotmail.com',
+'nicolasalberti@hotmail.com',
+'rmsanjuan@hotmail.com',
+'mmterannougues@hotmail.com',
+'petrizcecilia@gmail.com',
+'rschilman@gmail.com',
+'silvanachacana@hotmail.com',
+'alutec@alutecaluminio.com.ar',
+'huerto_gutierrez@live.com.ar',
+'aldanagsilman@hotmail.com',
+'lvaliente@sandl.com.ar',
+'carolinamagni@hotmail.com',
+'vanina.castillo@bbva.com',
+'marianomole@gmail.com',
+'mariaceciliamanson@gmail.com',
+'mmfernavarro@gmail.com',
+'dardolaise@hotmail.com',
+'pabloserrano500@gmai.com',
+'sofi_torre@hotmail.com',
+'valecor65@hotmail.com',
+'gpazposse@outlook.com',
+'alvaropereyras@gmail.com',
+'leiramtb10@hotmail.com',
+'jores22@hotmail.com',
+'aguyanicelli@hotmail.com',
+'hugomejail@yahoo.com.ar',
+'lacasadelsolfiestas@live.com',
+'luzmolivof@hotmail.com',
+'lucianamacagno@yahoo.com.ar',
+'gschifini@gmail.com',
+'montiel.facu@gmail.com',
+'chavocalleri@hotmail.com',
+'sorayasebih@yahoo.com',
+'florenciahuck@gmail.com',
+'pbrovia@hotmail.com',
+'guillocanteros@hotmail.com',
+'exeft@hotmail.com',
+'carlos_bh@yahoo.com',
+'prado_gabriela@hotmail.com',
+'elvi2311@gmail.com',
+'dariocugusi@hotmail.com',
+'gerardobemsch@hotmail.com',
+'lucuello@yahoo.com',
+'auaddiego@hotmail.com',
+'nicolascenturionpaz@hotmail.com',
+'prufay2000@hotmail.com',
+'mariaeluque@hotmail.com',
+'martinjcasanova@gmail.com',
+'amtn_t@hotmail.com',
+'jaauad@gmail.com',
+'guadalm@hotmail.com',
+'patobalzaretti@gmail.com',
+'jmafs1980@yahoo.com.ar',
+'ortegaac@gmail.com',
+'ramiro@cmzcitrus.com',
+'estudio430@hotmail.com',
+'mcelestemolloy@hotmail.com',
+'rc_tuc@yahoo.com.ar',
+'espechedr@gmail.com',
+'patriciofi@hotmail.com',
+'benjater@gmail.com',
+'josemariapuente@gmail.com',
+'leticiatoribio@yahoo.com',
+'angelesdeba@gmail.com',
+'lemase@complejosansalvador.com.ar',
+'danielaesper@yahoo.com.ar',
+'belencollareco@gmail.com',
+'mfveglia@hotmail.com.ar',
+'chachiortiz@hotmail.com',
+'maxthomsen@gmail.com',
+'eleogermainmarteau@gmail.com',
+'flopy_pon@hotmail.com',
+'raquel_valderrabano@hotmail.com',
+'valerialeone@hotmail.com',
+'franciscovoto@gmail.com',
+'bambinastivala@hotmail.com',
+'eugefu@hotmail.com',
+'vaneguezamburo@hotmail.com',
+'luciapdelat@hotmail.com',
+'javiersabeh@sp-contadores.com.ar',
+'sofiaferrari@gmail.com',
+'gustavowagner08@gmail.com',
+'rc_tuc@yahoo.com.ar',
+'pmartinezladetto1@hotmail.com',
+'ezevaz@hotmail.com',
+'steinalbertoh@gmail.com',
+'drmartearena@gmail.com',
+'lulodeza2000@yahoo.com.ar',
+'juanandresromero@hotmail.com',
+'nonidechazal@hotmail.com',
+'ipp.impresiondigital@gmail.com',
+'ipp.impresiondigital@gmail.com',
+'juancolombresgarmendia@hotmail.com',
+'geogas-srl@hotmail.com',
+'nortega@hachadepiedra.com',
+'adechazal@capitalmarkets-noa.com.ar',
+'eugemiranda20@hotmail.com',
+'omarbrito@arnetbiz.com.ar',
+'mariajose.asesoramiento@gmail.com',
+'araujo.pau@gmail.com',
+'anainesfort@gmail.com',
+'gabrielatosipredrosa@gmail.com',
+'analisgarzon@hotmail.com',
+'lalyrolandi@gmail.com',
+'bernibaralo@hotmail.com',
+'pamejalil@hotmail.com',
+'clemenciacolombresg@gmail.com',
+'mm.macagno@gmail.com',
+'alejandroartigas@hotmail.com',
+'bonigordillo@yahoo.com',
+'estudioarismendi@arnet.com.ar',
+'ignaciolopezbustos@yahoo.com.ar',
+'vquevedomartin@gmail.com',
+'mcourel@estudiocourel.com.ar',
+'n.a.pall@live.com.ar',
+'valejmarconi@arnet.com.ar',
+'sergioguan@qq.com',
+'en@marketone.com.ar',
+'drmartinmarangoni@gmail.com',
+'gabgabgab_8@hotmail.com',
+'gonzagranado@gmail.com',
+'drmayer@argentina.com',
+'jose_maria.marano@roche.com',
+'gabyservetto@hotmail.com',
+'vivianavillareal@hotmail.com',
+'mcbauque@hotmail.com',
+'popefs@hotmail.com',
+'usandivarasdolores@arnet.com.ar',
+'monikaaguirre@gmail.com',
+'virginiavanni@gmail.com',
+'florhuert@hotmail.com',
+'anainesfort@gmail.com',
+'vaudiffred@hotmail.com',
+'carlosnieto9@hotmail.com',
+'tucuman@ospadep.com',
+'guadacabezon@hotmail.com',
+'jamizrahi@gmail.com',
+'ivanalorena@live.com',
+'jipipetriz@hotmail.com',
+'enanashaw@hotmail.com',
+'suctacchella@uolsinectis.com.ar',
+'1503.caro@gmail.com',
+'eugueisa@hotmail.com',
+'pag1686@hotmail.com',
+'vpizzolitto@hotmail.com',
+'ernestorios2@gmail.com',
+'ernestorios2@gmail.com',
+'lourdesplatasrobles@hotmail.com',
+'sola@tiendawi.com.ar',
+'nataliainesmedina@gmail.com',
+'josemariaperez_29@hotmail.com',
+'sosa@seguridadobjetiva.com.ar',
+'matiaspisa@hotmail.com',
+'juhaustein@hotmail.com',
+'f_katz@hotmail.com',
+'empresaroda@yahoo.com.ar',
+'maritiu20@hotmail.com',
+'maurodepetri@hotmail.com',
+'vibelmon@quilmes.com.ar',
+'morenofred@hotmail.com',
+'sofyruizlocascio@icloud.com',
+'anijopalermo@hotmail.com',
+'mariacourel@hotmail.com',
+'baraloricardo@gmail.com',
+'baraloricardo@gmail.com',
+'juliomu@mendezcollado.com',
+'tatianagiudice@hotmail.com',
+'andreancg2@hotmail.com.ar',
+'nuriapaezdelatorre@gmail.com',
+'dariocugusi@hotmail.com',
+'vibelmont@hotmail.com',
+'romigomezleggio@gmail.com',
+'gcimach@yahoo.com',
+'levinpab@yahoo.com.ar',
+'adabujazha@hotmail.com',
+'ferk22@hotmail.com',
+'laucruzz@hotmail.com',
+'victoriaancely@hotmail.com',
+'mariayanicelli@hotmail.com',
+'adlerconrado@gmail.com',
+'lfjcasanova@gmail.com',
+'eliassasle@hotmail.com',
+'nico_tularizo@hotmail.com',
+'jose.boneff@icbc.com.ar',
+'lourdessalim@gmail.com',
+'naucam@hotmail.com',
+'fragolargentina@hotmail.com',
+'francosogno@hotmail.com',
+'pacopaz69@gmail.com',
+'gonzalostordeur@hotmail.com',
+'cordobagabriela@yahoo.com.ar',
+'josefinacampisi@gmail.com',
+'luciana@buloneriareginato.com.ar',
+'estudioquilessainz@gmail.com',
+'gabygomezaltam@hotmail.com',
+'ceciyanicelli3@gmail.com',
+'adm.col.san.patricio@gmail.com',
+'c.conti@cdconti.com.ar',
+'irinacruzado@gmail.com',
+'estudiosm1@gmail.com',
+'farprimavera@arnetbiz.com.ar',
+'inesbaralo@hotmail.com',
+'hectorrubenpedruzzi@yahoo.com.ar',
+'marifergomezgrs@yahoo.com.ar',
+'rc_tuc@yahoo.com.ar',
+'eugefu@hotmail.com',
+'federicoweibel@gmail.com',
+'gustavo.lovera@marriott.com',
+'bambinastivala@hotmail.com',
+'estebannoguera@hotmail.com',
+'vicentepinello@gmail.com',
+'ruyjuridico@arnet.com.ar',
+'solevarela2044@gmail.com',
+'kukasarmiento@hotmail.com',
+'alina_teran@hotmail.com',
+'juanjosearaoz@gmail.com',
+'mariaanapadilla@gmail.com',
+'josefinabercetche@gmail.com',
+'elgamartines@gmail.com',
+'mochon.analuz@gmail.com',
+'alejocorrales@hotmail.com',
+'ccarlino@lagaceta.com.ar',
+'fr@tucumanos.com',
+'gluis@arnet.com.ar',
+'joselucascamara@gmail.com',
+'mjosecabezon@gmail.com',
+'diegocourel@hotmail.com',
+'hatemsilvana@hotmail.com',
+'licenciada_eugenia@hotmail.com',
+'mpaulavarela@hotmail.com',
+'agustinagc81@gmail.com',
+'pabloaraoz@uolsinectis.com.ar',
+'mcourel@estudiocourel.com.ar',
+'raulicabrera@hotmail.com',
+'joshawg@hotmail.com',
+'luisfernandofarias@hotmail.com',
+'gracordi@hotmail.com',
+'contiguar@hotmail.com',
+'ecastroalmeyra@gmail.com',
+'aguyanicelli@hotmail.com',
+'balzabe@hotmail.com',
+'cristian.garlati@icbc.com.ar',
+'ortegaac@gmail.com',
+'anainesag@hotmail.com',
+'sebafigue@hotmail.com',
+'alegiu79@hotmail.com',
+'paulaperezaguirre@gmail.com',
+'fpesa@sanatorio9dejuliosa.com.ar',
+'mmarpulido@hotmail.com',
+'silviakaufman@gmail.com',
+'valecor65@hotmail.com',
+'abelnovillo@hotmail.com',
+'juan@estudiop.com.ar',
+'nanspector@hotmail.com',
+'perfumeria@faramerica.com.ar',
+'crissalim@hotmail.com',
+'vangy_07@hotmail.com',
+'maxinebooker@hotmail.com',
+'alehelguera@hotmail.com.ar',
+'milibaralo@hotmail.com',
+'lucianalopezosa@zafrasa.com.ar',
+'lobosflorencia@yahoo.com.ar',
+'dlopezosa@gmail.com',
+'guillermoviejobueno@gmail.com',
+'marianacasadey|@hotmail.com',
+'carolinamagni@hotmail.com',
+'lorecuba@hotmail.com',
+'sebastianmaris14@gmail.com',
+'josevigo@mundohouse.com.ar',
+'gustavosilva@gruposilva.com.ar',
+'alejandrinacruzd@gmail.com',
+'sofi_torre@hotmail.com',
+'gabriela.lupianez@gmail.com',
+'joponcedeleon@hotmail.com',
+'quero.negro@hotmail.com',
+'rinaturbay@hotmail.com',
+'lorenarasuk@hotmail.com',
+'pedrocabrera@dospe.com.ar',
+'cecifalon@hotmail.com',
+'gaby.kasem@gmail.com',
+'majoiparraguirre@hotmail.com',
+'eliananowak@gmail.com',
+'sandraaperrone@gmail.com',
+'ticuchi@hotmail.com',
+'mariacastellote26@hotmail.com',
+'marevestimientos@hotmail.com',
+'sofiaorloff@hotmail.com',
+'jopecr82@hotmail.com',
+'solanagomezomil@hotmail.com',
+'fgg_2208@hotmail.com',
+'nadiaumana85@hotmail.com',
+'sgrunaguer@hotmail.com',
+'gonzalezcandelaria@gmail.com',
+'legales@zeramiko.com',
+'elmaferrazzano@gmail.com',
+'danielaesper@yahoo.com.ar',
+'cris_mochis@hotmail.com',
+'lucuello@yahoo.com',
+'romigomezleggio@gmail.com',
+'gabrielaeugeniarubino@hotmail.com',
+'mariaeluque@hotmail.com',
+'cecilec@gmx.ch',
+'sebastianfiad@hotmail.com',
+'rovejero@mendoza-conicet.gov.ar',
+'josemariapuente@gmail.com',
+'luzlizarraga@arnet.com.ar',
+'marianopoliche@gmail.com',
+'javierpeirel@arnet.com.ar',
+'alebtv@yahoo.com',
+'pastorinojulio@hotmail.com',
+'valerialeone@hotmail.com',
+'chachiortiz@hotmail.com',
+'animacome@hotmail.com',
+'laurarodriguez757@hotmail.com',
+'gustavowagner08@gmail.com',
+'julteran@hotmail.com',
+'marcos-sundblad@rolcarsa.com.ar',
+'gustavopaterlini@hotmail.com',
+'cordobagabriela@yahoo.com.ar',
+'facurissopatron@yahoo.com.ar',
+'lucianomazzeo@gmail.com',
+'inesteran@hotmail.com',
+'ciscotucuman@js-ferreteria.com.ar',
+'mariaceciliamerino@hotmail.com',
+'juantorasso@hotmail.com',
+'danielaesper@yahoo.com.ar',
+'mauricio@laluguenze.com.ar',
+'sosa@seguridadobjetiva.com.ar',
+'macaheguy@yahoo.com',
+'javierternanvega@yahoo.com.ar',
+'griselekaselowski.gk@gmail.com',
+'travaini_sp@hotmail.com',
+'ipp.impresiondigital@gmail.com',
+'celiamuro_85@gmail.com',
+'reginabiagioli@hotmail.com',
+'fedethomsen@gmail.com',
+'juancolombresgarmendia@hotmail.com',
+'maurihuerta@hotmail.com',
+'mariajose.asesoramiento@gmail.com',
+'mariagut1673@hotmail.com',
+'anjohansson27@gmail.com',
+'fernandogorena@hotmail.com',
+'florenciahuck@gmail.com',
+'paula_iocca@hotmail.com',
+'maurodepetri@hotmail.com',
+'francosogno@hotmail.com',
+'claudiavdiaz2006@yahoo.com',
+'dagianfrancisco@lex-gianfrancisco.com.ar',
+'soniale_71@hotmail.com',
+'rodrigolopez72@hotmail.com',
+'ksalum7@hotmail.com',
+'lalyrolandi@gmail.com',
+'cristian.garlati@icbc.com.ar',
+'alejandroartigas@hotmail.com',
+'nataliaperez33@hotmail.com',
+'pamejalil@hotmail.com',
+'carosomonte@hotmail.com',
+'gerardobemsch@hotmail.com',
+'ramonaparicioapm@hotmail.com',
+'victorhugobaigorria@gmail.com',
+'fcabezon@hotmail.com',
+'juan.castro@live.com.ar',
+'gabrielatosipredrosa@gmail.com',
+'guadalm@hotmail.com',
+'conny.karlsson@scania.com',
+'antogusgt@hotmail.com',
+'pfnasca@gmail.com',
+'virginiavanni@gmail.com',
+'monikaaguirre@gmail.com',
+'solanazeitune@yahoo.com.ar',
+'javierp_2011@hotmail.com',
+'carlosnieto9@hotmail.com',
+'usandivarasdolores@arnet.com.ar',
+'jeugo@hotmail.com',
+'la_soleg@hotmail.com',
+'perico@arnet.com.ar',
+'sola@tiendawi.com.ar',
+'eugeml@hotmail.com',
+'elinabach@hotmail.com',
+'carofarias99@hotmail.com',
+'tucuman@ospadep.com',
+'luzmolivof@hotmail.com',
+'martinzamorah@hotmail.com',
+'nanspector@hotmail.com',
+'mfcm2015@gmail.com',
+'miguel@credimas.com.ar',
+'josemariaperez_29@hotmail.com',
+'juliowilliams_arg@hotmail.com',
+'pablormerlo@gmail.com',
+'contadora-cr@hotmail.com',
+'elena.maria.silvetti@gmail.com',
+'martin.formoso@mfiingenieria.com.ar',
+'hperezgar@hotmail.com',
+'onacrosrl@hotmail.com',
+'cristian.laurenti@latam.com',
+'marceloflastra@hotmail.com',
+'adolfolopezvallejo@live.com.ar',
+'elsitastegmayer@hotmail.com',
+'jose.lascano@monsanto.com',
+'mariamsanchez@uol.com',
+'valentinavargas2013@gmail.com',
+'farprimavera@arnetbiz.com.ar',
+'martinjcasanova@gmail.com',
+'lu_leone@hotmail.com',
+'juliocaltam@hotmail.com',
+'marulorenzetti@live.com.ar',
+'huertochrestia@hotmail.com',
+'elianascarlata@hotmail.com',
+'exeft@hotmail.com',
+'mesonagustina@gmail.com',
+'estudio430@hotmail.com',
+'levinpab@yahoo.com.ar',
+'dolacastell@hotmail.com',
+'rc_tuc@yahoo.com.ar',
+'cyntthiaosores@hotmail.com',
+'victoriaancely@hotmail.com',
+'marianacicilia@hotmail.com',
+'mlucrerojas@hotmail.com',
+'estudiobascary@arnetbiz.com.ar',
+'josefinabascary03@hotmail.com',
+'onacrosrl@hotmail.com',
+'franpineda@live.com.ar',
+'lucianamacagno@yahoo.com.ar',
+'mudarte@live.com',
+'elsitastegmayer@hotmail.com',
+'delriojuli76@gmail.com',
+'flopy_pon@hotmail.com',
+'rafaelgaleotti@hotmail.com',
+'luciana@buloneriareginato.com.ar',
+'cecidaniel@yahoo.com.ar',
+'rodolfomoisa@hotmail.com',
+'morenofred@hotmail.com',
+'arq_las@yahoo.com.ar',
+'luciapazcor@hotmail.com',
+'carovanni@hotmailcom',
+'vaneguezamburo@hotmail.com',
+'carocap@hotmail.com',
+'estudiomruiz@yahoo.com.ar',
+'hugo.shaw@hotmail.com',
+'lulodeza2000@yahoo.com.ar',
+'mariacourel@hotmail.com',
+'gabygomezaltam@hotmail.com',
+'solevarela2044@gmail.com',
+'maxthomsen@gmail.com',
+'agucarbonell@gmail.com',
+'pitibascary@gmail.com',
+'luciancastello@hotmail.com',
+'gustavopaterlini@hotmail.com',
+'steinalbertoh@gmail.com',
+'elena.maria.silvetti@gmail.com',
+'arturonavarro37@gmail.com',
+'holgadopablo@hotmail.com',
+'juanandresromero@hotmail.com',
+'jose.boneff@icbc.com.ar',
+'jueurnekian@gmail.com',
+'dgcorazza@gmail.com',
+'colettimax@gmail.com',
+'mflorenciapalacio@gmail.com',
+'f_katz@hotmail.com',
+'geogas-srl@hotmail.com',
+'rc_tuc@yahoo.com.ar',
+'alejocorrales@hotmail.com',
+'carmeforever@hotmail.com',
+'petrizcecilia@gmail.com',
+'paulote@argentina.com',
+'abelnovillo@hotmail.com',
+'gsabate.tuc@gmail.com',
+'agustinagc81@gmail.com',
+'diegocourel@hotmail.com',
+'ramiro@diagonalcitrtus.com.ar',
+'mtrivino@atanor.com.ar',
+'carolinalopezosa@zafrasa.com.ar',
+'sebastianmaris14@gmail.com',
+'ximepp@hotmail.com',
+'ric_caceres@hotmail.com',
+'javgarbou@gmail.com',
+'david.lopezdominguez@gmail.com',
+'anacaromoya@hotmail.com',
+'hatemsilvana@hotmail.com',
+'luzmolivof@hotmail.com',
+'lucianalopezosa@zafrasa.com.ar',
+'slvfonio@gmail.com',
+'zfede42@gmail.com',
+'hugonavas@yahoo.com',
+'maxinebooker@hotmail.com',
+'horizonte.producciones@gmail.com',
+'prado_gabriela@hotmail.com',
+'gbulacio@argentilemon.com',
+'lopez161255@gmail.com',
+'covuncocentro@hotmail.com',
+'crego@uolsinectis.com.ar',
+'noeliasos@hotmail.com',
+'gracordi@hotmail.com',
+'nhostier@yahoo.com.ar',
+'ccarlino@lagaceta.com.ar',
+'valecor65@hotmail.com',
+'director@quorumtuc.com.ar',
+'pabloserrano500@gmail.com',
+'hugomejail@yahoo.com.ar',
+'hemilioconesa@hotmail.com',
+'perfumeria@faramerica.com.ar',
+'silviakaufman@gmail.com',
+'gcimach@yahoo.com',
+'1503.caro@gmail.com',
+'sgrunaguer@hotmail.com',
+'mariaceciliamerino@hotmail.com',
+'ferk22@hotmail.com',
+'n.a.pall@live.com.ar',
+'sofi_torre@hotmail.com',
+'monibaron35@hotmail.com',
+'lu.pi.23@hotmail.com',
+'ferdecima@hotmail.com',
+'martinezlorenatucuman@gmail.com',
+'pierohtls@gmail.com',
+'paulaperezaguirre@gmail.com',
+'jores22@hotmail.com',
+'cecilec@gmx.ch',
+'juanjosearaoz@gmail.com',
+'awssissa@gmail.com',
+'drgmanzur@gmail.com',
+'drgmanzur@gmail.com',
+'imdempaire@gmail.com',
+'luisacunasrt@gmail.com',
+'vivianavillareal@hotmail.com',
+'ivanalorena@live.com',
+'valentinavargas2013@gmail.com',
+'ptmaciel@gmail.com',
+'marialauraholm@gmail.com',
+'eforenza@trasur.com.ar',
+'flacabeheran@hotmail.com',
+'rogorman@grupozed.com.ar',
+'marianajmw@hotmail.com',
+'agustina_gh@hotmail.com',
+'mariastordeur@gmail.com',
+'cecifalon@hotmail.com',
+'eliananowak@gmail.com',
+'cjllapur@hotmail.com',
+'vaudiffred@hotmail.com',
+'veronicafernandez29@hotmail.com',
+'inesteran@hotmail.com',
+'mariomorales@expresorivadavia.com',
+'carpa_yerbabuena@yahoo.com.ar',
+'victoriaancely@hotmail.com',
+'jopecr82@hotmail.com',
+'juliomu@mendezcollado.com',
+'mfveglia@hotmail.com.ar',
+'federicoweibel@gmail.com',
+'solanagomezomil@hotmail.com',
+'cordobagabriela@yahoo.com.ar',
+'anainesfort@gmail.com',
+'lourdesplatasrobles@hotmail.com',
+'fnader@hotmail.com',
+'fabriciocuezzo@hotmail.com',
+'anitameson@hotmail.com',
+'legales@zeramiko.com',
+'josefinanassif@hotmail.com',
+'consultoradelnoa@gmail.com',
+'majoamado78@hotmail.com',
+'miguelh@buloneriareginato.com.ar',
+'lucianomazzeo@gmail.com',
+'juan@estudiop.com.ar',
+'jfanjul@unsta.edu.ar',
+'tatianagiudice@hotmail.com',
+'aixa.mastrolorenzo@refinor.com',
+'falzabe@hotmail.com',
+'ldilullo@gmail.com',
+'fpero01@hotmail.com',
+'natsbanegas@gmail.com',
+'m_aluma@hotmail.com',
+'empresaroda@yahoo.com.ar',
+'ruyjuridico@arnet.com.ar',
+'jose_maria.marano@roche.com',
+'sebastianfiad@hotmail.com',
+'anijopalermo@hotmail.com',
+'rafaelgaleotti@hotmail.com',
+'sebafigue@hotmail.com',
+'luzlizarraga@arnet.com.ar',
+'fjvc555@gmail.com',
+'silvanafilip59@gmail.com',
+'pablomoisesbravo@hotmail.co',
+'dsebalopez@gmail.com',
+'laucruzz@hotmail.com',
+'drmartearena@gmail.com',
+'anacgaray@gmail.com',
+'josejantzon@hotmail.com',
+'holgadopablo@hotmail.com',
+'mariamarta@abogadosestofan.com.ar',
+'colettimax@gmail.com',
+'aromerodeescalada@yahoo.com.ar']
+
+users = list.uniq!
+p users.last
+users.each do |user|
+    User.create! email: user, password: 'sanpatricio'
+  end
+
+puts 'finish!'
+
+
+
+
+
+
+
+
+
+# file = URI.open(https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229638/secundario_ministro_de_educacion.jpg')
+
+
+# article = Article.new(user: user,
+#   division: secundario,
+#   title: 'Reunion con el ministro de Educacion de la nacion',
+#   subtitle: 'Los alumnos se reunieron con el ministro de Educacion de la nacion , Esteban Bullrich',
+#   content1: 'Los alumnos se reunieron con el ministro de Educacion de la nacion , Esteban Bullrich. Autoridades , profesores y alumnos fueron parte de esta jornada.',
+#   created_at: '15/04/2017')
+# article.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+# article.save
+
+
+# file13 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156072/40029739_1854585191254287_6456261823657148416_o.jpg')
+# article13 = Article.new(user: user,
+#   division: jardines,
+#   title: 'Los alumnos del jardin y la educacion vial',
+#   subtitle: 'Los alumnos del primario colaboraron en la enseñanza de las normas de transito a los chicos de los jardines',
+#   content1:'Los alumnos del primario colaboraron en la enseñanza de las normas de transito a los chicos de los jardines.
+#   Esta actividad se realizo acompañada por docentes y expretos en seguridad vial.',
+#   created_at: '25/08/2018')
+# article13.photo.attach(io: file13, filename: 'nes.jpg', content_type: 'image/jpg')
+# article13.save
+
+
+
+
+# file1 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585233891/IMG_3035.jpg')
+
+# article1 = Article.new(user: user,
+#   division: secundario,
+#   title: 'Cierre del ciclo lectivo',
+#   subtitle: 'Se festejo el acto por el cierre del ciclo lectivo',
+#   content1:'Se produjo el acto por el cierre del ciclo lectivo del año, padres y alumnos estuvieron presente en la entrega de distinciones a los alumnos de todos los años.',
+#   created_at: '10/12/2018')
+# article1.photo.attach(io: file1, filename: 'nes.jpg', content_type: 'image/jpg')
+# article1.save
+
+
+
+
+
+
+# file2 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156086/73188402_2556116157767850_6243152740499849216_n.jpg')
+# article2 = Article.new(user: user,
+#  division: institucional,
+#  title: 'Inaguramos el nuevo comedor',
+#  subtitle: 'La inaguracion del nuevo comedor del Secundario',
+#  content1: '',
+#  created_at: '02/03/2019')
+# article2.photo.attach(io: file2, filename: 'nes.jpg', content_type: 'image/jpg')
+# article2.save
+
+
+
+
+
+
+
+
+# file3 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156066/77268036_2589662987746500_8735371027980222464_n.jpg')
+# article3 = Article.new(user: user,
+#   division: primario,
+#   title: '1ª Exposición PEP del IB',
+#   subtitle: 'Los alumnos del primario presentaron sus proyectos de ayuda al medio ambiente.',
+#   content1:'1ª Exposición PEP del IB de los alumnos de Sexto año del Nivel Primario. Trabajo de Excelencia de los docentes y de todos los alumnos que participan en la muestra. No dejen de visitarla. Orgullosos de nuestro colegio!!
+# ',
+#   created_at: '28/11/2019')
+# article3.photo.attach(io: file3, filename: 'nes.jpg', content_type: 'image/jpg')
+# article3.save
+
+
+
+
+# file5 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229668/secundario_comedores.jpg')
+# article5 = Article.new(user: user,
+#   division: secundario,
+#   title: 'Ayuda de los alumnos en los comedores de la zona',
+#   subtitle: 'En el marco de la materia C.A.S , los alumnos colaboraron con el comedor "Padre Mujica" ubicado en Yerba Buena',
+#   content1:'En el marco de la materia C.A.S , los alumnos colaboraron con el comedor "Padre Mujica" ubicado en Yerba Buena. Felicitamos a alumnos y profesores por esta gran iniciativa.',
+#   created_at: '12/10/2018')
+# article5.photo.attach(io: file5, filename: 'nes.jpg', content_type: 'image/jpg')
+# article5.save
+
+
+
+
+
+
+
+
+
+
+
+# file6 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156055/60997228_2240313369348132_358752390532300800_n.jpg')
+# article6 = Article.new(user: user,
+#   division: secundario,
+#   title: 'Se celebro el 25 de Mayo',
+#   subtitle: 'Los alumnos realizaron el acto en conmemoracion al 25 de Mayo de 1810 ',
+#   content1:'En conmemoracion al 25 de Mayo de 1810, los alumnos y profesores realizaron el tradicional acto.
+#   El 25 de mayo es una de las fechas patrias más importantes para la República Argentina, que conmemora la Revolución de Mayo, una gesta que concluyó en la constitución de la Primera Junta de Gobierno que depuso la autoridad del virrey español Baltasar Hidalgo de Cisneros sobre el Virreinato del Río de la Plata.
+#   Los alumnos estuvieron acompañados por los padres que se hicieron presente para el acto patrio.',
+#   created_at: '25/05/2019')
+# article6.photo.attach(io: file6, filename: 'nes.jpg', content_type: 'image/jpg')
+# article6.save
+
+
+
+
+
+
+
+
+
+
+
+
+
+# file7 = URI.open('https://images.unsplash.com/photo-1584118624012-df056829fbd0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80')
+# article7 = Article.new(user: user,
+#   division: ib,
+#   title: 'The cancellation of the May 2020 IB examinations',
+#   subtitle: 'For the first time in its history, the IB will not hold a May exam session due to COVID-19. We speak with IB Director General Siva Kumari to hear more about the decision.',
+#   content1:'What led up to your unprecedented decision to not hold exams?
+#   It’s been two intensive months of day-to-day decisions about the health and safety of our international community. In late December/early January, we were monitoring and reacting to what was happening in our schools in China, Japan and South Korea. Those schools provided insights on the impact of shutdowns to come. We paid close attention as the epidemic quickly grew to a global pandemic. All the while, we were thinking through scenarios for all situations and, “what if’s”.
+#   Simultaneously, we as an organization started migrating to virtual. Our Singapore office transitioned to virtual working seven weeks ago and so have all other locations in the last two weeks. Our 700 employees worldwide are continuing to do what we are here to do, which is to provide services to schools, now as a suddenly virtual organization.
+#     The impact of the pandemic on our students and their ability to go through a fair assessment process was a major focal point throughout this entire process.
+#     Due to the nature of the IB programme, we could not make the decision one country at a time. We had to make the right decision for our entire global community of teachers, examiners and students.',
+#     created_at: '20/04/2020')
+# article7.photo.attach(io: file7, filename: 'nes.jpg', content_type: 'image/jpg')
+# article7.save
+
+
+
+
+# file8 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_555/v1585229134/Schools-respond-to-COVID-19-outbreak-by-going-virtual.png')
+# article8 = Article.new(user: user,
+#   division: ib,
+#   title: 'Schools respond to COVID-19 outbreak by going virtual',
+#   subtitle: 'Due to the COVID-19, also known as Coronavirus, emergency, many IB World Schools are successfully using online learning to continue students’ education, says IB Curriculum Manager Pilar Quezzaire. ',
+#   content1:'Coordinating teachers and students
+#   When the Chinese government ordered schools to be shut down due to the COVID-19 outbreak, students and teachers at IB World Schools Shanghai American School (SAS) and Western Academy of Beijing (WAB) were on vacation for the Chinese New Year. Faculty and families were scattered across the world and unable to return to China. Both schools had to respond to the situation as quickly as possible.
+#   SAS leadership implemented an emergency online learning programme. In the process, they discovered that their students and teachers resided across five continents and 22 time zones. The first challenge for SAS was to figure out how to get everyone enough online learning and teaching time.
+#   Director of Technology Alan Preis says: “At first, learning was almost entirely asynchronous [not online simultaneously] because we assumed we’d be closed for a short time. Now, we have implemented more options for synchronous [groups online at the same time] instruction. But equitable access is a huge issue based on time zones―it is almost impossible to have all students working together with a teacher at the same time.” The Shanghai American School Distance Learning Plan continues to evolve as the school must remain closed longer than originally expected.
+#   SAS has had to distribute teachers’ time across different time zones, creating shorter meeting times, more one-to-one conversations with students and more spontaneous teaching moments as students worked on their assignments. SAS leadership has been impressed by how well the teachers have responded despite the stresses of teaching in a different way as well as in a new medium. “The teachers got five years’ worth of professional learning in two weeks,” adds Preis.',
+#   created_at: '19/03/2020')
+# article8.photo.attach(io: file8, filename: 'nes.jpg', content_type: 'image/jpg')
+# article8.save
+
+# file9 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588869/Captura_de_Pantalla_2020-03-30_a_la_s_12.39.44.png')
+# article9 = Article.new(user: user,
+#   division: institucional,
+#   title: 'Las clases se suspenden por el coronavirus',
+#   subtitle: 'Comunicado',
+#   content1:'Sres. Padres
+#   Nos dirijimos a uds para informarles que a pesar de que en nuestro
+#   colegio no tenemos ningún caso de alumno enfermo ni sospechado de
+#   enfermedad COVID - 19, la institución en sus 3 Niveles, decide suspender las clases por 14 días para
+#   cuidar la salud de toda la Comunidad Educativa y favorecer el aislamiento de las
+#   personas en las casas. Esta medida es la única que está siendo efectiva en el mundo para cortar la
+#   circulación del virus.  Pero lo hace con eficiencia si se toma a tiempo.',
+#   content2: 'Contamos desde ya con su colaboración y compromiso en el cumplimiento estricto y responsable de la cuarentena
+#   que se solicita.',
+#   content3: 'Daremos respuesta a lo académico como lo hacemos simepre tomando las medidas que debamos tomar al respecto
+#   en su momento. Se los mantendrá informados permanentemente.
+#   Equipo Directivo de los 3 Niveles del Colegio San Patricio.',
+#   created_at: '15/03/2020')
+# article9.photo.attach(io: file9, filename: 'nes.jpg', content_type: 'image/jpg')
+# article9.save
+
+# file10 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156076/44267120_1919928638053275_7998990119052771328_o.jpg')
+# article10 = Article.new(user: user,
+#   division: jardines,
+#   title: 'Los Alumnos empezaron el ciclo lectivo 2020',
+#   subtitle: 'Los Alumnos de los Jardines empezaron el ciclo lectivo 2020',
+#   content1:'Los Alumnos de los Jardines empezaron el ciclo lectivo 2020,
+#   los padres estuvieron presentes en el primer dia de clases.',
+#   created_at: '03/03/2020')
+# article10.photo.attach(io: file10, filename: 'nes.jpg', content_type: 'image/jpg')
+# article10.save
+
+
+# file14 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229647/secundario_legislatura.jpg')
+# article14 = Article.new(user: user,
+#   division: secundario,
+#   title: 'Visita a la Legislatura',
+#   subtitle: 'Los alumnos visitaron la Legislatura de la provincia',
+#   content1:'Invitados por un legislador los alumnos del secundario visitaron la Legislatura. Fue una linda jornada donde los alumnos conocieron el funcionamiento de la Legislatura.',
+#   created_at: '01/04/2019')
+# article14.photo.attach(io: file14, filename: 'nes.jpg', content_type: 'image/jpg')
+# article14.save
+
+# file15 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229647/secundario_legislatura.jpg')
+# article15 = Article.new(user: user,
+#   division: secundario,
+#   title: 'Visita a la Reserva Ecologica',
+#   subtitle: 'Los alumnos visitaron la Legislatura de la provincia',
+#   content1:'Invitados por un legislador los alumnos del secundario visitaron la Legislatura. Fue una linda jornada donde los alumnos conocieron el funcionamiento de la Legislatura.',
+#   created_at: '30/04/2019')
+# article15.photo.attach(io: file15, filename: 'nes.jpg', content_type: 'image/jpg')
+# article15.save
+
+
+# file16 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229647/secundario_legislatura.jpg')
+# article16 = Article.new(user: user,
+#   division: primario,
+#   title: 'Feria del Libro',
+#   subtitle: 'Los alumnos visitaron la Legislatura de la provincia',
+#   content1:'Invitados por un legislador los alumnos del secundario visitaron la Legislatura. Fue una linda jornada donde los alumnos conocieron el funcionamiento de la Legislatura.',
+#   created_at: '16/10/2018')
+# article16.photo.attach(io: file16, filename: 'nes.jpg', content_type: 'image/jpg')
+# article16.save
+
+
+
+# file17 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585229647/secundario_legislatura.jpg')
+# article17 = Article.new(user: user,
+#   division: secundario,
+#   title: 'Se celebro el dia de la Independencia',
+#   subtitle: 'Los alumnos juraron la bandera en el acto realizado en el Secundario ',
+#   content1:'En el marco de los festejos por el dia de la Independencia los alumnos y profesores realizaron un acto.',
+#   created_at: '09/07/2019')
+# article17.photo.attach(io: file17, filename: 'nes.jpg', content_type: 'image/jpg')
+# article17.save
 
 
 # Article.new(user: user,
@@ -339,66 +1464,66 @@ article17.save
   #   category: '',
   #   title: '',
   #   subtitle: '',
-  #   photo: '',
-  #   content1:'',
-  # created_at: '')
-   # Article.create(user: user,
-  #   category: '',
-  #   title: '',
-  #   subtitle: '',
-  #   photo: '',
-  #   content1:'',
-  # created_at: '')
-  puts 'creating events'
-  archivo = URI.open('https://www.noticiasdel6.com/wp-content/uploads/2018/06/3-1.gif')
-  event = Event.new(user: user,
-   title: 'Dia de la independencia',
-   description: 'Se celebra el 9 de julio el dia de nuestra independencia los esperamos a todos',
-   date: '09/07/2020',
-   time: '08',
-   address: 'Las Acacias 2200',
-   location: 'Pirmario'
-   )
-  event.photo.attach(io: archivo, filename: 'nes.jpg', content_type: 'image/jpg')
-  event.save
-  archivo2 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156055/60997228_2240313369348132_358752390532300800_n.jpg')
-  event2 = Event.new(user: user,
-   title: 'Celebracion del 25 de mayo ',
-   description: 'El 25 de mayo es una de las fechas patrias más importantes para la República Argentina, que conmemora la Revolución de Mayo. Los esperamos a todos',
-   date: '25/05/2020',
-   time: '08',
-   address: 'Las Acacias 2200',
-   location: 'Secundario'
-   )
-  event2.photo.attach(io: archivo2, filename: 'nes.jpg', content_type: 'image/jpg')
-  event2.save
-  archivo3 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585175662/jose.jpg')
-  event3 = Event.new(user: user,
-    title: 'Acto por el General San Martin ',
-    description: 'Se Celebra el acto por el paso a la inmortalidad del Padre de la Patria, el general Jose De San Martin',
-    date: '17/08/2020',
-    time: '08',
-    address: 'Las Acacias 2200',
-    location: 'Jardines'
-    )
-  event3.photo.attach(io: archivo3, filename: 'nes.jpg', content_type: 'image/jpg')
-  event3.save
-  # archivo = URI.open('')
-  # Event.new(user: user,
-  #   title: '',
-  #   description: '',
-  #   photo: '',
-  #   date: '/0/2020',
-  #   time: '08'
-  # event.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+  # #   photo: '',
+  # #   content1:'',
+  # # created_at: '')
+  #  # Article.create(user: user,
+  # #   category: '',
+  # #   title: '',
+  # #   subtitle: '',
+  # #   photo: '',
+  # #   content1:'',
+  # # created_at: '')
+  # puts 'creating events'
+  # archivo = URI.open('https://www.noticiasdel6.com/wp-content/uploads/2018/06/3-1.gif')
+  # event = Event.new(user: user,
+  #  title: 'Dia de la independencia',
+  #  description: 'Se celebra el 9 de julio el dia de nuestra independencia los esperamos a todos',
+  #  date: '09/07/2020',
+  #  time: '08',
+  #  address: 'Las Acacias 2200',
+  #  location: 'Pirmario'
+  #  )
+  # event.photo.attach(io: archivo, filename: 'nes.jpg', content_type: 'image/jpg')
   # event.save
-  puts 'finsh events'
+  # archivo2 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585156055/60997228_2240313369348132_358752390532300800_n.jpg')
+  # event2 = Event.new(user: user,
+  #  title: 'Celebracion del 25 de mayo ',
+  #  description: 'El 25 de mayo es una de las fechas patrias más importantes para la República Argentina, que conmemora la Revolución de Mayo. Los esperamos a todos',
+  #  date: '25/05/2020',
+  #  time: '08',
+  #  address: 'Las Acacias 2200',
+  #  location: 'Secundario'
+  #  )
+  # event2.photo.attach(io: archivo2, filename: 'nes.jpg', content_type: 'image/jpg')
+  # event2.save
+  # archivo3 = URI.open('https://res.cloudinary.com/dw7ox75dg/image/upload/v1585175662/jose.jpg')
+  # event3 = Event.new(user: user,
+  #   title: 'Acto por el General San Martin ',
+  #   description: 'Se Celebra el acto por el paso a la inmortalidad del Padre de la Patria, el general Jose De San Martin',
+  #   date: '17/08/2020',
+  #   time: '08',
+  #   address: 'Las Acacias 2200',
+  #   location: 'Jardines'
+  #   )
+  # event3.photo.attach(io: archivo3, filename: 'nes.jpg', content_type: 'image/jpg')
+  # event3.save
+  # # archivo = URI.open('')
+  # # Event.new(user: user,
+  # #   title: '',
+  # #   description: '',
+  # #   photo: '',
+  # #   date: '/0/2020',
+  # #   time: '08'
+  # # event.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+  # # event.save
+  # puts 'finsh events'
 
-  puts 'creating category'
-  primario = Category.create(title: 'Primario', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588867/Captura_de_Pantalla_2020-03-30_a_la_s_12.36.43.png')
-  administracion = Category.create(title: 'Administracion', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588935/Captura_de_Pantalla_2020-03-30_a_la_s_14.19.06.png')
-  jardines = Category.create(title: 'Jardines', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588844/Captura_de_Pantalla_2020-03-30_a_la_s_14.20.07.png')
-  secundario = Category.create(title: 'Secundario', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588869/Captura_de_Pantalla_2020-03-30_a_la_s_14.17.33.png')
+  # puts 'creating category'
+  # primario = Category.create(title: 'Primario', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588867/Captura_de_Pantalla_2020-03-30_a_la_s_12.36.43.png')
+  # administracion = Category.create(title: 'Administracion', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588935/Captura_de_Pantalla_2020-03-30_a_la_s_14.19.06.png')
+  # jardines = Category.create(title: 'Jardines', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588844/Captura_de_Pantalla_2020-03-30_a_la_s_14.20.07.png')
+  # secundario = Category.create(title: 'Secundario', photo: 'https://res.cloudinary.com/dw7ox75dg/image/upload/v1585588869/Captura_de_Pantalla_2020-03-30_a_la_s_14.17.33.png')
 
   puts 'Creating Galleries'
 
