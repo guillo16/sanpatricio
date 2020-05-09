@@ -1,6 +1,6 @@
-<div class="top">
+<div class="top-wrapper">
   <div>
-    <%= link_to 'Aula virtual', '#' %>
+    <%= link_to 'Aula virtual', '#', class: 'btn-top' %>
   </div>
   <div class="links-top">
     <a href="https://www.facebook.com/sanpatriciotucuman/" target='_blank'>
@@ -14,21 +14,3 @@
     </a>
   </div>
 </div>
-
-<style>
-  .top {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 8px;
-    background-color: $green;
-  }
-  .links-top a {
-    text-decoration: none;
-  }
-  .links-top i {
-   margin: 0px;
-   color: white;
-   font-size: 26px;
-   margin-left: 10px;
-  }
-</style>

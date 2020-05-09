@@ -1,3 +1,36 @@
+//top bar of the homepage
+.top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: $green;
+  a {
+    text-decoration: none;
+    margin-bottom: 0px;
+  }
+}
+
+.links-top  {
+  padding: 0 16px;
+  i {
+    margin: 0px;
+    color: white;
+    font-size: 26px;
+    margin-left: 10px;
+  }
+}
+
+.btn-top {
+ padding: 5px 10px;
+ border: 1px solid white;
+ color: white;
+ font-size: 13px;
+ &:hover {
+  text-decoration: none;
+  color: lightgrey;
+
+ }
+}
 //main navbar for all the pages but home.html.erb
 .navbar-main {
   justify-content: space-between;
@@ -61,5 +94,10 @@
   }
 }
 @media(max-width: 700px) {
-
+  .links-top  {
+    padding: 0px;
+    i {
+      margin-left: 10px;
+    }
+  }
 }
