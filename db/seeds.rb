@@ -7,48 +7,24 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require "open-uri"
 require 'faker'
-
+# guillos = User.last(2)
+# guillos.each do |user|
+#   user.delete
+# end
 puts 'creating user'
+
 users = [
-  'mayracowes79@gmail.com',
-  'ncerain@gmail.com',
-  'guga_kazura@hotmail.com',
-  'agustin.eugenio.acuna@gmail.com',
-  'raulmaguilarb@gmail.com',
-  'patriciogarcia10@gmail.com',
-  'leo_germain@hotmail.com',
-  'germangrubert@hotmail.com',
-  'andreozziemilio@gmail.com',
-  'krulerdavid@hotmail.com',
-  'solvalipad@gmail.com',
-  'pjm.correa@gmai.com',
-  'jorgelopezg83@gmail.com',
-  'maritiu20@hotmail.com',
-  'susana.ibarra@gmail.com',
-  'florenciahuck@gmail.com',
-  'gonlamarca@gmail.com',
-  'gonzagranado@gmail.com',
-  'gustavocomotti@gmail.com',
-  'gbabot@gmail.com',
-  'piniday@gmail.com',
-  'alejandrinasari@yahoo.com.ar' ]
+  'mayracowes80@gmail.com',
+  'mayracowes82@gmail.com',
+  'mayracowes83@gmail.com',
+   ]
+
+  users.each do |user|
+    User.create! email: user, password: 'sanpatricio'
+  end
 
 
-
-users.each do |user|
-  User.create!(email: user, password: 123456)
-end
-
-
-puts 'finish'
-
-
-
-
-
-
-
-
+  puts 'finish'
 
 
 
