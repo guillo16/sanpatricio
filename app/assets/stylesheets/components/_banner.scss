@@ -1,7 +1,7 @@
 .banner {
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height:  calc(100vh - 124px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,7 +75,7 @@
 
 @media(max-width: 686px){
   .banner {
-    height: 60vh;
+    height:  calc(100vh - 122px);
   }
 
   .banner-container {

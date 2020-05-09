@@ -1,3 +1,37 @@
+//top bar of the homepage
+.top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 1rem;
+  background-color: $green;
+  a {
+    text-decoration: none;
+    margin-bottom: 0px;
+  }
+}
+
+.links-top  {
+  padding: 0 16px;
+  i {
+    margin: 0px;
+    color: white;
+    font-size: 26px;
+    margin-left: 10px;
+  }
+}
+
+.btn-top {
+ padding: 6px 16px;
+ border: 1px solid white;
+ color: white;
+ font-size: 13px;
+ &:hover {
+  text-decoration: none;
+  color: lightgrey;
+
+ }
+}
 //main navbar for all the pages but home.html.erb
 .navbar-main {
   justify-content: space-between;
@@ -25,15 +59,20 @@
 //navbar for the homepage
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: transparent;
+  background-color: white;
   font-weight: bold;
   color: red;
   font-size: 20px;
+  border-bottom: 3px solid darkgreen;
+  position: sticky;
+  top: 0px;
   .nav-link {
-    color: white;
+    font-size: 17px;
+    color: rgb(74, 73, 74);
+    font-weight: normal;
     border-bottom: 2px solid transparent;
     &:hover {
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid $red;
     }
   }
 }
@@ -56,32 +95,11 @@
   }
 }
 @media(max-width: 700px) {
-  .navbar-lewagon {
-    justify-content: space-between;
-    background-color: transparent;
-    font-weight: bold;
-    color: red;
-    font-size: 20px;
-    .nav-link {
-      color: white;
-      border-bottom: 2px solid transparent;
-      background-color: rgba(0, 0, 0, 0.2);
-      &:hover {
-        border-bottom: 2px solid white;
-      }
-    }
-  }
-  .navbar-lewagon-white {
-    background-color: white;
-    border-bottom: 3px solid green;
-    .nav-link {
-      color: grey;
-      border-bottom: 2px solid transparent;
-      background-color: white;
-      &:hover {
-        color: red;
-        border-bottom: 2px solid red;
-      }
+  .links-top  {
+    padding: 0px;
+    i {
+      margin-left: 10px;
+      font-size: 17px;
     }
   }
 }
