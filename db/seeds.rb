@@ -12,14 +12,7 @@ require 'faker'
 #   user.delete
 # end
 puts 'destroy databse'
-Post.delete_all
-Conection.delete_all
-Category.delete_all
-Gallery.delete_all
-Article.delete_all
-Event.destroy_all
-User.destroy_all
-Division.destroy_all
+
 puts 'finished destroy'
 
 
