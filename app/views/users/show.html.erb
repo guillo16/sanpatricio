@@ -9,7 +9,7 @@
   </div>
   <div class="log-out">
    <p><%= link_to 'Editar Perfil', edit_user_registration_path %></p>
-   <p><%= link_to "Cerrar sesíon", destroy_user_session_path, method: :delete %></p>
+   <p><%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete %></p>
  </div>
  <% if current_user.admin? %>
  <%= render 'adminpanel' %>
