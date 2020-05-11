@@ -23,12 +23,12 @@
 
 .btn-top {
  padding: 6px 16px;
- border: 1px solid white;
- color: white;
+ border: 1px solid $green;
+ color: $green;
  font-size: 13px;
  &:hover {
   text-decoration: none;
-  color: lightgrey;
+  color: $green;
 
  }
 }
