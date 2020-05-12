@@ -23,12 +23,12 @@
         <% end %>
       </div>
     </div>
-
     <div class="form-actions mt-1">
       <%= f.button :submit, "Ingresar", class: 'btn btn-green btn-block' %>
+      <p style='margin-top: 8px; font-weight: lighter;'>Si no recibió el email con instrucciones para ingresar a la pagina, envíanos un <%= link_to 'Mensaje', new_conection_path  %> </p>
     </div>
     <% end %>
-    <div class="text-center mt-3">
+    <div class="text-center mt-1">
       <p><%= render "devise/shared/links" %></p>
     </div>
   </div>
