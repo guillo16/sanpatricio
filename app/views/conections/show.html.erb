@@ -4,7 +4,7 @@
   <h2><%= @conection.building %></h2>
   <h3><strong>Email:</strong> <%= @conection.email %></h3>
   <h3><strong>Nombre:</strong> <%= @conection.name %></h3>
-  <h3><strong>Fecha:</strong> <%= @conection.created_at.strftime('%y/%m/%Y a las %H:%m') %></h3>
+  <h3><strong>Fecha:</strong> <%= @conection.created_at.in_time_zone("Buenos Aires").strftime('%d/%m/%Y a las %H:%m') %></h3>
   <h4><strong>Mensaje:</strong></h4>
   <p><%= @conection.message %></p>
   <%= link_to 'Atras', conections_path, class: 'btn btn-primary btn-lg btn-block'  %><br>
