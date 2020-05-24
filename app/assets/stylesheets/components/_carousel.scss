@@ -1,16 +1,36 @@
 .carousel-inner {
   img {
     height: 90vh;
-    width: 100%;
-    object-fit: fill;
+    object-fit: cover;
+  }
+}
+
+.modal-content {
+  background-color: rgba(250, 250, 250, 0.8);
+}
+
+.carousel-inner {
+  text-align: center;
+}
+
+@media(max-width: 1030px) {
+  .carousel-inner {
+    img {
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+    }
+  }
+  .carousel-inner {
   }
 }
 
 @media(max-width: 686px) {
-.carousel-inner {
-  img {
-    height: 50vh;
-    object-fit: cover;
+  .carousel-inner {
+    img {
+      width: 100%;
+      height: 50vh;
+
+    }
   }
-}
 }
