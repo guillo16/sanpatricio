@@ -2,7 +2,7 @@
   img {
     height: 90vh;
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
   }
 }
 
@@ -10,7 +10,7 @@
 .carousel-inner {
   img {
     height: 50vh;
-
+    object-fit: cover;
   }
 }
 }
