@@ -6,6 +6,7 @@ class Article < ApplicationRecord
   has_one_attached :photo
   has_many :galleries, dependent: :destroy
   validate :photo_attach
+  paginates_per 12
 
   private
 
