@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @users = User.all
+    @users = User.order(:email).page params[:page]
     @categories = Category.all
   end
 
