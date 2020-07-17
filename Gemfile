@@ -11,7 +11,7 @@ gem 'redis'
 gem 'mail_form', '~> 1.6'
 gem 'faker'
 gem 'cloudinary', '~> 1.12.0'
-
+gem 'kaminari'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
