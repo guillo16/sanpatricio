@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @users = User.order(:email).page params[:page]
     @categories = Category.all
+    @posts = Post.all
   end
 
   def destroy
