@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to root_path
+    flash[:notice] = "se elimino el usuario #{@user.email}"
+    redirect_to user_path(current_user)
   end
 end
