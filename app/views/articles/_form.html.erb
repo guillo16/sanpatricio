@@ -12,6 +12,7 @@
     <%= f.input :content3, label: "Tercer Contenido", required: false %>
     <%= f.input :url, label: "Link", required: false %>
     <%= f.input :photo, as: :file %>
+    <%= f.input :images, as: :file, input_html: { multiple: true }, label: "Archivo PDF" %>
     <%= f.submit 'Crear Noticia', class:"btn btn-primary btn-lg btn-block " %>
     <% end %>
   </div>
