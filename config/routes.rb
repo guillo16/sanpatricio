@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :events
   resources :users, only: [:show, :destroy]
-  resources :categories, only: [:index, :show]
+  resources :categories
   resources :posts
   resources :divisions, only: :show
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
