@@ -1,6 +1,6 @@
 <%= render 'shared/main_navbar' %>
 <section id="show-admin-container">
-<%= render 'admin' %>
+  <%= render 'admin' %>
 </section>
 <div class="articles-navbar mb-3">
   <% @divisions.each do |division| %>
@@ -21,6 +21,13 @@
     <p><%= @article.content2 %></p>
     <p><%= @article.content3 %></p>
     <a href="<%= @article.url %>" target='_blank'><%= @article.url %></a>
+    <div class="mt-3">
+      <% @article.images.each_with_index do |image, index| %>
+      <%= link_to cl_image_path(image.key, flags: 'attachment'), download: "@article.title" do %>
+        <p class="mb-2"><i class="fas fa-file-pdf h3 text-danger"></i> Descargar Archivo PDF <%= index + 1 %></p>
+      <% end %>
+      <% end %>
+    </div>
   </div>
   <div class="show-articles-footer">
   </div>
@@ -33,6 +40,3 @@
 <div class="text-center mt-5 mb-5">
   <%= link_to 'Mas Noticias', articles_path, class: 'btn-article'  %>
 </div>
-
-
-

@@ -1,0 +1,10 @@
+<%= simple_form_for @category do |f| %>
+<%= f.input :title %>
+<%= f.input :photo %>
+<div class="text-right">
+  <%= link_to 'volver', :back , class: "btn btn-secondary"%>
+  <%= f.submit class: "btn btn-primary" %>
+</div>
+
+<% end %>
+

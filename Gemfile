@@ -1,22 +1,22 @@
 source 'https://rubygems.org'
 ruby '2.6.3'
 
-gem 'bootsnap', require: false
-gem 'devise'
-gem 'jbuilder', '~> 2.0'
+gem "autoprefixer-rails", "~> 9.8", ">= 9.8.6.1"
+gem "bootsnap", ">= 1.4.2", require: false
+gem "cloudinary", "~> 1.16.0"
+gem "devise", "~> 4.7", ">= 4.7.2"
+gem "jbuilder", "~> 2.7"
 gem 'pg', '~> 0.21'
-gem 'puma'
+gem "puma", "~> 4.1"
 gem 'rails', '5.2.3'
 gem 'redis'
 gem 'mail_form', '~> 1.6'
 gem 'faker'
-gem 'cloudinary', '~> 1.12.0'
 gem 'kaminari'
 
-gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'sassc-rails'
-gem 'simple_form'
+gem "simple_form", "~> 5.0", ">= 5.0.2"
 gem 'uglifier'
 gem 'webpacker'
 

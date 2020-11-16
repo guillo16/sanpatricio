@@ -4,6 +4,7 @@ class Article < ApplicationRecord
   validates :title, presence: true
   validates :subtitle, presence: true
   has_one_attached :photo
+  has_many_attached :images
   has_many :galleries, dependent: :destroy
   validate :photo_attach
   paginates_per 12
