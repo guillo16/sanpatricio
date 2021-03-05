@@ -13,7 +13,7 @@ class Article < ApplicationRecord
 
   def photo_attach
     if photo.attached? == false
-      errors.add(:photo, 'Tienes que elegir una foto')
+      errors.add(:photo, 'tiene que estar presente')
     end
   end
 end

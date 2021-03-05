@@ -4,13 +4,13 @@
   <div class="article-new-container">
     <h2>Crear una noticia</h2>
     <%= simple_form_for(@article) do |f| %>
-    <%= f.association :division, label: 'Categoria', required: false %>
-    <%= f.input :title, label: "Titulo", required: false %>
-    <%= f.input :subtitle, label: "Subtitulo", required: false %>
-    <%= f.input :content1, label: "Primer Contenido", required: false %>
-    <%= f.input :content2, label: "Segundo Contenido", required: false %>
-    <%= f.input :content3, label: "Tercer Contenido", required: false %>
-    <%= f.input :url, label: "Link", required: false %>
+    <%= f.association :division%>
+    <%= f.input :title %>
+    <%= f.input :subtitle %>
+    <%= f.input :content1 %>
+    <%= f.input :content2 %>
+    <%= f.input :content3 %>
+    <%= f.input :url, required: false %>
     <%= f.input :photo, as: :file %>
     <%= f.input :images, as: :file, input_html: { multiple: true }, label: "Archivo PDF" %>
     <%= f.submit 'Crear Noticia', class:"btn btn-primary btn-lg btn-block " %>
