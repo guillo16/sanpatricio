@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :path_prefix =>'auth'
   root to: 'pages#home'
 
   resources :articles do
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'ib', to: 'pages#ib'
 
   resources :events
-  resources :users, only: [:show, :destroy]
+  resources :users, only: [:show, :destroy, :new, :create]
   resources :categories
   resources :posts
   resources :divisions, only: :show

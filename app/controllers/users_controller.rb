@@ -12,9 +12,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    @user.password = 123456
+    @user.password = "sanpatricio"
     if @user.save
-      flash[:success] = "#{@user.email} ha sido creado."
+      flash[:notice] = "#{@user.email} ha sido creado."
       redirect_to user_path(current_user)
     else
       render :new
