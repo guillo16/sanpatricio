@@ -2,7 +2,12 @@ class ContactsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new, :create]
 
   def new
-    @contact = Contact.new
+    if current_user.admin?
+      @contact = Contact.new
+    else
+      flash[:notice] = "Accesso denegado"
+      redirect_to root_path
+    end
   end
 
   def create

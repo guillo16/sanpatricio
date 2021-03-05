@@ -7,7 +7,12 @@ class CategoriesController < ApplicationController
   def show; end
 
   def new
-    @category = Category.new
+    if current_user.admin?
+      @category = Category.new
+    else
+      flash[:notice] = "Accesso denegado"
+      redirect_to root_path
+    end
   end
 
   def create

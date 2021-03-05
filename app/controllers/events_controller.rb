@@ -10,7 +10,12 @@ class EventsController < ApplicationController
   end
 
   def new
-    @event = Event.new
+    if current_user.admin?
+      @event = Event.new
+    else
+      flash[:notice] = "Accesso denegado"
+      redirect_to root_path
+    end
   end
 
   def create

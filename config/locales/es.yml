@@ -1,0 +1,63 @@
+es:
+  date:
+    order: ["day", "month", "year"]
+    month_names: [Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre]
+  helpers:
+    submit:
+      create: "Agregar %{model}"
+      update: "Guardar cambios"
+  activerecord:
+    models:
+      article:
+        one: Noticia
+        other: Noticias
+      division:
+        one: Categoria
+        other: Categorias
+    attributes:
+      article:
+        title: Titulo
+        subtitle: Subtitulo
+        content1: Primer parrafo
+        content2: Segundo parrafo
+        content3: Tercer parrafo
+        photo: Foto
+        division: Categoria
+      category:
+        title: Titulo
+        photo: Foto
+      post:
+        title: Titulo
+        content: Contenido
+        category: Categoria
+      event:
+        date: Fecha
+        title: Titulo
+        description: Descripción
+        location: Edificio
+        address: Dirección
+        photo: Foto
+      conection:
+        building: Edificio
+        name: Nombre
+        message: Mensaje
+    errors:
+      messages:
+        taken: "ya existe"
+        blank: "no puede estar vacio."
+        too_short: "es demasiado corto."
+        wrong_length: "no cumple con la longitud requerida."
+        greater_than: "tiene que ser mayor que 0"
+        required: 'tiene que estar presente'
+        taken: "no puede ser repetido."
+        invalid: "no cuenta con un formato válido."
+        inclusion: "no puede estar vacio"
+        not_a_number: "solo acepta numeros"
+        too_long: "es demasiado largo."
+        in_the_past: "no puede ser una fecha pasada"
+        in_the_future: "no puede ser una fecha futura"
+        record_invalid: "no es válido"
+        greater_than_or_equal_to: "tiene que ser mayor o igual a 0"
+        email_domain_known_errors: "contiene errores en el dominio"
+        no_menu_yet: Un menu no ha sido creado para esta hora de comer
+        no_meals_available: No hay comidas assignadas todavia para esta fecha
