@@ -1,23 +1,13 @@
-<%= render 'shared/main_navbar' %>
-<% if current_user.admin? %>
-<div class="container p-5 mt-5">
-  <div class="d-flex justify-content-between aling-items-center">
-    <h1>Crear eventos</h1>
-    <h1><%= link_to 'Atras', :back, class: 'btn btn-danger'  %></h1>
-  </div>
-  <%= simple_form_for(@event) do |f| %>
-  <%= f.input :title, required: false %>
-  <%= f.input :description, required: false %>
-  <%= f.input :location, input_html: { class: "form-control form-control-lg"}, label: 'Edificio' , collection: ['Administracion', 'Jardines', 'Primario', 'Secundario', 'Online'], required: false%>
-  <%= f.input :address, required: false %>
-  <%= f.input :date, required: false %>
-  <%= f.input :time, required: false %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit class: 'btn btn-primary btn-lg btn-block'%>
-  <% end %>
-  <br><br>
-
+<%= simple_form_for(@event) do |f| %>
+<%= f.input :title %>
+<%= f.input :description %>
+<%= f.input :location, input_html: { class: "form-control form-control-lg"}, label: 'Edificio' , collection: ['Administracion', 'Jardines', 'Primario', 'Secundario', 'Online']%>
+<%= f.input :address %>
+<%= f.input :date %>
+<%= f.input :time %>
+<%= f.input :photo, as: :file %>
+<%= f.submit 'Crear evento', class: "btn btn-primary btn-block mb-3" %>
+<div class="text-right pt-3">
+  <%= link_to 'Volver', user_path(current_user), class: "btn btn-secondary" %>
 </div>
-<% else %>
-<%= render 'shared/denied' %>
 <% end %>

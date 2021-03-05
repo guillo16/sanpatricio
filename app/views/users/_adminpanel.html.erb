@@ -1,13 +1,20 @@
 <h2 class="title-green">TAREAS <i class="fas fa-angle-down"></i></h2>
 <div class="admin-container">
   <div class="admin-links">
-    <%= link_to 'CREAR NOTICIA', new_article_path, class: "btn btn-secondary btn-lg btn-block"  %>
-    <%= link_to 'CREAR CATEGORIA(notificaciones)', new_category_path, class: "btn btn-secondary btn-lg btn-block"  %>
-    <%= link_to 'VER CATEGORIAS', categories_path, class: "btn btn-danger btn-lg btn-block" %>
-    <%= link_to 'CREAR NOTIFICACION', new_post_path, class: "btn btn-danger btn-lg btn-block" %>
-    <%= link_to 'VER NOTIFICACIONES', posts_path, class: "btn btn-primary btn-lg btn-block" %>
-    <%= link_to 'CREAR EVENTO', new_event_path, class: "btn btn-dark btn-lg btn-block" %>
-    <%= link_to 'VER MENSAJES', conections_path, class: "btn btn-primary btn-lg btn-block" %>
+    <%= link_to 'Crear Noticias', new_article_path, class: "btn btn-primary btn-lg btn-block"  %>
+    <%= link_to 'Ver Noticias', articles_path, class: "btn btn-primary btn-lg btn-block"  %>
+    <hr>
+    <%= link_to 'Crear Categoria(notificaciones)', new_category_path, class: "btn btn-secondary btn-lg btn-block"  %>
+    <%= link_to 'Ver Caterorias(notificaciones)', categories_path, class: "btn btn-secondary btn-lg btn-block" %>
+    <%= link_to 'Crear Notificación', new_post_path, class: "btn btn-secondary btn-lg btn-block" %>
+    <%= link_to 'Ver Notificaciones', posts_path, class: "btn btn-secondary btn-lg btn-block" %>
+    <hr>
+    <%= link_to 'Crear Evento', new_event_path, class: "btn btn-dark btn-lg btn-block" %>
+    <%= link_to 'Ver Eventos', events_path, class: "btn btn-dark btn-lg btn-block" %>
+    <hr>
+    <%= link_to 'Crear Usuario', new_user_path, class: "btn btn-primary btn-lg btn-block" %>
+    <hr>
+    <%= link_to 'Ver Mensajes', conections_path, class: "btn btn-success btn-lg btn-block" %>
   </div>
 </div>
 <h2 class="title-green">LISTA DE USUARIOS <i class="fas fa-angle-down"></i></h2>

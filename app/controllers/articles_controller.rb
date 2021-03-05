@@ -13,7 +13,12 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @article = Article.new
+    if current_user.admin?
+      @article = Article.new
+    else
+      flash[:notice] = "Accesso denegado"
+      redirect_to root_path
+    end
   end
 
   def create

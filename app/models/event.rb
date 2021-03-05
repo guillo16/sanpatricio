@@ -19,6 +19,6 @@ class Event < ApplicationRecord
 
   def end_date
     dates = Date.current
-    errors.add(:date, "can't be before today") if date <= dates
+    errors.add(:date, "no puede ser anterior a hoy.") if date <= dates
   end
 end
