@@ -7,7 +7,12 @@ class UsersController < ApplicationController
   end
 
   def new
-    @user = User.new
+    if current_user.admin?
+      @user = User.new
+    else
+      flash[:notice] = "Accesso denegado"
+      redirect_to root_path
+    end
   end
 
   def create
