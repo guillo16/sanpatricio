@@ -1,38 +1,5 @@
-//find it in shared/cards.html.erb
-.card-article {
-  background-color: white;
-  box-shadow: 0px 0px 6px lightgrey;
-  a {
-    text-decoration: none;
-  }
-  img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-  }
-  h2 {
-    padding: 0 6px;
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 5px;
-    color: black;
-  }
-  h4 {
-    text-align: left ;
-    padding: 0 6px;
-    margin-bottom: 2px;
-    font-size: 16px;
-    margin-top: 10px;
-    color: $green;
-  }
-  &:hover {
-    text-decoration: none;
-    box-shadow: 0px 0px 6px grey;
-    h2 {
-      color: grey;
-    }
-  }
-}
+
+
 //find it in shared/main-cards.html.erb
 .main-card-article {
   height: 400px;

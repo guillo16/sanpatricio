@@ -4,5 +4,6 @@ class DivisionsController < ApplicationController
   def show
     @division = Division.find(params[:id])
     @divisions = Division.all
+    @articles = @division.articles.order(created_at: :desc)
   end
 end
