@@ -2,17 +2,20 @@
 <div class="home-container">
   <h3>Documentos</h3>
 </div>
-<div class="container pt-5">
+<div class="container pt-5 mb-5 pb-5">
   <div class="d-md-flex justify-content-between pb-5 mb-5">
-    <div>
+    <div class="mr-md-3">
       <% @document_category.uniq(&:category).each do |document|  %>
       <p id="btn-document"><%= link_to document.category, documents_path(category: document.category) %></p>
       <% end %>
     </div>
-    <div class="bg-white p-3 rounded">
+    <div class="flex-grow-1">
       <% @documents.each do |document|  %>
       <%= render 'card', document: document %>
       <% end %>
     </div>
   </div>
+  <div class="mt-5 pb-5">
+  <%= paginate @documents %>
+</div>
 </div>

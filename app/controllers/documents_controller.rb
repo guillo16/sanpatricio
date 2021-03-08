@@ -5,9 +5,9 @@ class DocumentsController < ApplicationController
   def index
     @document_category = Document.all
     if params["category"]
-      @documents = Document.where(category: params["category"])
+      @documents = Document.where(category: params["category"]).page params[:page]
     else
-      @documents = Document.all
+      @documents = Document.order(created_at: :desc).page params[:page]
     end
   end
 
