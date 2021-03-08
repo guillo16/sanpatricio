@@ -1,16 +1,14 @@
 class DocumentsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
-  before_action :set_document, only: %w[show edit update destroy]
+  before_action :set_document, only: %w[edit update destroy]
 
   def index
+    @document_category = Document.all
     if params["category"]
       @documents = Document.where(category: params["category"])
     else
       @documents = Document.all
     end
-  end
-
-  def show
   end
 
   def new

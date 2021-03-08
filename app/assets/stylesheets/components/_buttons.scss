@@ -12,9 +12,14 @@
     color:grey;
   }
 }
-@media(max-width: 686px) {
-  .btn-article {
-    padding: 10px 25px;
+#btn-document {
+  width: 224px;
+  padding: 10px 20px;
+  background-color: $green;
+
+  a {
+    color: white;
+    font-weight: bold;
   }
 }
 
@@ -40,6 +45,17 @@
   }
 }
 
+@media(max-width: 686px) {
+  .btn-article {
+    padding: 10px 25px;
+  }
+
+  #btn-document {
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+  }
+}
 
 @media(max-width: 323px) {
 

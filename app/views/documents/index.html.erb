@@ -1,6 +1,18 @@
 <%= render 'shared/navbar' %>
-<div class="container pt-5 mt-5">
-<% @documents.each do |document|  %>
-<%= render 'card', document: document %>
-<% end %>
+<div class="home-container">
+  <h3>Documentos</h3>
+</div>
+<div class="container pt-5">
+  <div class="d-md-flex justify-content-between pb-5 mb-5">
+    <div>
+      <% @document_category.uniq(&:category).each do |document|  %>
+      <p id="btn-document"><%= link_to document.category, documents_path(category: document.category) %></p>
+      <% end %>
+    </div>
+    <div class="bg-white p-3 rounded">
+      <% @documents.each do |document|  %>
+      <%= render 'card', document: document %>
+      <% end %>
+    </div>
+  </div>
 </div>
