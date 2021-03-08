@@ -1,0 +1,10 @@
+<div class="bg-white">
+  <p><%= document.category %></p>
+  <h2><%= document.title %></h2>
+  <% document.files.each_with_index do |image, index| %>
+  <%= link_to cl_image_path(image.key, flags: 'attachment'), download: "document.title" do %>
+  <p class="mb-2"><i class="fas fa-file-pdf h3 text-danger"></i> Descargar Archivo PDF <%= index + 1 %></p>
+  <% end %>
+  <% end %>
+</div>
+

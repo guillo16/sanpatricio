@@ -41,6 +41,10 @@ es:
         building: Edificio
         name: Nombre
         message: Mensaje
+      document:
+        title: Titulo
+        category: Categoria
+        file: Archivo PDF
     errors:
       messages:
         taken: "ya existe"

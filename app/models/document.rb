@@ -2,8 +2,8 @@ class Document < ApplicationRecord
 
   validates :title, presence: true
   validates :category, presence: true
-  has_one_attached :file
-  validate :file_attach
+  has_many_attached :files
+
   paginates_per 12
 
   private

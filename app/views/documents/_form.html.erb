@@ -1,7 +1,7 @@
 <%= simple_form_for @document do |f| %>
 <%= f.input :title %>
 <%= f.input :category %>
-<%= f.input :photo, as: :file %>
+<%= f.input :files, as: :file, input_html: { multiple: true }, label: "Archivo PDF" %>
 <%= f.submit 'Crear documento', class: "btn btn-primary btn-block mb-3" %>
 <div class="text-right pt-3">
   <%= link_to 'Volver', user_path(current_user), class: "btn btn-secondary" %>
