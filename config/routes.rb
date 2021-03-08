@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'documents/index'
-  get 'documents/show'
-  get 'documents/new'
-  get 'documents/edit'
   devise_for :users, :path_prefix =>'auth'
   root to: 'pages#home'
 
@@ -21,5 +17,6 @@ Rails.application.routes.draw do
   resources :categories
   resources :posts
   resources :divisions, only: :show
+  resources :documents
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
