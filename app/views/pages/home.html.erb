@@ -7,8 +7,8 @@
       <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/v1584881920/ib-world-school-logo-1-colour-rev.png" alt="" style="height: 150px;">
     </div>
     <p>
-        <span id="banner-typed-text-secondary"></span>
-      </p>
+      <span id="banner-typed-text-secondary"></span>
+    </p>
   </div>
 </div>
 <section id="articles">
@@ -19,8 +19,10 @@
 </section>
 <section id="events">
   <div class="home-container">
-    <h3>CALENDARIO</h3>
-    <h5>Los proximos eventos del colegio <i class="fas fa-caret-down"></i></h5>
+    <div class="py-5 my-md-5 text-center">
+      <h2 class="font-weight-bold">Calendario</h2>
+      <h4>Los proximos eventos del colegio</h4>
+    </div>
     <div class="event-container-home">
       <% @events.each do |event| %>
       <%= render 'cards/event_main_cards', event: event %>
