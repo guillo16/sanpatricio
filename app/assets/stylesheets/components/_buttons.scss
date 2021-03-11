@@ -17,11 +17,8 @@
   width: 224px;
   padding: 10px 20px;
   background-color: $green;
-
-  a {
-    color: white;
-    font-weight: bold;
-  }
+  color: white;
+  font-weight: bold;
 }
 
 .btn-ib {
@@ -54,8 +51,8 @@
   #btn-document {
     width: 100%;
     padding: 10px 20px;
-    text-align: center;
   }
+
 }
 
 @media(max-width: 323px) {

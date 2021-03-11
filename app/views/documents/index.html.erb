@@ -1,13 +1,13 @@
+<%= render 'shared/top' %>
 <%= render 'shared/navbar' %>
-<div class="home-container">
-  <h3>Documentos</h3>
-</div>
+<h3 class="pt-5 pb-2 text-center font-weight-bold h1">Documentos</h3>
 <div class="container pt-5 mb-5 pb-5">
   <div class="d-md-flex justify-content-between pb-5 mb-5">
-    <div class="mr-md-3">
+    <div class="mr-md-3 pb-4">
       <% @document_category.uniq(&:category).each do |document|  %>
-      <p id="btn-document"><%= link_to document.category, documents_path(category: document.category) %></p>
+      <%= link_to document.category, documents_path(category: document.category), class: "rounded btn btn-block text-md-left", id: "btn-document" %>
       <% end %>
+      <%= link_to "Todos", documents_path, class: "rounded btn btn-block text-md-left", id: "btn-document" %></p>
     </div>
     <div class="flex-grow-1">
       <% @documents.each do |document|  %>
@@ -16,6 +16,6 @@
     </div>
   </div>
   <div class="mt-5 pb-5">
-  <%= paginate @documents %>
-</div>
+    <%= paginate @documents %>
+  </div>
 </div>

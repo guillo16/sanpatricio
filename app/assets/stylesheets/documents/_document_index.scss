@@ -14,13 +14,12 @@
 
 @media(max-width: 575px) {
   #document-card {
+    p {
+      font-size: 12px;
+    }
 
-  p {
-    font-size: 12px;
+    h2 {
+      font-size: 24px;
+    }
   }
-
-  h2 {
-    font-size: 24px;
-  }
-}
 }
