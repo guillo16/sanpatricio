@@ -1,27 +1,38 @@
-<h2>Change your password</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
-
-  <%= f.input :reset_password_token, as: :hidden %>
-  <%= f.full_error :reset_password_token %>
-
-  <div class="form-inputs">
-    <%= f.input :password,
-                label: "New password",
-                required: true,
-                autofocus: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                label: "Confirm your new password",
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
+<div class="login-wrapper">
+  <div class="login-navbar">
+    <%= link_to root_path do  %>
+    <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/v1585140067/san_patricio_logo.png" alt="">
+    <% end %>
   </div>
+  <div class="login-container">
+    <div class="text-center">
+      <hr class="hr-text" data-content="Olvidaste tu contraseña?">
+    </div>
+    <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+    <%= f.error_notification %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Change my password" %>
+    <%= f.input :reset_password_token, as: :hidden %>
+    <%= f.full_error :reset_password_token %>
+
+    <div class="form-inputs">
+      <%= f.input :password,
+      label: "New password",
+      required: true,
+      autofocus: true,
+      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+      input_html: { autocomplete: "new-password" } %>
+      <%= f.input :password_confirmation,
+      label: "Confirm your new password",
+      required: true,
+      input_html: { autocomplete: "new-password" } %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Cambiar mi contraseña", class: "btn btn-green btn-block" %>
+    </div>
+    <% end %>
+    <br>
+    <%= render "devise/shared/links" %>
   </div>
-<% end %>
+</div>
 
-<%= render "devise/shared/links" %>

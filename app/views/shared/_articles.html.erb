@@ -1,6 +1,8 @@
 <div class="home-container">
-  <h3>NOVEDADES</h3>
-  <h5>Las ultimas noticias del colegio <i class="fas fa-caret-down"></i></h5>
+  <div class="py-5 my-md-5 text-center">
+    <h2 class="font-weight-bold">Novedades</h2>
+    <h4>Las últimas noticias del colegio</h4>
+  </div>
   <div class="article-container">
     <% @articles.take(6).each do |article| %>
     <%= render 'cards/article_card', article: article %>
