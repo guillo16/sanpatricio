@@ -13,9 +13,11 @@
 </div>
 <section>
   <div class="home-container">
-    <h3>El Colegio</h3>
+    <div class="pt-5 mt-md-5 text-center">
+      <h2 class="font-weight-bold">El Colegio</h2>
+    </div>
     <div class="container text-center">
-      <p class="text-center px-5 py-4 py-md-5 mt-4 mb-4" id="main-text-homepage">El Colegio San Patricio fue fundado en el año 1976, está situado en la ciudad de Yerba Buena, provincia de Tucumán. El colegio se encuadra dentro de los colegios no confesionales, aunque acredita un acervo tradicional católico. Es mixto, bilingüe, de doble escolaridad. Es pluralista en varios aspectos: racial, religioso, social, etc. Abierto al diálogo y la comprensión global, ya que es un colegio miembro de “ Organización del Bachillerato Internacional".</p>
+      <p class="text-center px-2 px-md-5 pt-3 pb-5 mb-4" id="main-text-homepage">El Colegio San Patricio fue fundado en el año 1976, está situado en la ciudad de Yerba Buena, provincia de Tucumán. El colegio se encuadra dentro de los colegios no confesionales, aunque acredita un acervo tradicional católico. Es mixto, bilingüe, de doble escolaridad. Es pluralista en varios aspectos: racial, religioso, social, etc. Abierto al diálogo y la comprensión global, ya que es un colegio miembro de “ Organización del Bachillerato Internacional".</p>
       <div class="image-container-homepage">
         <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_752/v1614961250/Portada_posible_4.jpg" alt="">
         <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/v1593013081/1USCPxGwCsYKXWj7SXrbGiTD.jpg" alt="">
@@ -42,8 +44,8 @@
       <%= render 'cards/event_main_cards', event: event %>
       <% end %>
     </div>
-    <div class="article-button">
-      <%= link_to 'EVENTOS', events_path, class: "btn-article"  %>
+    <div class="py-5 text-center">
+      <%= link_to 'Eventos', events_path, class: "btn-article"  %>
     </div>
   </div>
 </section>

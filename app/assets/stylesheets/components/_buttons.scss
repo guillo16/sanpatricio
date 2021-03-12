@@ -12,9 +12,11 @@
     color:grey;
   }
 }
+
 @media(max-width: 686px) {
   .btn-article {
     padding: 10px 25px;
+    font-size: 14px;
   }
 }
 
