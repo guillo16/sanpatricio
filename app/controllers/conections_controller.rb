@@ -2,7 +2,7 @@ class ConectionsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @conections = Conection.all
+    @conections = Conection.order(created_at: :desc)
   end
 
   def show
