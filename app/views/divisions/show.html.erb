@@ -8,8 +8,8 @@
   <% end %>
   <h2><%= link_to 'TODAS', articles_path %></h2>
 </div>
-<div class="article-container-2">
-  <% @division.articles.each do |article| %>
+<div class="article-container pb-5 mb-5">
+  <% @articles.each do |article| %>
   <%= render 'cards/article_card', article: article %>
   <% end %>
 </div>

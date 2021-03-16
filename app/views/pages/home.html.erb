@@ -1,4 +1,4 @@
-<%= render 'shared/top' %>
+<%= render 'shared/topbar' %>
 <%= render 'shared/navbar' %>
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_1317/v1589459748/San%20patricio/IMG_3902-01.jpg);">
   <div class="banner-container">
@@ -7,10 +7,26 @@
       <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/v1584881920/ib-world-school-logo-1-colour-rev.png" alt="" style="height: 150px;">
     </div>
     <p>
-        <span id="banner-typed-text-secondary"></span>
-      </p>
+      <span id="banner-typed-text-secondary"></span>
+    </p>
   </div>
 </div>
+<section>
+  <div class="home-container">
+    <div class="pt-5 mt-md-5 text-center">
+      <h2 class="font-weight-bold">El Colegio</h2>
+    </div>
+    <div class="container text-center">
+      <p class="text-center px-2 px-md-5 pt-3 pb-5 mb-4" id="main-text-homepage">El Colegio San Patricio fue fundado en el año 1976, está situado en la ciudad de Yerba Buena, provincia de Tucumán. El colegio se encuadra dentro de los colegios no confesionales, aunque acredita un acervo tradicional católico. Es mixto, bilingüe, de doble escolaridad. Es pluralista en varios aspectos: racial, religioso, social, etc. Abierto al diálogo y la comprensión global, ya que es un colegio miembro de “ Organización del Bachillerato Internacional".</p>
+      <div class="image-container-homepage">
+        <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_752/v1614961250/Portada_posible_4.jpg" alt="">
+        <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/v1593013081/1USCPxGwCsYKXWj7SXrbGiTD.jpg" alt="">
+        <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_626/v1614961438/Decorativa1.jpg" alt="">
+        <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_689/v1614962160/IMG_3964-01.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
 <section id="articles">
   <%= render 'shared/articles' %>
 </section>
@@ -19,23 +35,20 @@
 </section>
 <section id="events">
   <div class="home-container">
-    <h3>CALENDARIO</h3>
-    <h5>Los proximos eventos del colegio <i class="fas fa-caret-down"></i></h5>
+    <div class="py-5 my-md-5 text-center">
+      <h2 class="font-weight-bold">Calendario</h2>
+      <h4>Los próximos eventos del colegio</h4>
+    </div>
     <div class="event-container-home">
       <% @events.each do |event| %>
       <%= render 'cards/event_main_cards', event: event %>
       <% end %>
     </div>
-    <div class="article-button">
-      <%= link_to 'EVENTOS', events_path, class: "btn-article"  %>
+    <div class="py-5 text-center">
+      <%= link_to 'Eventos', events_path, class: "btn-article"  %>
     </div>
   </div>
 </section>
 <section id="social">
   <%= render 'shared/social' %>
-</section>
-<section>
-  <div class="text-center">
-    <p style="color: #F4F4F4;">p</p>
-  </div>
 </section>
