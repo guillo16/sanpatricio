@@ -3,12 +3,12 @@
     <h2 class="font-weight-bold">Novedades</h2>
     <h4>Las últimas noticias del colegio</h4>
   </div>
-  <div class="article-container-2">
+  <div class="article-container">
     <% @articles.take(6).each do |article| %>
     <%= render 'cards/article_card', article: article %>
     <% end %>
   </div>
-  <div class="article-button">
-    <%= link_to 'MAS NOTICIAS', articles_path, class: "btn-article"  %>
+  <div class="pt-4 mt-4 mb-5 pb-5 text-center">
+    <%= link_to 'Más Noticias', articles_path, class: "btn-article"  %>
   </div>
 </div>

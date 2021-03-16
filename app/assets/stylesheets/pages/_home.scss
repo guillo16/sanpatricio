@@ -1,11 +1,21 @@
 // Specific CSS for your home-page
+.image-container-homepage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-bottom: 30px;
+  grid-gap: 2px;
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+  }
+}
 .home-container {
   width: 100%;
 
   h2 {
     font-size: 48px;
   }
-
 
   h4 {
     font-size: 24px;
@@ -21,6 +31,10 @@
     margin: 0 auto;
   }
 }
+
+#main-text-homepage {
+  line-height: 1.8;
+}
 //Ib section
 .ib-container-1 {
   width: 100%;
@@ -30,10 +44,13 @@
   padding: 0 40px;
 }
 
-.article-button {
-  background-color: white;
-  padding:60px;
-  text-align: center;
+
+@media (max-width: 991.98px) {
+  .image-container-homepage {
+    img {
+      height: 200px;
+    }
+  }
 }
 
 @media(max-width: 686px) {
@@ -48,16 +65,22 @@
     }
 
     h2 {
-    font-size: 32px;
-  }
+      font-size: 32px;
+    }
 
 
-  h4 {
-    font-size: 18px;
+    h4 {
+      font-size: 18px;
+    }
   }
+
+  .image-container-homepage {
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 15px;
   }
-  .article-button {
-    padding-bottom: 30px;
-    padding-top: 30px;
+
+  #main-text-homepage {
+    line-height: 1.8;
+    font-size: 13px;
   }
 }

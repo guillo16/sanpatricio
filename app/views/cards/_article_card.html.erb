@@ -2,9 +2,8 @@
   <%= link_to article_path(article) do %>
   <%= cl_image_tag article.photo.key %>
   <div class="article-content">
-    <p><%= article.division.title.upcase %></p>
-    <h2><%= article.title %></h2>
+    <p class="pt-2"><%= article.division.title.capitalize %></p>
+    <h2 class="pb-3"><%= article.title %></h2>
   </div>
   <% end %>
 </div>
-

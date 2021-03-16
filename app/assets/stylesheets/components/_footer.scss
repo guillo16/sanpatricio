@@ -1,5 +1,4 @@
 .footer {
-  text-align: center;
   padding: 10px;
   background-color: white;
   box-shadow: 1px 1px 10px lightgrey;
@@ -8,12 +7,21 @@
     margin-bottom: 0px;
     color: rgb(74, 73, 74);
   }
-  p {
+
+  h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(74, 73, 74);
     margin-bottom: 0px;
-    margin-right: 10px;
-    font-size: 18px;
+  }
+
+  p {
+    margin-bottom: 4px;
+    margin-right: 0px;
+    font-size: 14px;
     color: rgb(74, 73, 74);
   }
+
   i {
     font-size: 20px;
     color: $green;
@@ -21,7 +29,6 @@
   }
 }
 .footer-content {
-  margin-bottom: 10px;
   a {
     color: rgb(74, 73, 74);
     font-size: 14px;
@@ -34,12 +41,7 @@
       font-size: 10px;
     }
     p {
-      margin-right: 6px;
-      font-size: 10px;
-    }
-    img {
-      width: 20px;
-      margin: 0 8px;
+      font-size: 11px;
     }
   }
   .footer-content {
