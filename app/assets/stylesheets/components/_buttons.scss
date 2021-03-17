@@ -13,11 +13,12 @@
   }
 }
 
-@media(max-width: 686px) {
-  .btn-article {
-    padding: 10px 25px;
-    font-size: 14px;
-  }
+#btn-document {
+  width: 224px;
+  padding: 10px 20px;
+  background-color: $green;
+  color: white;
+  font-weight: bold;
 }
 
 .btn-ib {
@@ -42,6 +43,17 @@
   }
 }
 
+@media(max-width: 686px) {
+  .btn-article {
+    padding: 10px 25px;
+  }
+
+  #btn-document {
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+}
 
 @media(max-width: 323px) {
 

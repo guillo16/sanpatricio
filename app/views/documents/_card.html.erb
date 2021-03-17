@@ -1,0 +1,18 @@
+<div class="p-3 mb-4 rounded" id="document-card">
+  <div class="d-flex justify-content-between">
+    <p class="font-weight-bold text-success mb-0"><%= document.category %></p>
+    <p class="text-secondary mb-0"><%= document.created_at.in_time_zone("Buenos Aires").strftime('%d/%m/%y - %H:%M') %></p>
+  </div>
+  <h2 class="py-3 mb-0"><%= document.title %></h2>
+  <% document&.files.each do |image| %>
+  <%= link_to cl_image_path(image.key, flags: 'attachment'), download: "document.title" do %>
+  <p class="mb-0" style="font-weight: bold; font-size: 12px;"><i class="fas fa-file-pdf h4 text-danger"></i> Descargar Archivo PDF</p>
+  <% end %>
+  <% end %>
+  <% if user_signed_in? %>
+  <% if current_user.admin? %>
+  <%= link_to 'Editar Documento', edit_document_path(document), class: "badge badge-warning" %>
+  <%= link_to 'Destruir Documento', document_path(document), method: :delete ,data: { confirm: 'Estas seguro?' }, class: "badge badge-danger" %>
+  <% end %>
+  <% end %>
+</div>
