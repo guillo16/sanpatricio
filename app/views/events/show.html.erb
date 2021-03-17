@@ -1,39 +1,35 @@
 <%= render 'shared/main_navbar' %>
-<% if user_signed_in? %>
-<% if current_user.admin? %>
+<% if user_signed_in? && current_user.admin? %>
 <div class="mt-5 p-5">
   <%= link_to 'Editar evento', edit_event_path(@event), class: 'btn btn-warning btn-block' %>
   <br>
   <%= link_to 'Destruir evento',  @event,  method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-danger btn-block' %>
 </div>
-<% else %>
 <% end %>
-<% else %>
-<% end %>
-<div class="show-event-container">
+<div class="show-event-container py-5">
   <div class="show-event-content">
     <h2><%= @event.title %></h2>
     <div class="show-event-img">
       <%= cl_image_tag @event.photo.key %>
-
     </div>
     <div class="show-event-time">
       <div class="d-flex justify-content-between align-items-center">
         <p><i class="far fa-calendar-alt"></i> <strong style="color: black;"><%= @event.date.strftime(' %d/%m/%y') %></strong></p>
         <h2><%= @event.location %></h2>
       </div>
-
       <p><i class="far fa-clock"></i> <%= @event.time.in_time_zone("Buenos Aires").strftime('%H:%M') %> </p>
       <%= link_to 'agregar al calendario', '#'  %>
       <h4><i class="fas fa-map-marker-alt"></i> <%= @event.address %></h4>
     </div>
   </div>
-  <div class="event-footer">
+  <div class="event-footer pt-5 pb-3">
     <h2>Detalles del evento:</h2>
     <h3><%= @event.title %></h3>
     <p><%= @event.description %></p>
     <h3><i class="far fa-calendar-alt"></i><%= @event.date.strftime(' %d/%m/%y') %></h3>
     <h3><i class="far fa-clock"></i> <%= @event.time.in_time_zone("Buenos Aires").strftime('%H:%M') %></h3>
-    <%= link_to 'Volver', events_path  %>
   </div>
+</div>
+<div class="py-3 text-center mb-5">
+  <%= link_to 'Volver', events_path, class: 'btn-article'  %>
 </div>

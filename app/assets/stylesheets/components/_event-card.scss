@@ -1,7 +1,8 @@
 .event-container-home {
  width: 90%;
  margin: 0 auto;
- padding: 30px 8px;
+ padding: 8px 8px;
+ padding-bottom: 16px;
  background-color: white;
  overflow-x: scroll;
  overflow-y: hidden;
@@ -10,11 +11,11 @@
 
 .main-wrapper-event {
   display: inline-block;
-  box-shadow: 0px 0px 10px grey;
+  box-shadow: 0px 0px 8px lightgrey;
   width: 220px;
   margin-right: 24px;
   &:hover {
-    box-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 8px grey;
   }
   a {
     text-decoration: none;
@@ -45,16 +46,15 @@
     font-weight: bold;
     margin-bottom: 0px;
   }
+
   h2 {
-    margin-top: 8px;
     color: black;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px !important;
   }
   h4 {
     color: black;
-    font-size: 13px;
-    padding-bottom: 10px;
+    font-size: 13px !important;
   }
 }
 .date-box {
