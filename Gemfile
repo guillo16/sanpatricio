@@ -7,7 +7,7 @@ gem "cloudinary", "~> 1.16.0"
 gem "devise", "~> 4.7", ">= 4.7.2"
 gem "jbuilder", "~> 2.7"
 gem 'pg', '~> 0.21'
-gem "puma", "~> 4.1"
+gem "puma", "~> 4.3"
 gem 'rails', '5.2.3'
 gem 'redis'
 gem 'mail_form', '~> 1.6'
