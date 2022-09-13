@@ -20,6 +20,7 @@ gem 'sassc-rails'
 gem "simple_form", "~> 5.0", ">= 5.0.2"
 gem 'uglifier'
 gem 'webpacker'
+gem 'execjs', '2.7'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
