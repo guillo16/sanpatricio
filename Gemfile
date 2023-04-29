@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.6.3'
+ruby '2.7.6'
 
 gem "autoprefixer-rails", "~> 9.8", ">= 9.8.6.1"
 gem "bootsnap", ">= 1.4.2", require: false
