@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.6.3'
+ruby '2.7.6'
 
 gem "autoprefixer-rails", "~> 9.8", ">= 9.8.6.1"
 gem "bootsnap", ">= 1.4.2", require: false
@@ -20,6 +20,7 @@ gem 'sassc-rails'
 gem "simple_form", "~> 5.0", ">= 5.0.2"
 gem 'uglifier'
 gem 'webpacker'
+gem 'execjs', '2.7'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
