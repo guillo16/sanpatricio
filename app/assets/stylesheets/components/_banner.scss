@@ -1,3 +1,9 @@
+.carousel {
+  position: inherit;
+}
+.carousel-inner {
+  z-index: -1 !important;
+}
 .carousel-inner img {
   height: 140px !important;
   width: auto !important;
@@ -7,7 +13,7 @@
 .banner {
   background-size: cover;
   background-position: center;
-  height:  calc(100vh - 124px);
+  height: calc(100vh - 124px);
   display: flex;
   align-items: center !important;
   justify-content: center !important;

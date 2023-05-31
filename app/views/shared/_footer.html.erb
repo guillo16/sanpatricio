@@ -33,6 +33,11 @@
     <p><%= link_to 'Direcciones & Teléfono', new_conection_path %></p>
     <p><a href="#">Campus Virtual</a></p>
     <p><%= link_to 'Documentos', documents_path %></p>
+    <% if user_signed_in? %>
+      <p><%= link_to "Perfil", user_path(current_user)%></p>
+    <% else %>
+      <p><%= link_to "Iniciar sesión",new_user_session_path %></p>
+    <% end %>
   </div>
   <div class="text-center">
     <img style="width: 40px; height: 40px; margin-left: 10px;" src="https://res.cloudinary.com/dw7ox75dg/image/upload/v1590350831/CUd3c3FoD3BcC7J1DtVQTfra.png" alt="">
