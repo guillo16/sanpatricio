@@ -18,6 +18,16 @@ class ConectionsController < ApplicationController
     if @conection.save
       redirect_to root_path
       flash[:notice] = "Gracias por su mensaje, lo contactaremos pronto"
+      if @conection.building == 'Jardines'
+        @conection.update!(building: 'jardines@gmail.com')
+      elsif @conection.building == 'Primario'
+        @conection.update!(building: 'primario@gmail.com')
+      elsif @conection.building == 'Secundario'
+        @conection.update!(building: 'secundario@gmail.com')
+      else
+        @conection.update(building: 'administracion@gmail.com')
+      end
+      ConectionMailer.new_message(@conection).deliver_now
     else
       render :new
     end
