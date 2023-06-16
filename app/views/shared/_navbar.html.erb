@@ -10,25 +10,27 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
+
+
     <div class="dropdown show d-none d-xl-block">
       <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Sobre Nosotros
       </a>
 
       <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <%= link_to 'Quiénes somos', '#', class: 'dropdown-item' %>
-        <%= link_to 'Nuestra Historia', '#', class: 'dropdown-item' %>
-        <%= link_to 'Misión y Visión', '#', class: 'dropdown-item' %>
-        <%= link_to 'Autoridades', '#', class: 'dropdown-item' %>
+        <%= link_to 'Quiénes somos', about_path, class: 'dropdown-item' %>
+        <%= link_to 'Nuestra Historia', historia_path, class: 'dropdown-item' %>
+        <%= link_to 'Misión y Visión', mision_path, class: 'dropdown-item' %>
+        <%= link_to 'Autoridades', autoridades_path, class: 'dropdown-item' %>
       </div>
     </div>
 
-    <div class="dropdow show d-none d-xl-block">
-      <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="dropdown show d-none d-xl-block">
+      <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLinkThree" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Oferta Académica
       </a>
 
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkThree">
         <%= link_to 'Nivel Inicial', '#', class: 'dropdown-item' %>
         <%= link_to 'Nivel Primario', '#', class: 'dropdown-item' %>
         <%= link_to 'Nivel Secundario', '#', class: 'dropdown-item' %>
@@ -37,11 +39,11 @@
     </div>
 
     <div class="dropdown show d-none d-xl-block">
-      <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLinkThree" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Experiencias Educativas
       </a>
 
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkThree">
         <%= link_to 'Obras de Teatro', '#', class: 'dropdown-item' %>
         <%= link_to 'Fiesta de los Colores', '#', class: 'dropdown-item' %>
         <%= link_to 'Salidas Educativas', '#', class: 'dropdown-item' %>
@@ -55,10 +57,10 @@
         Sobre Nosotros
       </a>
       <div class="collapse" id="collapseExample">
-        <%= link_to 'Quiénes somos', '#', class: 'nav-link' %>
-        <%= link_to 'Nuestra Historia', '#', class: 'nav-link' %>
-        <%= link_to 'Misión y Visión', '#', class: 'nav-link' %>
-        <%= link_to 'Autoridades', '#', class: 'nav-link' %>
+        <%= link_to 'Quiénes somos', about_path, class: 'nav-link' %>
+        <%= link_to 'Nuestra Historia', historia_path, class: 'nav-link' %>
+        <%= link_to 'Misión y Visión', mision_path, class: 'nav-link' %>
+        <%= link_to 'Autoridades', autoridades_path, class: 'nav-link' %>
       </div>
 
       <a class="nav-link" data-toggle="collapse" href="#collapseExampleTwo" role="button" aria-expanded="false" aria-controls="collapseExampleTwo">

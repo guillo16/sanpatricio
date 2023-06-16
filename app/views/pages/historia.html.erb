@@ -1,0 +1,18 @@
+<%= render 'shared/main_navbar' %>
+<div class="about-container">
+  <div class="nav-tab">
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <%= link_to 'Quienes Somos', about_path, class: 'nav-link ' %>
+      <%= link_to 'Nuestra Historia', historia_path, class: 'nav-link active' %>
+      <%= link_to 'Misión y Visión', mision_path, class: 'nav-link' %>
+      <%= link_to 'Autoridades', autoridades_path, class: 'nav-link ' %>
+    </div>
+  </div>
+  <div class="nav-tab-content">
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="mission-container">
+
+      </div>
+    </div>
+  </div>
+</div>
