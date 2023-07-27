@@ -1,4 +1,4 @@
-<%= render 'shared/main_navbar' %>
+<%= render 'shared/main_navbar'%>
 <div class="about-container">
   <div class="nav-tab">
     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -11,7 +11,18 @@
   <div class="nav-tab-content">
     <div class="tab-content" id="v-pills-tabContent">
       <div class="mission-container">
-        <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_1317/v1589467126/San%20patricio/mission2.jpg" alt="">
+       <div class="about-image-cards">
+          <button data-toggle="modal" data-target=".bd-example-modal-lg">
+            <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_600/v1690468588/FOTO_1_quienes_somos_sovzi5.jpg", :quality=>'auto')%>
+          </button>
+          <button data-toggle="modal" data-target=".bd-example-modal-lg">
+            <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_600/v1690468593/FOTO_2_quienes_somos_sfryxw.jpg", :quality=>'auto')%>
+          </button>
+          <button data-toggle="modal" data-target=".bd-example-modal-lg">
+            <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_600/v1690468593/FOTO_3_quienes_somos_tgzakh.jpg", :quality=>'auto')%>
+          </button>
+       </div>
+
         <p class="pt-4">Fundado en 1976 por un grupo de 5 profesoras que soñaban con enseñar inglés desde temprana edad como una herramienta para el futuro, el Colegio San Patricio es una institución educativa pública de gestión privada ubicada en el corazón de Yerba Buena, provincia de Tucumán, Argentina.</p>
         <p>Con un significativo número de alumnos, colaboradores y egresados, el colegio ofrece los 3 niveles de educación escolar: inicial (desde jardín de 3 años), primario y secundario. Se caracteriza por enseñar inglés como lengua nativa, iniciando la formación desde los 3 años de edad. Desde jardín de 5 años los alumnos empiezan de forma progresiva a incorporar más horas de formación, teniendo una jornada prolongada de educación desde jardín de 5 años y hasta el último año del nivel secundario. </p>
         <p>Asimismo, el Colegio San Patricio forma parte desde 1988 del Bachillerato Internacional (IB), un programa a nivel mundial que propone una forma específica de enseñar y aprender. Convertirse en Colegio del Mundo del IB supone unirse a más de 4.500 colegios de todo el mundo que comparten una misma mirada y que otorga a sus alumnos una educación excepcional.</p>
@@ -36,6 +47,26 @@
         </ol>
       </div>
 
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= render 'about_carousel'%>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
     </div>
   </div>
 </div>

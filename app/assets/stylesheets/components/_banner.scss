@@ -1,14 +1,18 @@
-.carousel {
-  position: inherit;
-}
-.carousel-inner {
-  z-index: -1 !important;
-}
-.carousel-inner img {
-  height: 140px !important;
-  width: auto !important;
+#carouselExampleSlidesOnly {
+
+  .carousel-inner {
+    z-index: -1 !important;
+  }
+
+  .carousel-inner img {
+    height: 140px !important;
+    width: auto !important;
+  }
 }
 
+.carousel-home {
+  position: inherit !important;
+}
 
 .banner {
   background-size: cover;
@@ -126,13 +130,13 @@
       font-size: 25px;
     }
   }
-
-  .carousel-inner img {
-    height: 100px !important;
-    margin-bottom: 6px;
-    width: auto !important;
+  #carouselExampleSlidesOnly {
+    .carousel-inner img {
+      height: 100px !important;
+      margin-bottom: 6px;
+      width: auto !important;
+    }
   }
-
   .banner-ib {
     padding: 100px 0;
   }
