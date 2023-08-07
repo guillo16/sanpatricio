@@ -105,6 +105,29 @@
     }
   }
 }
+
+//oferta_academica.html.erb
+
+.oferta-academica-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin-right: 16px;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
 //responsiveness
 @media(max-width: 1025px) {
   .main-card-article {
@@ -148,5 +171,18 @@
       margin-top: 5px;
       font-size: 14px;
     }
+  }
+}
+
+@media(max-width: 686px) {
+  .oferta-academica-card {
+    display: block;
+    h3 {
+      text-align: center;
+    }
+
+    img {
+      margin-bottom: 16px;
+  }
   }
 }

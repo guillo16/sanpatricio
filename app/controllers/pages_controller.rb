@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[home about ib historia autoridades mision inicial primario secundario obras_teatro fiesta_colores salidas_educativas talleres clases_abiertas bicicleteadas]
+  skip_before_action :authenticate_user!, only: %i[home about ib historia autoridades mision oferta_academica experiencia_educativa]
 
   def home
     @articles = Article.order(created_at: :desc)
@@ -16,22 +16,8 @@ class PagesController < ApplicationController
 
   def mision; end
 
-  def inicial; end
+  def oferta_academica; end
 
-  def primario; end
-
-  def secundario; end
-
-  def obras_teatro; end
-
-  def fiesta_colores; end
-
-  def salidas_educativas; end
-
-  def talleres; end
-
-  def clases_abiertas; end
-
-  def bicicleteadas; end
+  def experiencia_educativa; end
 
 end

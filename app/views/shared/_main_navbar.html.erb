@@ -29,9 +29,9 @@
       </a>
 
       <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkThree">
-        <%= link_to 'Nivel Inicial', inicial_path, class: 'dropdown-item' %>
-        <%= link_to 'Nivel Primario', primario_path, class: 'dropdown-item' %>
-        <%= link_to 'Nivel Secundario', secundario_path, class: 'dropdown-item' %>
+        <%= link_to 'Nivel Inicial', oferta_academica_path(anchor: 'inicial'), class: 'dropdown-item' %>
+        <%= link_to 'Nivel Primario', oferta_academica_path(anchor: 'primario'), class: 'dropdown-item' %>
+        <%= link_to 'Nivel Secundario', oferta_academica_path(anchor: 'secundario'), class: 'dropdown-item' %>
         <%= link_to 'Colegio del Mundo IB', ib_path, class: 'dropdown-item' %>
       </div>
     </div>
@@ -42,12 +42,12 @@
       </a>
 
       <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkThree">
-        <%= link_to 'Obras de Teatro', '#', class: 'dropdown-item' %>
-        <%= link_to 'Fiesta de los Colores', '#', class: 'dropdown-item' %>
-        <%= link_to 'Salidas Educativas', '#', class: 'dropdown-item' %>
-        <%= link_to 'Talleres', '#', class: 'dropdown-item' %>
-        <%= link_to 'Clases Abiertas', '#', class: 'dropdown-item' %>
-        <%= link_to 'Bicicleteadas', '#', class: 'dropdown-item' %>
+        <%= link_to 'Obras de Teatro', experiencia_educativa_path, class: 'dropdown-item' %>
+        <%= link_to 'Fiesta de los Colores', experiencia_educativa_path, class: 'dropdown-item' %>
+        <%= link_to 'Salidas Educativas', experiencia_educativa_path, class: 'dropdown-item' %>
+        <%= link_to 'Talleres', experiencia_educativa_path, class: 'dropdown-item' %>
+        <%= link_to 'Clases Abiertas', experiencia_educativa_path, class: 'dropdown-item' %>
+        <%= link_to 'Bicicleteadas', experiencia_educativa_path, class: 'dropdown-item' %>
       </div>
     </div>
     <div class="d-lg-block d-xl-none">
@@ -65,9 +65,9 @@
         Oferta Académica
       </a>
       <div class="collapse" id="collapseExampleTwo">
-        <%= link_to 'Nivel Inicial', inicial_path, class: 'nav-link' %>
-        <%= link_to 'Nivel Primario', primario_path, class: 'nav-link' %>
-        <%= link_to 'Nivel Secundario', secundario_path, class: 'nav-link' %>
+        <%= link_to 'Nivel Inicial', oferta_academica_path(anchor: 'inicial'), class: 'nav-link' %>
+        <%= link_to 'Nivel Primario', oferta_academica_path(anchor: 'primario'), class: 'nav-link' %>
+        <%= link_to 'Nivel Secundario', oferta_academica_path(anchor: 'secundario'), class: 'nav-link' %>
         <%= link_to 'Colegio del Mundo IB', ib_path, class: 'nav-link' %>
       </div>
 
@@ -75,12 +75,12 @@
         Experiencias Educativas
       </a>
       <div class="collapse" id="collapseExampleThree">
-        <%= link_to 'Obras de Teatro', '#', class: 'nav-link' %>
-        <%= link_to 'Fiesta de los Colores', '#', class: 'nav-link' %>
-        <%= link_to 'Salidas Educativas', '#', class: 'nav-link' %>
-        <%= link_to 'Talleres', '#', class: 'nav-link' %>
-        <%= link_to 'Clases Abiertas', '#', class: 'nav-link' %>
-        <%= link_to 'Bicicleteadas', '#', class: 'nav-link' %>
+        <%= link_to 'Obras de Teatro', experiencia_educativa_path, class: 'nav-link' %>
+        <%= link_to 'Fiesta de los Colores', experiencia_educativa_path, class: 'nav-link' %>
+        <%= link_to 'Salidas Educativas', experiencia_educativa_path, class: 'nav-link' %>
+        <%= link_to 'Talleres', experiencia_educativa_path, class: 'nav-link' %>
+        <%= link_to 'Clases Abiertas', experiencia_educativa_path, class: 'nav-link' %>
+        <%= link_to 'Bicicleteadas', experiencia_educativa_path, class: 'nav-link' %>
       </div>
     </div>
 

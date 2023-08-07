@@ -9,14 +9,8 @@ Rails.application.routes.draw do
   get 'ib', to: 'pages#ib'
   get '/mision', to: 'pages#mision'
   get '/inicial', to: 'pages#inicial'
-  get '/primario', to: 'pages#primario'
-  get '/secundario', to: 'pages#secundario'
-  get '/obras_teatro', to: 'pages#obras_teatro'
-  get '/fiesta_colores', to: 'pages#fiesta_colores'
-  get '/salidas_educativas', to: 'pages#salidas_educativas'
-  get '/talleres', to: 'pages#talleres'
-  get '/clases_abiertas', to: 'pages#clases_abiertas'
-  get '/bicicleteadas', to: 'pages#bicicleteadas'
+  get '/oferta_academica', to: 'pages#oferta_academica'
+  get '/experiencia_educativa', to: 'pages#experiencia_educativa'
 
   resources :articles do
     resources :galleries, only: [:show, :create]
