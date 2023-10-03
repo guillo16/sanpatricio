@@ -1,0 +1,26 @@
+<div id="carouselNiveles" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselNiveles" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselNiveles" data-slide-to="1"></li>
+    <li data-target="#carouselNiveles" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_600/v1696274398/inicial_1_cvsmuk.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/v1696276297/inicial_2_gjy1gr_denbaz.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/v1696276298/inicial_3_mosxop_rubuas.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselNiveles" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselNiveles" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
