@@ -1,5 +1,48 @@
 #carouselNiveles {
   .carousel-inner {
     width: 600px;
+    img {
+      height: 350px;
+    }
+  }
+}
+
+#carouselPrimario {
+  .carousel-inner {
+    width: 600px;
+    img {
+      height: 350px;
+    }
+  }
+}
+
+#carouselSecundario {
+  .carousel-inner {
+    width: 600px;
+    img {
+      height: 350px;
+    }
+  }
+}
+
+@media(max-width: 900px) {
+  #carouselNiveles {
+    .carousel-inner {
+      width: 100%;
+    }
+  }
+
+  #carouselPrimario {
+    margin-top: 80px;
+    .carousel-inner {
+      width: 100%;
+    }
+  }
+
+  #carouselSecundario {
+    margin-top: 80px;
+    .carousel-inner {
+      width: 100%;
+    }
   }
 }
