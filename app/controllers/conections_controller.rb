@@ -19,13 +19,13 @@ class ConectionsController < ApplicationController
       redirect_to root_path
       flash[:notice] = "Gracias por su mensaje, lo contactaremos pronto"
       if @conection.building == 'Jardines'
-        @conection.update!(building: 'jardines@gmail.com')
+        @conection.update!(building: 'jardin@sanpatriciotucuman.edu.ar')
       elsif @conection.building == 'Primario'
-        @conection.update!(building: 'primario@gmail.com')
+        @conection.update!(building: 'primario@sanpatriciotucuman.edu.ar')
       elsif @conection.building == 'Secundario'
-        @conection.update!(building: 'secundario@gmail.com')
+        @conection.update!(building: 'secundario@sanpatriciotucuman.edu.ar')
       else
-        @conection.update(building: 'administracion@gmail.com')
+        @conection.update(building: 'administracion@sanpatriciotucuman.edu.ar')
       end
       ConectionMailer.new_message(@conection).deliver_now
     else
