@@ -1,0 +1,30 @@
+<div id="carouselColors" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselColors" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselColors" data-slide-to="1"></li>
+    <li data-target="#carouselColors" data-slide-to="2"></li>
+    <li data-target="#carouselColors" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_700/v1696966321/colores_4_h9vw4g.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_700/v1696966321/colores_3_tt1rvx.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_700/v1696966321/colores_2_mod1xp.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_700/v1696966320/colores_1_wkyrjd.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselColors" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselColors" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>

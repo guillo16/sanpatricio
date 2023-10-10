@@ -1,0 +1,30 @@
+<div id="carouselBicicle" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselBicicle" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselBicicle" data-slide-to="1"></li>
+    <li data-target="#carouselBicicle" data-slide-to="2"></li>
+    <li data-target="#carouselBicicle" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_700/v1696966161/bici_1_nnnvp8.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_700/v1696966161/bici_2_ou30gb.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_700/v1696966162/bici_3_d1h8z7.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_700/v1696966161/bici_4_r5hf85.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselBicicle" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselBicicle" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
