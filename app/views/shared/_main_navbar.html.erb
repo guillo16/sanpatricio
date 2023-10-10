@@ -42,12 +42,14 @@
       </a>
 
       <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkThree">
-        <%= link_to 'Obras de Teatro', experiencia_educativa_path, class: 'dropdown-item' %>
-        <%= link_to 'Fiesta de los Colores', experiencia_educativa_path, class: 'dropdown-item' %>
-        <%= link_to 'Salidas Educativas', experiencia_educativa_path, class: 'dropdown-item' %>
-        <%= link_to 'Talleres', experiencia_educativa_path, class: 'dropdown-item' %>
-        <%= link_to 'Clases Abiertas', experiencia_educativa_path, class: 'dropdown-item' %>
-        <%= link_to 'Bicicleteadas', experiencia_educativa_path, class: 'dropdown-item' %>
+        <%= link_to 'Bicicleteadas', experiencia_educativa_path(anchor: 'bicicleteadas'), class: 'dropdown-item' %>
+        <%= link_to 'Clases Abiertas', experiencia_educativa_path(anchor: 'clases_abiertas'), class: 'dropdown-item' %>
+        <%= link_to 'Fiesta de los Colores', experiencia_educativa_path(anchor: 'fiesta_colores'), class: 'dropdown-item' %>
+        <%= link_to 'Obras de Teatro', experiencia_educativa_path(anchor: 'obras_teatro'), class: 'dropdown-item' %>
+        <%= link_to 'Salidas Educativas', experiencia_educativa_path(anchor: 'salidas_educativas'), class: 'dropdown-item' %>
+        <%= link_to 'Semana del Colegio', experiencia_educativa_path(anchor: 'semana_colegio'), class: 'dropdown-item' %>
+        <%= link_to 'Semana del Libro', experiencia_educativa_path(anchor: 'semana_libro'), class: 'dropdown-item' %>
+        <%= link_to 'Talleres', experiencia_educativa_path(anchor: 'talleres'), class: 'dropdown-item' %>
       </div>
     </div>
     <div class="d-lg-block d-xl-none">
@@ -75,12 +77,14 @@
         Experiencias Educativas
       </a>
       <div class="collapse" id="collapseExampleThree">
-        <%= link_to 'Obras de Teatro', experiencia_educativa_path, class: 'nav-link' %>
-        <%= link_to 'Fiesta de los Colores', experiencia_educativa_path, class: 'nav-link' %>
-        <%= link_to 'Salidas Educativas', experiencia_educativa_path, class: 'nav-link' %>
-        <%= link_to 'Talleres', experiencia_educativa_path, class: 'nav-link' %>
-        <%= link_to 'Clases Abiertas', experiencia_educativa_path, class: 'nav-link' %>
-        <%= link_to 'Bicicleteadas', experiencia_educativa_path, class: 'nav-link' %>
+        <%= link_to 'Bicicleteadas', experiencia_educativa_path(anchor: 'bicicleteadas'), class: 'nav-link' %>
+        <%= link_to 'Clases Abiertas', experiencia_educativa_path(anchor: 'clases_abiertas'), class: 'nav-link' %>
+        <%= link_to 'Fiesta de los Colores', experiencia_educativa_path(anchor: 'fiesta_colores'), class: 'nav-link' %>
+        <%= link_to 'Obras de Teatro', experiencia_educativa_path(anchor: 'obras_teatro'), class: 'nav-link' %>
+        <%= link_to 'Salidas Educativas', experiencia_educativa_path(anchor: 'salidas_educativas'), class: 'nav-link' %>
+        <%= link_to 'Semana del Colegio', experiencia_educativa_path(anchor: 'semana_colegio'), class: 'nav-link' %>
+        <%= link_to 'Semana del Libro', experiencia_educativa_path(anchor: 'semana_libro'), class: 'nav-link' %>
+        <%= link_to 'Talleres', experiencia_educativa_path(anchor: 'talleres'), class: 'nav-link' %>
       </div>
     </div>
 
