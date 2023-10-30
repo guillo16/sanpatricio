@@ -42,6 +42,6 @@ class ConectionsController < ApplicationController
   private
 
   def conection_params
-    params.require(:conection).permit(:name, :building, :email, :message)
+    params.require(:conection).permit(:name, :building, :email, :message, :matter, :file)
   end
 end

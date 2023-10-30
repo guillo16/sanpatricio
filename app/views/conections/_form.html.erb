@@ -6,6 +6,10 @@
   <div class="form-group">
     <%= f.input :building, input_html: { class: "form-control"}, label: false , collection: ['Administración', 'Jardines', 'Primario', 'Secundario']%>
   </div>
+  <h3>Asunto<strong style="color:red; font-size: 16px;">*</strong></h3>
+  <div class="form-group">
+    <%= f.input :matter, input_html: { class: "form-control"}, label: false , collection: ['Admisiones', 'Búsqueda Laboral', 'Información', 'Otros']%>
+  </div>
   <h3>Nombre<strong style="color:red; font-size: 16px;">*</strong></h3>
   <div class="form-group">
     <%= f.input :name, input_html: { class: "form-control"}, label: false%>
@@ -16,9 +20,13 @@
   </div>
   <h3>Mensaje<strong style="color:red; font-size: 16px;">*</strong></h3>
   <div class="form-group">
-   <%= f.input :message, :as => :text, input_html: { class: "form-control form-control", id:"exampleFormControlTextarea1", rows:"7" }, label: false %>
- </div>
- <h4>Por favor escriba su mensaje. Un miembro de nuestro equipo le respondera lo mas rapido posible.</h4>
+    <%= f.input :message, :as => :text, input_html: { class: "form-control form-control", id:"exampleFormControlTextarea1", rows:"7" }, label: false %>
+  </div>
+  <h4>Por favor escriba su mensaje. Un miembro de nuestro equipo le respondera lo mas rapido posible.</h4>
+  <h3>Archivo<strong style="color:red; font-size: 16px;">*</strong></h3>
+  <div class="form-group">
+    <%= f.input :file, as: :file, label: false %>
+  </div>
  <div class=" w-100">
   <%= f.submit 'Enviar Mensaje', class: "btn btn-green btn-lg btn-block" %>
  </div>
