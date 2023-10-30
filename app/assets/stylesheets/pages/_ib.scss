@@ -24,6 +24,19 @@
     margin-bottom: 10px;
   }
 }
+
+.ib-cards {
+  padding: 32px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 8px;
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+}
+
 .ib-wrapper {
   width: 96%;
   margin: 0px auto;
@@ -64,6 +77,17 @@
       font-size: 12px;
     }
   }
+
+  .ib-cards {
+  padding: 32px 0px;
+  grid-template-columns: 1fr;
+  grid-gap: 8px;
+  img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+}
   .ib-wrapper {
     display: block;
   }

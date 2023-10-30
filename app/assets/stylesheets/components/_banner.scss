@@ -1,10 +1,26 @@
+#carouselExampleSlidesOnly {
+
+  .carousel-inner {
+    z-index: -1 !important;
+  }
+
+  .carousel-inner img {
+    height: 140px !important;
+    width: auto !important;
+  }
+}
+
+.carousel-home {
+  position: inherit !important;
+}
+
 .banner {
   background-size: cover;
   background-position: center;
-  height:  calc(100vh - 124px);
+  height: calc(100vh - 124px);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center !important;
+  justify-content: center !important;
 }
 
 .banner-login {
@@ -112,6 +128,13 @@
 
     p {
       font-size: 25px;
+    }
+  }
+  #carouselExampleSlidesOnly {
+    .carousel-inner img {
+      height: 100px !important;
+      margin-bottom: 6px;
+      width: auto !important;
     }
   }
   .banner-ib {

@@ -1,0 +1,42 @@
+.autoridades-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.autoridades-card {
+  text-align: center;
+
+  img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  h3 {
+    padding-top: 8px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+
+@media (max-width: 991.98px) {
+  .autoridades-container {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 16px;
+  }
+}
+
+@media(max-width: 686px) {
+  .autoridades-container {
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+  }
+}

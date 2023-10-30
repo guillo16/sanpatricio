@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-lg navbar-light navbar-lewagon ">
+<div class="navbar navbar-expand-xl navbar-light navbar-lewagon ">
   <%= link_to root_path, class: "navbar-brand" do %>
   <%= image_tag "https://res.cloudinary.com/dw7ox75dg/image/upload/v1585140067/san_patricio_logo.png"%>
   <% end %>
@@ -10,15 +10,89 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-    <%= link_to "Noticias", articles_path, class: "nav-link" %>
-    <%= link_to "Historia", about_path, class: "nav-link" %>
-    <%= link_to "IB", ib_path, class: "nav-link" %>
-    <%= link_to "Eventos", events_path, class: "nav-link" %>
+
+
+    <div class="dropdown show d-none d-xl-block">
+      <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Sobre Nosotros
+      </a>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <%= link_to 'Quiénes somos', about_path, class: 'dropdown-item' %>
+        <%= link_to 'Nuestra Historia', historia_path, class: 'dropdown-item' %>
+        <%= link_to 'Misión y Visión', mision_path, class: 'dropdown-item' %>
+        <%= link_to 'Autoridades', autoridades_path, class: 'dropdown-item' %>
+      </div>
+    </div>
+
+    <div class="dropdown show d-none d-xl-block">
+      <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLinkThree" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Oferta Académica
+      </a>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkThree">
+        <%= link_to 'Nivel Inicial', oferta_academica_path(anchor: 'inicial'), class: 'dropdown-item' %>
+        <%= link_to 'Nivel Primario', oferta_academica_path(anchor: 'primario'), class: 'dropdown-item' %>
+        <%= link_to 'Nivel Secundario', oferta_academica_path(anchor: 'secundario'), class: 'dropdown-item' %>
+        <%= link_to 'Colegio del Mundo IB', ib_path, class: 'dropdown-item' %>
+      </div>
+    </div>
+
+    <div class="dropdown show d-none d-xl-block">
+      <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLinkThree" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Experiencias Educativas
+      </a>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkThree">
+        <%= link_to 'Bicicleteadas', experiencia_educativa_path(anchor: 'bicicleteadas'), class: 'dropdown-item' %>
+        <%= link_to 'Clases Abiertas', experiencia_educativa_path(anchor: 'clases_abiertas'), class: 'dropdown-item' %>
+        <%= link_to 'Fiesta de los Colores', experiencia_educativa_path(anchor: 'fiesta_colores'), class: 'dropdown-item' %>
+        <%= link_to 'Obras de Teatro', experiencia_educativa_path(anchor: 'obras_teatro'), class: 'dropdown-item' %>
+        <%= link_to 'Salidas Educativas', experiencia_educativa_path(anchor: 'salidas_educativas'), class: 'dropdown-item' %>
+        <%= link_to 'Semana del Colegio', experiencia_educativa_path(anchor: 'semana_colegio'), class: 'dropdown-item' %>
+        <%= link_to 'Semana del Libro', experiencia_educativa_path(anchor: 'semana_libro'), class: 'dropdown-item' %>
+        <%= link_to 'Talleres', experiencia_educativa_path(anchor: 'talleres'), class: 'dropdown-item' %>
+      </div>
+    </div>
+    <div class="d-lg-block d-xl-none">
+      <a class="nav-link" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        Sobre Nosotros
+      </a>
+      <div class="collapse" id="collapseExample">
+        <%= link_to 'Quiénes somos', about_path, class: 'nav-link' %>
+        <%= link_to 'Nuestra Historia', historia_path, class: 'nav-link' %>
+        <%= link_to 'Misión y Visión', mision_path, class: 'nav-link' %>
+        <%= link_to 'Autoridades', autoridades_path, class: 'nav-link' %>
+      </div>
+
+      <a class="nav-link" data-toggle="collapse" href="#collapseExampleTwo" role="button" aria-expanded="false" aria-controls="collapseExampleTwo">
+        Oferta Académica
+      </a>
+      <div class="collapse" id="collapseExampleTwo">
+        <%= link_to 'Nivel Inicial', oferta_academica_path(anchor: 'inicial'), class: 'nav-link' %>
+        <%= link_to 'Nivel Primario', oferta_academica_path(anchor: 'primario'), class: 'nav-link' %>
+        <%= link_to 'Nivel Secundario', oferta_academica_path(anchor: 'secundario'), class: 'nav-link' %>
+        <%= link_to 'Colegio del Mundo IB', ib_path, class: 'nav-link' %>
+      </div>
+
+      <a class="nav-link" data-toggle="collapse" href="#collapseExampleThree" role="button" aria-expanded="false" aria-controls="collapseExampleThree">
+        Experiencias Educativas
+      </a>
+      <div class="collapse" id="collapseExampleThree">
+       <%= link_to 'Bicicleteadas', experiencia_educativa_path(anchor: 'bicicleteadas'), class: 'nav-link' %>
+        <%= link_to 'Clases Abiertas', experiencia_educativa_path(anchor: 'clases_abiertas'), class: 'nav-link' %>
+        <%= link_to 'Fiesta de los Colores', experiencia_educativa_path(anchor: 'fiesta_colores'), class: 'nav-link' %>
+        <%= link_to 'Obras de Teatro', experiencia_educativa_path(anchor: 'obras_teatro'), class: 'nav-link' %>
+        <%= link_to 'Salidas Educativas', experiencia_educativa_path(anchor: 'salidas_educativas'), class: 'nav-link' %>
+        <%= link_to 'Semana del Colegio', experiencia_educativa_path(anchor: 'semana_colegio'), class: 'nav-link' %>
+        <%= link_to 'Semana del Libro', experiencia_educativa_path(anchor: 'semana_libro'), class: 'nav-link' %>
+        <%= link_to 'Talleres', experiencia_educativa_path(anchor: 'talleres'), class: 'nav-link' %>
+      </div>
+    </div>
+
+
+    <%= link_to "Novedades", articles_path, class: "nav-link" %>
     <%= link_to "Contacto", new_conection_path, class: "nav-link" %>
-    <% if user_signed_in? %>
-    <%= link_to "Perfil", user_path(current_user), class: "nav-link" %>
-    <% else %>
-    <%= link_to "Iniciar sesión",new_user_session_path , class: "nav-link" %>
-    <% end %>
   </div>
 </div>
+

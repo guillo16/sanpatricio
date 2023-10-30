@@ -18,6 +18,16 @@ class ConectionsController < ApplicationController
     if @conection.save
       redirect_to root_path
       flash[:notice] = "Gracias por su mensaje, lo contactaremos pronto"
+      if @conection.building == 'Jardines'
+        @conection.update!(building: 'jardin@sanpatriciotucuman.edu.ar')
+      elsif @conection.building == 'Primario'
+        @conection.update!(building: 'primario@sanpatriciotucuman.edu.ar')
+      elsif @conection.building == 'Secundario'
+        @conection.update!(building: 'secundario@sanpatriciotucuman.edu.ar')
+      else
+        @conection.update(building: 'administracion@sanpatriciotucuman.edu.ar')
+      end
+      ConectionMailer.new_message(@conection).deliver_now
     else
       render :new
     end
@@ -32,6 +42,6 @@ class ConectionsController < ApplicationController
   private
 
   def conection_params
-    params.require(:conection).permit(:name, :building, :email, :message)
+    params.require(:conection).permit(:name, :building, :email, :message, :matter, :file)
   end
 end

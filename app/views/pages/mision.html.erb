@@ -1,0 +1,48 @@
+<%= render 'shared/main_navbar' %>
+<div class="about-container">
+  <div class="nav-tab">
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <%= link_to 'Quienes Somos', about_path, class: 'nav-link ' %>
+      <%= link_to 'Nuestra Historia', historia_path, class: 'nav-link' %>
+      <%= link_to 'Misión y Visión', mision_path, class: 'nav-link active' %>
+      <%= link_to 'Autoridades', autoridades_path, class: 'nav-link ' %>
+    </div>
+  </div>
+  <div class="nav-tab-content">
+    <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,h_600,w_1200/v1690468579/mision-FOTO_1_jcz0um.jpg", :quality=>'auto', class:'mision-banner d-block w-100')%>
+    <div class="mission-container">
+      <h2 class="mt-5">Misión</h2>
+      <div class="d-lg-flex mt-5 align-items-center">
+        <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_400/v1690468590/mision-FOTO_3_iiwy31.jpg", :quality=>'auto', class: 'mb-3')%>
+        <div class="ml-lg-3">
+          <p>Los fines de la institución se orientan hacia el logro de la educación integral de la persona humana dentro de una concepción cristiana de la vida. Se concibe a la educación como el medio más eficaz en el logro de una escala de valores orientada hacia fines más trascendentes.</p>
+          <p>El proceso educativo debe afianzar y desarrollar con sentido responsable la libertad como condición original del hombre… “ la libertad profunda, más que referirse al hacer, se refiere al definirse y disponer el hombre sobre sí mismo…” (G.S. 17EPV 39). Esta libertad sólo puede ser alcanzada a través del conocimiento, del descubrimiento de las cualidades propias, del fortalecimiento de la identidad personal, de la experiencia, de compartir con otros y respetar las diferencias. Libertad implica también la capacidad de elegir, de tomar decisiones, de pensar de forma crítica y de comprender que mi libertad termina cuando empieza la del prójimo.</p>
+        </div>
+      </div>
+      <p class="">Nuestro colegio entiende que cada alumno/a es una persona única e inigualable y que nuestra misión va más allá de lo estrictamente académico. Tenemos, en colaboración con las familias, la responsabilidad de actuar como guías en la gestión de las emociones, en el descubrimiento y formación del mundo interior y en su expresión hacia afuera que cada niño/a y jóven desarrolla a lo largo de su crecimiento y maduración personal.</p>
+      <h2 class="my-5">La misión de nuestro Programa de Inglés</h2>
+      <p>La comprensión íntima y profunda de nuestra propia identidad, de la interdependencia entre las comunidades del planeta y el manejo de la lengua inglesa como medio de llegar a apreciar las diferencias se han vuelto esenciales para la educación integral del ciudadano del mundo.</p>
+      <p>La misión del programa de inglés del colegio es promover a través del estudio de esta lengua:</p>
+      <div class="d-lg-flex mt-3 align-items-center">
+        <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_400/v1690468587/mision-FOTO_4_azlnnh.jpg", :quality=>'auto', class: 'mb-3')%>
+        <div class="ml-lg-3">
+          <ul>
+            <li>La exploración y valoración de capacidades propias que llevan al fortalecimiento de la autoestima.</li>
+            <li>La comprensión de nuestra perspectiva del mundo que hace a nuestra propia identidad.</li>
+            <li>La concientización de la interdependencia humana universal, expresada a través de una apreciación de perspectivas multiculturales y del desarrollo de una comprensión global de las relaciones económicas, culturales y éticas existentes entre todas las sociedades del planeta y en su conjunto de su relación con el medio ambiente. Como consecuencia, buscamos promover en nuestros estudiantes el respeto, la aceptación y celebración de las diferencias que hacen a la identidad y culturas de otros grupos étnicos, sociales, económicos, religiosos y culturales.</li>
+          </ul>
+        </div>
+      </div>
+      <ul>
+        <li>La exploración de los valores humanos universales a través de la literatura en la lengua inglesa.</li>
+        <li>La capacitación del estudiante para insertarse con una visión amplia y global en su comunidad y se transforme en agente de cambio para mejorar su entorno</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

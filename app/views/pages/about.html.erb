@@ -1,23 +1,72 @@
-<%= render 'shared/main_navbar' %>
+<%= render 'shared/main_navbar'%>
 <div class="about-container">
   <div class="nav-tab">
     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Historia</a>
-      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Misión</a>
-      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Quienes somos</a>
-      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Autoridades</a>
-
-      <a class="nav-link" id="v-pills-egresados-tab" data-toggle="pill" href="#v-pills-egresados" role="tab" aria-controls="v-pills-egresados" aria-selected="false">Egresados</a>
+      <%= link_to 'Quienes Somos', about_path, class: 'nav-link active' %>
+      <%= link_to 'Nuestra Historia', historia_path, class: 'nav-link' %>
+      <%= link_to 'Misión y Visión', mision_path, class: 'nav-link' %>
+      <%= link_to 'Autoridades', autoridades_path, class: 'nav-link' %>
     </div>
   </div>
   <div class="nav-tab-content">
     <div class="tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"><%= render 'history/history' %></div>
-      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab"><%= render 'history/mission' %></div>
-      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"><%= render 'history/objetivos' %></div>
-      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab"><%= render 'history/autorithy' %> </div>
+      <div class="mission-container">
+       <div class="about-image-cards">
+          <button data-toggle="modal" data-target=".bd-example-modal-lg">
+            <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_600/v1690468588/FOTO_1_quienes_somos_sovzi5.jpg", :quality=>'auto')%>
+          </button>
+          <button data-toggle="modal" data-target=".bd-example-modal-lg">
+            <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_600/v1690468593/FOTO_2_quienes_somos_sfryxw.jpg", :quality=>'auto')%>
+          </button>
+          <button data-toggle="modal" data-target=".bd-example-modal-lg">
+            <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_600/v1690468593/FOTO_3_quienes_somos_tgzakh.jpg", :quality=>'auto')%>
+          </button>
+       </div>
 
-      <div class="tab-pane fade" id="v-pills-egresados" role="tabpanel" aria-labelledby="v-pills-egresados-tab"><%= render 'history/egresados' %></div>
+        <p class="pt-4">Fundado en 1976 por un grupo de 5 profesoras que soñaban con enseñar inglés desde temprana edad como una herramienta para el futuro, el Colegio San Patricio es una institución educativa pública de gestión privada ubicada en el corazón de Yerba Buena, provincia de Tucumán, Argentina.</p>
+        <p>Con un significativo número de alumnos, colaboradores y egresados, el colegio ofrece los 3 niveles de educación escolar: inicial (desde jardín de 3 años), primario y secundario. Se caracteriza por enseñar inglés como lengua nativa, iniciando la formación desde los 3 años de edad. Desde jardín de 5 años los alumnos empiezan de forma progresiva a incorporar más horas de formación, teniendo una jornada prolongada de educación desde jardín de 5 años y hasta el último año del nivel secundario. </p>
+        <p>Asimismo, el Colegio San Patricio forma parte desde 1988 del Bachillerato Internacional (IB), un programa a nivel mundial que propone una forma específica de enseñar y aprender. Convertirse en Colegio del Mundo del IB supone unirse a más de 4.500 colegios de todo el mundo que comparten una misma mirada y que otorga a sus alumnos una educación excepcional.</p>
+        <p class="font-weight-bold">Objetivos:</p>
+        <p>Nuestra institución privilegia para sus objetivos generales la consecución de cinco valores: Libertad, Responsabilidad, Justicia, Fortaleza y Solidaridad. A partir de estos cinco pilares fundamentales se organiza la vida institucional y la participación de sus miembros para alcanzar lo que se propone:</p>
+        <ul>
+          <li>Posibilitar el desarrollo de una persona equilibrada.</li>
+          <li>Brindar oportunidades para pensar y obrar con criterios personales basados en valores éticos y religiosos.</li>
+          <li>Contribuir a la formación de actitudes de participación social y comunitaria, con sentido crítico para generar cambios orientados hacia el bien común.</li>
+          <li>Proporcionar una sólida formación científica y humanística que permita al egresado participar activa, reflexiva y críticamente en los diversos ámbitos de la vida social.</li>
+          <li>Contribuir en la inserción del egresado como ciudadano consciente de los derechos y deberes de las personas, comprometido con la realidad nacional y con apertura a la comprensión de la cultura global.</li>
+          <li>Proporcionar las oportunidades para el aprendizaje de una segunda lengua (inglés) como medio de comunicación de la cultura internacional.</li>
+        </ul>
+        <p class="font-weight-bold">Perfil del Egresado:</p>
+        <ol>
+          <li>Pensar y actuar en la vida de acuerdo con principios orientados hacia fines trascendentes</li>
+          <li>Integrarse activamente a la sociedad como productor responsable, respetando al prójimo y actuando con principios democráticos.</li>
+          <li>Pensar y comunicarse adecuadamente utilizando los sistemas de lenguaje oral, escrito, matemático, corporal y artístico.</li>
+          <li>Utilizar con responsabilidad los medios que la tecnología pone a su alcance.</li>
+          <li>Adquirir, integrar y aplicar conocimientos provenientes de los distintos campos del saber.</li>
+          <li>Contribuir activamente a la transformación del medio social y cultural, aceptando la diversidad y aportando su potencial para que la vida sea más humana.</li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= render 'about_carousel'%>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
     </div>
   </div>
 </div>

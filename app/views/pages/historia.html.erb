@@ -1,0 +1,155 @@
+<%= render 'shared/main_navbar' %>
+<div class="about-container">
+  <div class="nav-tab">
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <%= link_to 'Quienes Somos', about_path, class: 'nav-link ' %>
+      <%= link_to 'Nuestra Historia', historia_path, class: 'nav-link active' %>
+      <%= link_to 'Misión y Visión', mision_path, class: 'nav-link' %>
+      <%= link_to 'Autoridades', autoridades_path, class: 'nav-link ' %>
+    </div>
+  </div>
+  <div class="nav-tab-content">
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="mission-container">
+
+        <div class="py-5 px-2" id="sponsors">
+          <div class="d-none d-md-block" id="carousel-desktop">
+            <div id="carouselExampleIndicators" class="carousel slide py-5" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+              </ol>
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="d-flex justify-content-center">
+                    <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_796/v1693314923/1_mmiaao.jpg", :quality=>'auto')%>
+                    <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_800/v1693314923/2_o1s9vz.jpg", :quality=>'auto')%>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_800/v1693314923/3_kt6gzj.jpg", :quality=>'auto')%>
+                    <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_800/v1693314924/4_eohapm.jpg", :quality=>'auto')%>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_800/v1693314924/5_z3qwaj.jpg", :quality=>'auto')%>
+                    <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_800/v1693314924/6_xewjar.jpg", :quality=>'auto')%>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_800/v1693314924/7_fvz8iu.jpg", :quality=>'auto')%>
+                    <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_800/v1693314924/8_s7ltzh.jpg", :quality=>'auto')%>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <div class="d-md-none" id="carousel-mobile">
+            <div id="carouselMobile" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselMobile" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselMobile" data-slide-to="1"></li>
+                <li data-target="#carouselMobile" data-slide-to="2"></li>
+                <li data-target="#carouselMobile" data-slide-to="3"></li>
+                <li data-target="#carouselMobile" data-slide-to="4"></li>
+                <li data-target="#carouselMobile" data-slide-to="5"></li>
+                <li data-target="#carouselMobile" data-slide-to="6"></li>
+                <li data-target="#carouselMobile" data-slide-to="7"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="d-flex justify-content-center">
+                    <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_796/v1693314923/1_mmiaao.jpg", :quality=>'auto')%>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_800/v1693314923/2_o1s9vz.jpg", :quality=>'auto')%>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_800/v1693314923/3_kt6gzj.jpg", :quality=>'auto')%>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_800/v1693314924/4_eohapm.jpg", :quality=>'auto')%>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_800/v1693314924/5_z3qwaj.jpg", :quality=>'auto')%>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_800/v1693314924/6_xewjar.jpg", :quality=>'auto')%>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_800/v1693314924/7_fvz8iu.jpg", :quality=>'auto')%>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex justify-content-center">
+                    <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_800/v1693314924/8_s7ltzh.jpg", :quality=>'auto')%>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev d-none" href="#carouselMobile" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next d-none" href="#carouselMobile" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <h2 class="text-center pb-5">“Cinco Docentes Y Un Proyecto No Convencional”</h2>
+          <p>El Colegio San Patricio es una institución de notable importancia en el norte argentino. Su historia se remonta a su fundación en el año 1976 en la ciudad de San Miguel de Tucumán, Tucumán, Argentina.</p>
+          <p>Desde sus inicios, la administración del Colegio tiene nombre y apellido. Estos nombres hacen referencia a aquellas personas que un día decidieron embarcarse en un viaje cuyo resultado era inimaginable e inmensurable. Las fundadoras del Colegio San Patricio eran todas maestras jardineras y/o de grado y profesoras de inglés: Laura “Chiqui” Saitzew de Verdaguer, Graciela Eraña de Babot, Lida Doris de Parra, María Beatriz “Morita” Retondo de Delacroix, Leonor Alzabé y Mercedes Lía Silvetti de Medina. Estas valientes y ambiciosas docentes, en 1976 decidieron formar una sociedad laboral, en la cual no sólo serían inversionistas de capital (ya que el dinero para este proyecto salió de sus propios bolsillos), sino que también trabajarían para la institución como profesionales de la educación. </p>
+          <p>Pero la administración de un recién fundado colegio no era tarea fácil. Es por ello que al finalizar el primer año, por motivos personales, Graciela Eraña de Babot y Lida Doris de Parra debieron retirarse de la administración del Colegio, dando lugar al  ingreso de María Luisa Carreras de Orloff Thompsen. En la actualidad, las señoras propietarias son Laura Saitzew de Verdaguer, Leonor Alzabé (difunta, representada por su hija Cecilia D’Agnillo), María Luisa Carreras de Orloff Thompsen, María Beatriz Retondo de Delacroix y Mercedes Lía Silvetti de Medina.</p>
+          <p>Inicialmente, la intención de las propietarias, más que fundar un colegio como lo conocemos ahora, era establecer un instituto de educación inicial en el cual se impartiera a sus estudiantes clases la lengua extranjera (Inglés) desde una temprana edad; a diferencia de otras instituciones locales que enseñaban un segundo idioma luego de que el alumnado iniciara el nivel primario y haya aprendido lectura y escritura en español. Es por eso que, desde un comienzo, la educación bilingüe fue y es una característica singular del Colegio San Patricio; como también lo es la educación pluralista en diversos aspectos (racial, religioso, social, y la apertura al diálogo y la comprensión global) en base a la cual se forjaron los principios de la institución, siempre con la libertad como condición original del hombre.</p>
+          <p>Pero las fundadoras del Colegio no solo buscaban que el alumno adquiriera el Inglés como una mera herramienta para su futuro desarrollo, sino también como un medio para poder abrir su mente y así poder lograr el entendimiento de otras culturas y el respeto por puntos de vista divergentes. Es por eso que desde un principio y hasta la actualidad, en el Colegio San Patricio el Inglés no es una materia más en la cual hay que memorizar un conjunto de contenidos para poder aprobar, sino que es parte esencial del día a día de niños y jóvenes. Se busca que los estudiantes incorporen el idioma como una primera lengua de la manera más natural posible, mediante un proceso de aprendizaje que inicia a la edad de tres años y continúa hasta finalizar los estudios de nivel medio.</p>
+          <p>El recién fundado jardín de infantes se llamó en un comienzo “Robin Hood”. Éste se ubicaba en la calle Laprida, en el distrito céntrico de la capital tucumana. La sede era una propiedad de Lida Doris de Parra y las clases empezaron dictándose con lo poco que tenían las docentes a disponibilidad: desde juguetes de los hijos de las propietarias hasta diferentes materiales de trabajo que se fueron adquiriendo con el tiempo. Inicialmente se contaba con salas de 3, 4 y 5 años pero, para que los estudiantes no tengan que discontinuar su intensiva educación bilingüe, al año siguiente se decidió crear un primer grado para aquellos alumnos cuyas familias deseaban que sus hijos recibiesen su educación primaria en la institución. En esta primera etapa, las propietarias ejercieron cargos de maestras de grado acompañadas por otras profesionales como María Sosa Molina y Vicky Robledo, quienes fueron las primeras maestras jardineras y secretarías respectivamente del colegio, o Luz Balsa de Cusicanqui, “La Pelona”, quien posteriormente fue Directora del nivel primario.</p>
+          <p>Si bien abrir el nivel primario no fue algo extremadamente difícil (ya que desde un principio el Colegio fue inscripto para nivel inicial, primario, secundario y terciario), esto significó de todos modos varios contratiempos y muchas decisiones más que se debieron tomar. Por ejemplo, para no dejar de lado la educación en Inglés pero también dictar clases en español, se decidió que la Institución tendría jornada doble, reforzando el inglés por la tarde en los jardines de infantes, en el nivel primario y a lo largo de la jornada en la secundaria. Esto fue una maniobra riesgosa, novedosa para una región acostumbrada a una educación de medio tiempo y que podría no haber sido bien aceptada. Desde un inicio el alumno contaba con un receso extendido durante el mediodía, en el cual podría ir a su casa o almorzar en el colegio, y recién a partir del año 2021, a causa del crecimiento demográfico en Tucumán y el consecuente aumento del tráfico, se decidió implementar una jornada extendida en la cual el tiempo de almuerzo se redujo y los alumnos de todos los niveles han de almorzar en el Colegio.</p>
+          <p>Volviendo atrás en esta historia, en 1978 y de forma conjunta a la apertura del nivel primario, el Colegio San Patricio debió cambiar su ubicación. En un primer momento, pensaron mudarse a la calle Córdoba, también en el centro tucumano, pero la Secretaría de Educación no permitía que un colegio funcionara en una ubicación próxima a otra institución educativa preexistente, el Colegio Ntra. Señora del Huerto en este caso. En la búsqueda por un lugar con mayor amplitud para dar inicio al nivel primario, se llegó a Yerba Buena (la ciudad contigua al departamento capital), estableciéndose en una antigua casa en la Avenida Aconquija al 900 y Calle Maciel.</p>
+          <p>Acto escolar, década de 1980</p>
+          <p>Pero este no fue el único cambio: el Colegio también tuvo que modificar su nombre, ya que en esos tiempos la Secretaría de Educación de la provincia no aceptaba la inscripción de colegios cuyos nombres sean en una lengua extranjera. Es por eso que, luego de mucho pensar, se concluyó que “San Patricio” sería el nombre más indicado y acorde a una institución ecuménica, pero que profesa un acervo tradicional católico. </p>
+          <p>Con el tiempo y el exponencial crecimiento de la comunidad perteneciente al Colegio San Patricio, la antigua casa sobre la Avenida Aconquija resultó pequeña. Consecuentemente se optó por comprar una propiedad a menos de 100 metros de la antigua propiedad, ahora sobre la calle Las Acacias, la cual fue destinada a los jardines de infantes y al departamento administrativo. Posteriormente, en el año 1985, se da inicio al nivel secundario en esa misma propiedad de manera provisoria, con la profesora Liliana Robledo de Llona como primera Rectora.</p>
+          <p>La Prof.a Llona, acompañada de la Pedagoga Liliana de Apud, fueron quienes buscaron transmitir al personal la misión del Colegio San Patricio: “Formar personalidades fuertes y responsables, capaces de hacer opciones libres y justas”. Esta misión dio lugar al esclarecimiento de los pilares del Colegio. Además, incentivaron la presencia de otro valor que, poco a poco, era más y más notorio en cada uno de los alumnos y docentes: la solidaridad con los más necesitados. Los pilares del Colegio actualmente son: Libertad, Responsabilidad, Justicia, Fortaleza y Solidaridad.</p>
+          <p>En el año 1988 se opta por mover a aquellos alumnos correspondientes a la primera, segunda y tercera promoción del colegio, es decir, a todo el nivel secundario para ese entonces, a un predio de 4 hectáreas a 2,5 kilómetros al oeste (terreno perteneciente a la familia Frías Silva, quienes lo dieron en parte de pago por la educación de sus hijos). Esta movilización fue un trámite nada fácil, recuerdan las señoras propietarias. Esto implicó el traslado de alumnos que estaban matriculados en un domicilio legal diferente a donde las clases serían dictadas. No obstante, la entonces nueva ubicación resultó altamente provechosa: ésta contaba con un amplio espacio verde (rodeado de cañaverales y calles de tierra en un principio) que serviría como campo de deportes y actividades recreativas.</p>
+          <p>La elección de esta ubicación para ampliar el Colegio fue totalmente estratégica, ya que el crecimiento de la institución acompañó de manera contundente el crecimiento demográfico de la zona y, al día de hoy alrededor de ella funciona uno de los centros cívicos más importantes de la provincia.</p>
+          <p>En ese mismo año, 1988, se implementa en el Colegio el Programa de Bachillerato Internacional (IB) tras recomendación del Colegio Northlands de Olivos, Buenos Aires, con quien la institución tenía contacto;  esta sugerencia tuvo lugar debido a la gran cantidad de alumnos que realizaban intercambios culturales internacionales desde y hacia el Colegio San Patricio. La fecha de adhesión del Colegio a la Organización permitió a la primera promoción (de 1989) realizar el Programa del Diploma (PD), siempre de manera optativa para alumnos que lo desearan, ya que éste contaba y cuenta con un costo agregado, y adicionalmente, en ese entonces se debían realizar horas extras más allá de las establecidas en la currícula para poder alcanzar los objetivos académicos propuestos por la organización internacional.. Posteriormente, y casi de manera inmediata, se recibió la memorable visita de inspección de Peter Stoyle, el entonces Director en América Latina de la Organización del Bachillerato Internacional, quien inauguró a la institución en la red de Colegios del Mundo. Empero, como las señoras propietarias relatan, el haberse convertido en un Colegio IB fue una decisión tomada no sólo por la excelencia de los contenidos del programa de cada materia, sino también por la filosofía del Programa y el perfil del alumno que tanto lo caracteriza, siempre priorizando la actitud crítica, la probidad académica y la formación de mentes abiertas e indagadoras que piensan más allá de su comunidad. La implementación fue, como la llamó el personal del colegio en una obra teatral representativa de este momento histórico, “un parto difícil”; los docentes del secundario debieron modificar no solamente sus programas y contenidos, sino el enfoque de sus clases  (algo similar a lo que está sucediendo actualmente en el primario y los jardines quienes desde el año 2020 se incorporaron a esta forma de enseñar y están adaptando de forma conveniente toda su propuesta académica): ahora los alumnos eran los protagonistas en el dictado de clases, participando en debates abiertos y recurrentes, realizando trabajos autónomos de indagación, posibilitándoles el poder de opinar y formar un criterio propio e incentivándolos a realmente entender para qué sabemos lo qué sabemos y cómo aplicar ese conocimiento en nuestro día a día. Hoy, más del 80% de los alumnos del último año certifican en el Programa del Diploma del Bachillerato Internacional al menos una materia (Inglés mayoritariamente) y más de 10 alumnos realizan el Diploma completo (Inglés - Estudios de Lengua y Literatura, o como Lengua Extranjera -, Matemáticas, Literatura en Español, Biología, Historia - de las Américas y el Mundo -  y Artes Visuales).</p>
+          <p>En la primavera de 1989, con Leonor Vela de Lecuona como Rectora, el Colegio San Patricio, entre festejos y lágrimas de alegría, despidió a su primera promoción/camada. Las señoras propietarias ven este momento como un hito en la historia de la Institución, como una recompensa de su inmensurable esfuerzo y como resultado de un atareado camino en el cual tuvieron que pararse fuertes y seguir adelante, siempre con la ayuda de la comunidad del Colegio.</p>
+          <p>La primera promoción contaba solamente con una división de 19 alumnos y la segunda promoción con un curso de 20 y otro de 18 alumnos (en la actualidad existen 4 divisiones por año de más de 30 alumnos cada una). Para ese entonces, los cursos de Inglés eran divididos en niveles, con el fin de que los alumnos recibieran una educación de la mayor calidad posible.</p>
+          <p>Asimismo, el colegio contó siempre con diversas actividades para alumnos y docentes: la semana del estudiante, el Club Colegial (el cual se detuvo a principio de los años 2000, y se retoma con la promoción 2023), días recreativos, obras de teatro bilingües, exposiciones (como el “Museo Histórico” de las profesoras María Marta Albornoz y Mónica Vera del Barco) y viajes de estudio, recreación y convivencia.</p>
+          <p>Con respecto al personal docente de la Institución, el Colegio se caracteriza por profesionales que eligen al San Patricio, más que como un lugar de trabajo, como un segundo hogar. El Colegio, como ratifican los que allí trabajan, se ha convertido en parte de ellos. Muchos de sus profesionales tienen todas o la mayoría de sus horas de clase allí ya que, como estos explican, en el Colegio encontraron un ambiente laboral único, con personas cálidas, agradables y genuinas, las cuales convierten la sala de profesores en una mesa de amigos. En la actualidad todavía continúa trabajando personal que lleva casi 35 años formando parte del equipo de la institución y, a pesar de que se espera una renovación generacional de personal del 100% para 2025/26, gran parte de las personas que ingresan no son ajenas a la institución: muchos ex alumnos eligen volver (es común que egresados se conviertan en colegas de sus propios profesores que son, a su vez, docentes de sus hijos) y el Colegio y las propietarias buscan que esas personas que una vez fueron parte vuelvan para quedarse.</p>
+          <p>Las proyecciones a futuro de las fundadoras, quienes se consideran estar ahora en el momento de empezar a delegar tareas a mentes más jóvenes, son varias: desde asuntos de logística hasta si se debería abrir un nivel terciario, pero lo que sí tienen por seguro es que se debe acompañar cada paso con la ayuda del departamento de Formación Humana, formando personas abiertas al mundo, pensadores críticos que reconozcan y respeten al prójimo, que sepan lidiar con los obstáculos que se les presenten en el camino, siempre acogiendo el cambio pero nunca dejando de lado sus principios; además desean que desde el aula se siga educando en la libertad y la diversidad e inculcando la responsabilidad. Como Miss Chiqui siempre dice, “que suerte, que suerte que somos todos diferentes”. La historia no concluye aquí, sino que continúa escribiéndose cada día, en cada aula, en cada evento, cada izamiento de la bandera, cada recreo, viaje, exposición, en cada promoción de alumnos que deja su huella en su paso por nuestro Colegio. Como bien dice el Himno de nuestro colegio: “We are proud to be your pupils, Saint Patrick´s School”.</p>
+          <p class="font-weight-bold text-right">Extracto de la Historia institucional reconstruida por el alumno Lucas Apud Rubio</p>
+          <p class="font-weight-bold text-right">Promoción 2023</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

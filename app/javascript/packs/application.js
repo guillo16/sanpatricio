@@ -17,8 +17,8 @@ initSweetalert('#sweet-alert-demo', {
   }
 });
 
-import { loadDynamicBannerText, loadDynamicBannerTextTwo } from '../components/banner';
-loadDynamicBannerText(); loadDynamicBannerTextTwo();
+import { loadDynamicBannerText, loadDynamicBannerTextTwo, loadDynamicBannerTextThree, loadDynamicBannerTextFour } from '../components/banner';
+loadDynamicBannerText(); loadDynamicBannerTextTwo(); loadDynamicBannerTextThree(); loadDynamicBannerTextFour()
 
 
 

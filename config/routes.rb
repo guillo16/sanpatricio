@@ -3,14 +3,22 @@ Rails.application.routes.draw do
   devise_for :users, :path_prefix =>'auth'
   root to: 'pages#home'
 
+  get 'about', to: 'pages#about'
+  get '/autoridades', to: 'pages#autoridades'
+  get '/historia', to: 'pages#historia'
+  get 'ib', to: 'pages#ib'
+  get '/mision', to: 'pages#mision'
+  get '/inicial', to: 'pages#inicial'
+  get '/oferta_academica', to: 'pages#oferta_academica'
+  get '/experiencia_educativa', to: 'pages#experiencia_educativa'
+
   resources :articles do
     resources :galleries, only: [:show, :create]
   end
   resources :contacts, only: [:new, :create]
   resources :conections, exept: [:update, :edit]
 
-  get 'about', to: 'pages#about'
-  get 'ib', to: 'pages#ib'
+
 
   resources :events
   resources :users, only: [:show, :destroy, :new, :create]

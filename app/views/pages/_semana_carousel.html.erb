@@ -1,0 +1,30 @@
+<div id="carouselSemana" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselSemana" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselSemana" data-slide-to="1"></li>
+    <li data-target="#carouselSemana" data-slide-to="2"></li>
+    <li data-target="#carouselSemana" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_700/v1696966587/semana_1_uojsac.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_700/v1696966587/semana_0_nonhnh.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_700/v1696966587/semana_3_dz0cwr.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_700/v1696966588/semana_2_trogv1.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselSemana" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselSemana" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>

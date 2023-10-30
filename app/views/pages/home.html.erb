@@ -1,6 +1,56 @@
 <%= render 'shared/topbar' %>
 <%= render 'shared/navbar' %>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_1317/v1589459748/San%20patricio/IMG_3902-01.jpg);">
+<div id="carouselExampleSlidesOnly" class="carousel slide carousel-home" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="d-block w-100">
+        <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dye9yotct/image/upload/c_scale,w_1800/v1685467971/Nivel_Primario_1_p3jica.jpg);">
+          <div class="banner-container">
+            <div class="banner-image">
+              <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/v1588966208/loguito.png" alt="">
+              <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/v1584881920/ib-world-school-logo-1-colour-rev.png" alt="" style="height: 150px;">
+            </div>
+            <p>
+              <span id="banner-typed-text-secondary"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-block w-100">
+        <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dye9yotct/image/upload/c_scale,w_1800/v1685468021/Nivel_Inicial_2_xxlfvr.jpg);">
+          <div class="banner-container">
+            <div class="banner-image">
+              <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/v1588966208/loguito.png" alt="">
+              <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/v1584881920/ib-world-school-logo-1-colour-rev.png" alt="" style="height: 150px;">
+            </div>
+            <p>
+              <span id="banner-typed-text-third"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-block w-100">
+        <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dye9yotct/image/upload/c_scale,w_1800/v1685468023/Nivel_Secundario_2_o9q6i1.jpg);">
+          <div class="banner-container">
+            <div class="banner-image">
+              <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/v1588966208/loguito.png" alt="">
+              <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/v1584881920/ib-world-school-logo-1-colour-rev.png" alt="" style="height: 150px;">
+            </div>
+            <p>
+              <span id="banner-typed-text-four"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dw7ox75dg/image/upload/c_scale,w_1317/v1589459748/San%20patricio/IMG_3902-01.jpg);">
   <div class="banner-container">
     <div class="banner-image">
       <img src="https://res.cloudinary.com/dw7ox75dg/image/upload/v1588966208/loguito.png" alt="">
@@ -10,8 +60,8 @@
       <span id="banner-typed-text-secondary"></span>
     </p>
   </div>
-</div>
-<section>
+</div> -->
+<!-- <section>
   <div class="home-container">
     <div class="pt-5 mt-md-5 text-center">
       <h2 class="font-weight-bold">El Colegio</h2>
@@ -26,14 +76,14 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <section id="articles">
   <%= render 'shared/articles' %>
 </section>
 <section id="ib">
   <%= render 'shared/ib' %>
 </section>
-<section id="events">
+<!-- <section id="events">
   <div class="home-container">
     <div class="py-5 my-md-5 text-center">
       <h2 class="font-weight-bold">Calendario</h2>
@@ -48,7 +98,7 @@
       <%= link_to 'Eventos', events_path, class: "btn-article"  %>
     </div>
   </div>
-</section>
+</section> -->
 <section id="social">
   <%= render 'shared/social' %>
 </section>

@@ -1,0 +1,30 @@
+<div id="carouselObras" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselObras" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselObras" data-slide-to="1"></li>
+    <li data-target="#carouselObras" data-slide-to="2"></li>
+    <li data-target="#carouselObras" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_700/v1696966321/obras_1_weje9u.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_700/v1696966321/obras_2_ogrgsk.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_700/v1696966321/obras_3_u0uroz.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+    <div class="carousel-item">
+      <%= cl_image_tag("https://res.cloudinary.com/dmbom1kyl/image/upload/c_scale,w_700/v1696966322/obras_4_m6d0sw.jpg", :quality=>'auto', class: "d-block w-100")%>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselObras" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselObras" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
