@@ -8,7 +8,7 @@ class ConectionMailer < ApplicationMailer
     @building = conection.building
     @conection = conection
     if conection.file.attached?
-      attachments['file.pdf'] = conection.file.blob.download
+      attachments['file.pdf'] = conection.file.download
     end
     mail(to: @building, subject: "Nuevo mensaje de la pagina web")
   end
