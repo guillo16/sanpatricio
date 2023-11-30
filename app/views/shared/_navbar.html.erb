@@ -26,7 +26,7 @@
 
     <div class="dropdown show d-none d-xl-block">
       <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLinkThree" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Oferta Académica
+        Niveles Educacionales
       </a>
 
       <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkThree">
@@ -64,13 +64,12 @@
       </div>
 
       <a class="nav-link" data-toggle="collapse" href="#collapseExampleTwo" role="button" aria-expanded="false" aria-controls="collapseExampleTwo">
-        Oferta Académica
+        Niveles Educacionales
       </a>
       <div class="collapse" id="collapseExampleTwo">
         <%= link_to 'Nivel Inicial', oferta_academica_path(anchor: 'inicial'), class: 'nav-link' %>
         <%= link_to 'Nivel Primario', oferta_academica_path(anchor: 'primario'), class: 'nav-link' %>
         <%= link_to 'Nivel Secundario', oferta_academica_path(anchor: 'secundario'), class: 'nav-link' %>
-        <%= link_to 'Colegio del Mundo IB', ib_path, class: 'nav-link' %>
       </div>
 
       <a class="nav-link" data-toggle="collapse" href="#collapseExampleThree" role="button" aria-expanded="false" aria-controls="collapseExampleThree">
@@ -88,7 +87,7 @@
       </div>
     </div>
 
-
+    <%= link_to 'Colegio del Mundo IB', ib_path, class: 'nav-link' %>
     <%= link_to "Novedades", articles_path, class: "nav-link" %>
     <%= link_to "Contacto", new_conection_path, class: "nav-link" %>
   </div>
