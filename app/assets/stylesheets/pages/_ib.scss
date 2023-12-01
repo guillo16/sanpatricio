@@ -60,6 +60,27 @@
   }
 }
 
+.ib-image-center {
+  width: 60%;
+  margin: 10px auto;
+  margin-bottom: 20px;
+  img {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 991.98px) {
+  .ib-image-center {
+    width: 90%;
+    margin: 10px auto;
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
 @media(max-width: 686px) {
   .video-container {
     margin-top: 80px;
@@ -109,6 +130,15 @@
     }
     li {
       font-size: 12px;
+    }
+  }
+
+  .ib-image-center {
+    width: 90%;
+    margin: 10px auto;
+    margin-bottom: 20px;
+    img {
+      width: 100%;
     }
   }
 }
