@@ -19,7 +19,7 @@ class Conection < ApplicationRecord
   end
 
   def file_content_type
-    if file.attached? && !file.content_type.in?(%w(application/pdf))
+    if file.attached? && !file.content_type.in?(%w(application/pdf image/jpeg image/png image/jpg))
       errors.add(:file, 'El unico formato valido es PDF')
     end
   end

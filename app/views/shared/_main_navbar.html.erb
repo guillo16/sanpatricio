@@ -1,7 +1,13 @@
 <div class="navbar navbar-expand-xl navbar-light navbar-main fixed-top ">
-  <%= link_to root_path, class: "navbar-brand" do %>
-  <%= image_tag "https://res.cloudinary.com/dw7ox75dg/image/upload/v1585140067/san_patricio_logo.png"%>
-  <% end %>
+  <div>
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "https://res.cloudinary.com/dw7ox75dg/image/upload/v1585140067/san_patricio_logo.png", class:'sp-img'%>
+    <% end %>
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "https://www.ibo.org/globalassets/new-structure/icons-and-logos/images/ib-world-school-logo-1-colour.png", class:'ib-img'%>
+    <% end -%>
+  </div>
+
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -24,14 +30,13 @@
 
     <div class="dropdown show d-none d-xl-block">
       <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLinkThree" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Oferta Académica
+        Niveles Educacionales
       </a>
 
       <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkThree">
         <%= link_to 'Nivel Inicial', oferta_academica_path(anchor: 'inicial'), class: 'dropdown-item' %>
         <%= link_to 'Nivel Primario', oferta_academica_path(anchor: 'primario'), class: 'dropdown-item' %>
         <%= link_to 'Nivel Secundario', oferta_academica_path(anchor: 'secundario'), class: 'dropdown-item' %>
-        <%= link_to 'Colegio del Mundo IB', ib_path, class: 'dropdown-item' %>
       </div>
     </div>
 
@@ -41,13 +46,13 @@
       </a>
 
       <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkThree">
-        <%= link_to 'Bicicleteadas', experiencia_educativa_path(anchor: 'bicicleteadas'), class: 'dropdown-item' %>
+        <%= link_to 'Actividades Deportivas y Recreativas', experiencia_educativa_path(anchor: 'actividades_deportivas'), class: 'dropdown-item' %>
         <%= link_to 'Clases Abiertas', experiencia_educativa_path(anchor: 'clases_abiertas'), class: 'dropdown-item' %>
         <%= link_to 'Fiesta de los Colores', experiencia_educativa_path(anchor: 'fiesta_colores'), class: 'dropdown-item' %>
         <%= link_to 'Obras de Teatro', experiencia_educativa_path(anchor: 'obras_teatro'), class: 'dropdown-item' %>
         <%= link_to 'Salidas Educativas', experiencia_educativa_path(anchor: 'salidas_educativas'), class: 'dropdown-item' %>
-        <%= link_to 'Semana del Colegio', experiencia_educativa_path(anchor: 'semana_colegio'), class: 'dropdown-item' %>
-        <%= link_to 'Semana del Libro', experiencia_educativa_path(anchor: 'semana_libro'), class: 'dropdown-item' %>
+        <%= link_to 'Contacto con la Naturaleza', experiencia_educativa_path(anchor: 'contacto_naturaleza'), class: 'dropdown-item' %>
+        <%= link_to 'Arte y Creatividad', experiencia_educativa_path(anchor: 'arte_creatividad'), class: 'dropdown-item' %>
         <%= link_to 'Talleres', experiencia_educativa_path(anchor: 'talleres'), class: 'dropdown-item' %>
       </div>
     </div>
@@ -62,31 +67,30 @@
       </div>
 
       <a class="nav-link" data-toggle="collapse" href="#collapseExampleTwo" role="button" aria-expanded="false" aria-controls="collapseExampleTwo">
-        Oferta Académica
+        Niveles Educacionales
       </a>
       <div class="collapse" id="collapseExampleTwo">
         <%= link_to 'Nivel Inicial', oferta_academica_path(anchor: 'inicial'), class: 'nav-link' %>
         <%= link_to 'Nivel Primario', oferta_academica_path(anchor: 'primario'), class: 'nav-link' %>
         <%= link_to 'Nivel Secundario', oferta_academica_path(anchor: 'secundario'), class: 'nav-link' %>
-        <%= link_to 'Colegio del Mundo IB', ib_path, class: 'nav-link' %>
       </div>
 
       <a class="nav-link" data-toggle="collapse" href="#collapseExampleThree" role="button" aria-expanded="false" aria-controls="collapseExampleThree">
         Experiencias Educativas
       </a>
       <div class="collapse" id="collapseExampleThree">
-        <%= link_to 'Bicicleteadas', experiencia_educativa_path(anchor: 'bicicleteadas'), class: 'nav-link' %>
+        <%= link_to 'Actividades Deportivas y Recreativas', experiencia_educativa_path(anchor: 'actividades_deportivas'), class: 'nav-link' %>
         <%= link_to 'Clases Abiertas', experiencia_educativa_path(anchor: 'clases_abiertas'), class: 'nav-link' %>
         <%= link_to 'Fiesta de los Colores', experiencia_educativa_path(anchor: 'fiesta_colores'), class: 'nav-link' %>
         <%= link_to 'Obras de Teatro', experiencia_educativa_path(anchor: 'obras_teatro'), class: 'nav-link' %>
         <%= link_to 'Salidas Educativas', experiencia_educativa_path(anchor: 'salidas_educativas'), class: 'nav-link' %>
-        <%= link_to 'Semana del Colegio', experiencia_educativa_path(anchor: 'semana_colegio'), class: 'nav-link' %>
-        <%= link_to 'Semana del Libro', experiencia_educativa_path(anchor: 'semana_libro'), class: 'nav-link' %>
+        <%= link_to 'Contacto con la Naturaleza', experiencia_educativa_path(anchor: 'contacto_naturaleza'), class: 'nav-link' %>
+        <%= link_to 'Arte y Creatividad', experiencia_educativa_path(anchor: 'arte_creatividad'), class: 'nav-link' %>
         <%= link_to 'Talleres', experiencia_educativa_path(anchor: 'talleres'), class: 'nav-link' %>
       </div>
     </div>
 
-
+    <%= link_to 'IB', ib_path, class: 'nav-link' %>
     <%= link_to "Novedades", articles_path, class: "nav-link" %>
     <%= link_to "Contacto", new_conection_path, class: "nav-link" %>
   </div>
