@@ -1,7 +1,12 @@
 <div class="navbar navbar-expand-xl navbar-light navbar-lewagon ">
-  <%= link_to root_path, class: "navbar-brand" do %>
-  <%= image_tag "https://res.cloudinary.com/dw7ox75dg/image/upload/v1585140067/san_patricio_logo.png"%>
-  <% end %>
+  <div>
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "https://res.cloudinary.com/dw7ox75dg/image/upload/v1585140067/san_patricio_logo.png", class:'sp-img'%>
+    <% end %>
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "https://www.ibo.org/globalassets/new-structure/icons-and-logos/images/ib-world-school-logo-1-colour.png", class:'ib-img'%>
+    <% end %>
+  </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

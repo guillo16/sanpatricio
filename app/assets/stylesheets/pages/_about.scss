@@ -1,6 +1,6 @@
 .about-container {
   width: 96%;
-  margin: 90px auto;
+  margin: 97px auto;
   display: flex;
 }
 .nav-tab {
@@ -9,7 +9,7 @@
 }
 .nav {
   position: sticky;
-  top: 90px;
+  top: 97px;
 }
 .history-container {
   margin-bottom: 400px;
@@ -74,7 +74,7 @@
 
 @media(max-width: 686px) {
   .about-container {
-    margin: 90px auto;
+    margin: 95px auto;
     display: block;
   }
   .nav-tab {
