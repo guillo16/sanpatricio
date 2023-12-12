@@ -4,6 +4,8 @@
 <p>Nombre: <%= @conection.name %></p>
 <p>Mensaje:<br></p>
 <p><%= @conection.message %></p>
-<%= link_to 'Descargar archivo adjunto', url_for(@conection.file) %>
+<% if @conection.file.attached?  %>
+  <%= link_to 'Descargar archivo adjunto', url_for(@conection.file) %>
+<% end -%>
 --------------------------
 
