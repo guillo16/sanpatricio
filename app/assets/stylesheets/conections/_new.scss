@@ -1,5 +1,4 @@
 .new-conection-wrapper {
-  margin-top: 80px;
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
@@ -15,6 +14,11 @@
   padding: 10px;
 }
 
+.conection-title {
+  margin-top: 130px;
+  margin-bottom: 50px;
+  font-weigth: bold;
+}
 .footer-location-wrapper {
   display: none;
 }
@@ -114,6 +118,12 @@
   }
   #location-hidden {
     display: block;
+  }
+
+  .conection-title {
+    margin-top: 130px;
+    margin-bottom: 30px;
+    font-weigth: bold;
   }
 
 
