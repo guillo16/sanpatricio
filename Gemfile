@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '3.1.4'
+ruby '3.2.2'
 
 gem "autoprefixer-rails", "~> 9.8", ">= 9.8.6.1"
 gem "bootsnap", ">= 1.18", require: false
@@ -37,8 +37,4 @@ group :development, :test do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
-end
-
-group :production do
-  gem 'rails_12factor'
 end
