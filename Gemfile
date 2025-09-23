@@ -23,6 +23,7 @@ gem 'webpacker'
 gem 'execjs', '2.7'
 gem 'letter_opener', '~> 1.4', '>= 1.4.1'
 gem 'zeitwerk', '~> 2.6.8'
+gem 'concurrent-ruby', '1.3.4'
 gem 'logger'
 
 group :development do
